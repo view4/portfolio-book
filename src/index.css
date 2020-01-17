@@ -54,8 +54,16 @@ code {
 	display: flex;
 	flex-direction: column;
 	position: relative;
+	padding: '20px';
 }
 
 .page-index {
-
+	
+}
+.page-footer{
+	position: absolute;
+	bottom: 0px;
+	display: flex;
+	justify-content: center;
+	width: 100%;
 }

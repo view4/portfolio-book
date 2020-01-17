@@ -15,7 +15,12 @@ class Book extends Component <{}, State> {
     pageNumber: 1
   }
   private turnPage = (num: number) => {
-	this.setState({ pageNumber: this.state.pageNumber + num })
+	  let { pageNumber } = this.state;
+	  pageNumber = pageNumber + num;
+
+	  if( pageNumber >= 1 ) {
+		this.setState({ pageNumber: this.state.pageNumber + num })
+	  }
   }
   private openBook = () => {
 	this.setState({ isOpen: !this.state.isOpen })
@@ -30,11 +35,11 @@ class Book extends Component <{}, State> {
 		  :
 		    <div className='inner-book'>
 		      <Page
-		         handleClick={() => this.turnPage(-1)}
+		         handleClick={() => this.turnPage(-2)}
 			 pageNumber={pageNumber}
 			/>
 		      <Page
-		         handleClick={() => this.turnPage(+1)}
+		         handleClick={() => this.turnPage(+2)}
 			 pageNumber={pageNumber+1} 
 			/>
 		    </div>	

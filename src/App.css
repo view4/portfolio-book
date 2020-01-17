@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+
+.circle-image {
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	background-image: url('./images/Nate+I.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
