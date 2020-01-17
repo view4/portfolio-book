@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ChapterHeading } from './ChapterHeading';
 
 interface Props {
 }
@@ -7,13 +8,25 @@ interface State{
 }
 const contents = {
 	aboutMe: {
-		name: 'about me',
+		name: 'About me',
 		pageNumber: 3,
+	},
+	codingEducation: {
+		name: 'Coding education',
+		pageNumber: 5
 	},
 	projects: {
 		name: 'projects',
-		pageNumber: 5,
+		pageNumber: 7,
 	},
+	nonProfessionalProjects: {
+		name: 'Non-professional projects',
+		pageNumber: 15,
+	},
+	contactPage: {
+		name: 'Contact me',
+		pageNumber: 23
+	}
 };
 
 class ContentsPage extends Component <Props, State> {
@@ -25,9 +38,12 @@ class ContentsPage extends Component <Props, State> {
 		<div style= {{
 			display: 'flex',
 			justifyContent: 'space-between',
-			padding: '7px'
+			padding: '7px',
+			borderBottom: '1px solid black',
+			marginLeft: '10px',
+			marginRight: '10px'
 		}}>
-			<div>
+			<div style={{fontWeight: 600}}>
 				{chapter.name}
 			</div>
 			<div> 
@@ -39,7 +55,7 @@ class ContentsPage extends Component <Props, State> {
   render() {
     return (
 	<div className='contents-page'>
-		This is the contents page
+		<ChapterHeading heading='Contents-page'/>
 	  {this.renderContents()}
 	</div>
     )

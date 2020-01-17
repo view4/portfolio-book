@@ -7,6 +7,7 @@ import CodingEdOne from './CodingEdOne';
 import CodingEdTwo from './CodingEdTwo';
 import { ProjectPageOne } from './ProjectPageOne';
 import { ProjectPageTwo } from './ProjectPageTwo';
+import ContactMePage from './ContactMePage';
 
 //images
 //import appleImage from './images/apple.png';
@@ -58,6 +59,66 @@ const petwellhousevetsImages = [
   }
 ];
 
+const fleetonomyDescription = "I was involved in multiple aspects of the startup’s platform, performing front-end and back-end tasks. I was working with developers with many years of experience and with high expectations for the quality of code. Often I would develop front-end features from design. The startup is based in Tel Aviv. I was mostly involved with the project they were running with Jaguar-Land-Rover in the UK. for their chauffeur riding service called HAVN Reference available upon request. "
+const fleetonomyTechnologies = ["React", "React-Redux", "Docker", "Python", "Flask", "Mandrill"]
+const fleetonomyImages = [
+  {
+    img: appleImage,
+    style: {
+      height: '100px',
+      width: '300px'
+    }
+  }
+];
+
+const appleWebpagedescription = "One of my first projects which shows that I can develop front-end based on design. The responsiveness of this is reasonably good. Code available upon request"
+const appleWebpageTechnologies = ["HTML", "CSS"]
+const appleWebPageImages = [
+  {
+    img: appleImage,
+    style: {
+      height: '100px',
+      width: '300px'
+    }
+  }
+];
+const toDoDescription = "Get things done! Using this To-do app which utilises CRUD functionality within the App which shows it can be scaled to grow. It is also a means of doing things in a manner which is rooted in one’s values and beliefs to make them more meaningful. Code available @ https://github.com/view4/todolist"
+const toDoTechnologies = ["React", "Firebase", "HTML", " CSS"]
+const toDoImages = [
+  {
+    img: appleImage,
+    style: {
+      height: '100px',
+      width: '300px'
+    }
+  }
+];
+
+const tvDescription = "One of many full-stack projects which I was involved in. I love working on back-end functionality as well, but rarely am I able to. This project enables searching through one’s favourite shows. Other back-end frameworks I have used include Django and Flask. Code available @ https://github.com/view4/tvsearch"
+const tvTechnologies = ["Python", "Bottle"]
+const tvImages = [
+  {
+    img: appleImage,
+    style: {
+      height: '100px',
+      width: '300px'
+    }
+  }
+];
+
+const teachingsDescription = "So this I built for fun and is a way to record teachings derived from a belief. I try and be a moral-driven person, with mixed results. For me it is a means to humble and guide me in a seemingly chaotic world. The interesting thing about the code here is not it’s complexity but that it is rendered dynamically through object-oriented Javascript Code available @ https://github.com/view4/Connecting-with-values"
+const teachingsTechnologies = ["VanillaJS", "OOP", "Firebase"];
+const teachingsImages = [
+  {
+    img: appleImage,
+    style: {
+      height: '100px',
+      width: '300px'
+    }
+  }
+];
+
+
 const pageMap = {
   1:{
     component: <ContentsPage />,
@@ -93,6 +154,40 @@ const pageMap = {
   12: {
     component: <ProjectPageTwo images={petwellhousevetsImages}/>
   },
+  13: {
+    component: <ProjectPageOne title='Fleetonomy' description={fleetonomyDescription} technologies={fleetonomyTechnologies} />
+  },
+  14: {
+    component: <ProjectPageTwo images={fleetonomyImages}/>
+  },
+  15: {
+    component: <ProjectPageOne title='Recreating the Apple landing page' description={appleWebpagedescription} technologies={appleWebpageTechnologies} />
+  },
+  16: {
+    component: <ProjectPageTwo images={appleWebPageImages}/>
+  },
+  17: {
+    component: <ProjectPageOne title='To Do App' description={toDoDescription} technologies={toDoTechnologies} />
+  },
+  18: {
+    component: <ProjectPageTwo images={toDoImages}/>
+  },
+  19: {
+    component: <ProjectPageOne title='Tv Guide' description={tvDescription} technologies={tvTechnologies} />
+  },
+  20: {
+    component: <ProjectPageTwo images={tvImages}/>
+  },
+  21: {
+    component: <ProjectPageOne title='Heart of a belief' description={teachingsDescription} technologies={teachingsTechnologies} />
+  },
+  22: {
+    component: <ProjectPageTwo images={teachingsImages}/>
+  },
+  23: {
+    component: <ContactMePage />
+  }
+
 
 }
 
