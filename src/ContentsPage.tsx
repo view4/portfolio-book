@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import { ChapterHeading } from './ChapterHeading';
+import { AppContextConsumer } from './Book';
 
 interface Props {
 }
 
 interface State{
+}
+interface contents{
+	pageNumber: number;
+	name: string;
 }
 const contents = {
 	aboutMe: {
@@ -35,29 +40,28 @@ class ContentsPage extends Component <Props, State> {
   private renderContents = () => {
 	const contentsArray = Object.values(contents);
 	return contentsArray.map((chapter) => (
-		<div style= {{
-			display: 'flex',
-			justifyContent: 'space-between',
-			padding: '7px',
-			borderBottom: '1px solid black',
-			marginLeft: '10px',
-			marginRight: '10px'
-		}}>
-			<div style={{fontWeight: 600}}>
-				{chapter.name}
-			</div>
-			<div> 
-				{chapter.pageNumber}
-			</div>
-		</div>
+		<AppContextConsumer>
+			{appContext => appContext && (
+				<div className={'contents-item'}>
+					<div onClick={() => appContext.setPageNumber(chapter.pageNumber)}>
+						{chapter.name}
+					</div>
+					<div> 
+						{chapter.pageNumber}
+					</div>
+				</div>
+			)}
+		</AppContextConsumer>
+
 	));
   }
   render() {
     return (
-	<div className='contents-page'>
-		<ChapterHeading heading='Contents-page'/>
-	  {this.renderContents()}
-	</div>
+				<div className='contents-page'>
+				<ChapterHeading heading='Contents-page'/>
+				<br />
+				{this.renderContents()}
+				</div>
     )
   }
 }

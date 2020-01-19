@@ -8,10 +8,43 @@ import CodingEdTwo from './CodingEdTwo';
 import { ProjectPageOne } from './ProjectPageOne';
 import { ProjectPageTwo } from './ProjectPageTwo';
 import ContactMePage from './ContactMePage';
+import { isMobile } from 'react-device-detect';
+import MovingTextPage from './MovingTextPage';
 
 //images
 //import appleImage from './images/apple.png';
-const appleImage = require('./images/apple.png');
+const appleImageOne = require('./images/apple.png');
+const appleImageTwo = require('./images/apple-two.png');
+const appleImageThree = require('./images/apple-three.png');
+// This is surely a long way to be doing this, hardcoding etc.. 
+const trooxImageOne = require('./images/troox-one.png');
+const trooxImageTwo = require('./images/troox-two.png');
+const trooxImageThree = require('./images/troox-three.png');
+
+const orderPleaseOne = require('./images/orderPlease-one.png');
+const orderPleaseTwo = require('./images/orderPlease-two.png');
+const orderPleaseThree = require('./images/orderPlease-three.png');
+
+const petwellImageOne = require('./images/orderPlease-one.png');
+const petwellImageTwo = require('./images/orderPlease-two.png');
+const petwellImageThree = require('./images/orderPlease-three.png');
+
+const fleetonomyImageOne = require('./images/orderPlease-one.png');
+const fleetonomyImageTwo = require('./images/orderPlease-two.png');
+const fleetonomyImageThree = require('./images/orderPlease-three.png');
+
+const toDoImageOne = require('./images/todo-one.png');
+const toDoImageTwo = require('./images/todo-two.png');
+const toDoImageThree = require('./images/todo-three.png');
+
+const tvImageOne = require('./images/tv-one.png');
+const tvImageTwo = require('./images/tv-two.png');
+const tvImageThree = require('./images/tv-three.png');
+
+const teachingsImageOne = require('./images/orderPlease-one.png');
+const teachingsImageTwo = require('./images/orderPlease-two.png');
+const teachingsImageThree = require('./images/orderPlease-three.png');
+
 
 interface State {
   //pageNumber: number,
@@ -27,10 +60,27 @@ const trooxDescription =" My role is to make multiple design based changes to th
 const trooxTechnologies = ['React-native', 'react-redux', 'javascript'];
 const trooxImages = [
   {
-    img: appleImage,
+    img: trooxImageOne,
     style: {
-      height: '100px',
-      width: '300px'
+      height: '300px',
+      width: '150px',
+      left: '150px',
+      top: '100px',
+    }
+  },
+  // {
+  //   img: trooxImageTwo,
+  //   style: {
+  //     height: '300px',
+  //     width: '150px'
+  //   }
+  // },
+  {
+    img: trooxImageThree,
+    style: {
+      height: '300px',
+      width: '150px',
+
     }
   }
 ]
@@ -39,10 +89,30 @@ const orderPleaseDescription = "I created this prototype which is fully function
 const orderPleaseTechnologies = ['react-native', 'expo', 'firebase'];
 const orderPleaseImages = [
   {
-    img: appleImage,
+    img: orderPleaseOne,
     style: {
-      height: '100px',
-      width: '300px'
+      height: '300px',
+      width: '150px',
+      left: '150px',
+      top: '120px',
+      zIndex: 3,
+    }
+  },
+  {
+    img: orderPleaseTwo,
+    style: {
+    width: '150px',
+    height: '300px',
+    zIndex: 2,
+    left: '50px'
+    }
+  },
+  {
+    img: orderPleaseThree,
+    style: {
+      height: '300px',
+      width: '150px',
+      top: '100px',
     }
   }
 ];
@@ -51,7 +121,21 @@ const petwellHouseVetsDescription = "I helped re-create their old-fashioned and 
 const petwellHouseVetsTechnologies = ['WordPress', 'CSS3', 'Google API'];
 const petwellhousevetsImages = [
   {
-    img: appleImage,
+    img: petwellImageOne,
+    style: {
+      height: '100px',
+      width: '300px'
+    }
+  },
+  {
+    img: petwellImageTwo,
+    style: {
+      height: '100px',
+      width: '300px'
+    }
+  },
+  {
+    img: petwellImageThree,
     style: {
       height: '100px',
       width: '300px'
@@ -63,7 +147,21 @@ const fleetonomyDescription = "I was involved in multiple aspects of the startup
 const fleetonomyTechnologies = ["React", "React-Redux", "Docker", "Python", "Flask", "Mandrill"]
 const fleetonomyImages = [
   {
-    img: appleImage,
+    img: fleetonomyImageOne,
+    style: {
+      height: '100px',
+      width: '300px'
+    }
+  },
+  {
+    img: fleetonomyImageTwo,
+    style: {
+      height: '100px',
+      width: '300px'
+    }
+  },
+  {
+    img: fleetonomyImageThree,
     style: {
       height: '100px',
       width: '300px'
@@ -75,7 +173,21 @@ const appleWebpagedescription = "One of my first projects which shows that I can
 const appleWebpageTechnologies = ["HTML", "CSS"]
 const appleWebPageImages = [
   {
-    img: appleImage,
+    img: appleImageOne,
+    style: {
+      height: '100px',
+      width: '300px'
+    }
+  },
+  {
+    img: appleImageTwo,
+    style: {
+      height: '100px',
+      width: '300px'
+    }
+  },
+  {
+    img: appleImageThree,
     style: {
       height: '100px',
       width: '300px'
@@ -86,7 +198,21 @@ const toDoDescription = "Get things done! Using this To-do app which utilises CR
 const toDoTechnologies = ["React", "Firebase", "HTML", " CSS"]
 const toDoImages = [
   {
-    img: appleImage,
+    img: toDoImageOne,
+    style: {
+      height: '100px',
+      width: '300px'
+    }
+  },
+  {
+    img: toDoImageTwo,
+    style: {
+      height: '100px',
+      width: '300px'
+    }
+  },
+  {
+    img: toDoImageThree,
     style: {
       height: '100px',
       width: '300px'
@@ -98,7 +224,21 @@ const tvDescription = "One of many full-stack projects which I was involved in. 
 const tvTechnologies = ["Python", "Bottle"]
 const tvImages = [
   {
-    img: appleImage,
+    img: tvImageOne,
+    style: {
+      height: '100px',
+      width: '300px'
+    }
+  },
+  {
+    img: tvImageTwo,
+    style: {
+      height: '100px',
+      width: '300px'
+    }
+  },
+  {
+    img: tvImageThree,
     style: {
       height: '100px',
       width: '300px'
@@ -110,7 +250,21 @@ const teachingsDescription = "So this I built for fun and is a way to record tea
 const teachingsTechnologies = ["VanillaJS", "OOP", "Firebase"];
 const teachingsImages = [
   {
-    img: appleImage,
+    img: teachingsImageOne,
+    style: {
+      height: '100px',
+      width: '300px'
+    }
+  },
+  {
+    img: teachingsImageTwo,
+    style: {
+      height: '100px',
+      width: '300px'
+    }
+  },
+  {
+    img: teachingsImageThree,
     style: {
       height: '100px',
       width: '300px'
@@ -121,9 +275,11 @@ const teachingsImages = [
 
 const pageMap = {
   1:{
+    component: <MovingTextPage />,
+  },
+  2: {
     component: <ContentsPage />,
   },
-  2: {},
   3: {
     component: <AboutMeOne />,
   } ,
@@ -201,11 +357,16 @@ class Page extends Component <Props, State> {
   render() {
     const { pageNumber, handleClick } = this.props;
     return(
-      <div className='page' >
+      <div className='page' style={isMobile ? {'width': '100%'}: null }>
         {this.renderPageContent()}
         <div className='page-footer'> 
+          {
+            !(pageNumber % 2 == 0) || isMobile ? <button className='page-turner left' onClick={()=>handleClick(isMobile? -1 : -2 )}> {'<'} </button>: null
+          }
           <div className='page-index'>- {pageNumber} -</div>
-          <div onClick={handleClick}> click me </div>
+          {
+            pageNumber % 2 == 0 || isMobile? <button className='page-turner right' onClick={()=>handleClick(isMobile? 1: 2)}> {'>'} </button>: null
+          }
         </div>
       </div>
     )

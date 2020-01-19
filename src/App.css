@@ -39,11 +39,22 @@
 
 
 .circle-image {
-	height: 150px;
-	width: 150px;
+	height: 270px;
+	width: 270px;
 	border-radius: 50%;
 	background-image: url('./images/Nate+I.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+}
+
+.experience-list-item{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 0px;
+}
+
+.experience-list-item > span{
+  font-size: 14px;
+  padding: 10px;
 }

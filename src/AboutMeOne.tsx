@@ -1,27 +1,53 @@
 import React, { Component } from 'react';
 import { ChapterHeading } from './ChapterHeading'
 import { ParagraphText } from './ParagraphText';
-interface State {}
+interface State {
+  slideImage: string;
+  currentImageIndex: number;
+}
 
 interface Props {}
 
-const SnippetOfMyStory = 'I grew up in London, studied in Newcastle, and I\'m currently based in Tel-Aviv. In university I achieved a 2:1 bsc hons in Biomedical Sciences. However, after graduating I felt there was so much I still wanted to do and learn outside of my field of study. Shortly afterwards I begun to learn computer programming, eventually going on to complete the Israel Tech Challenge coding course.'
+const benjiAtSushi = require('./images/Benj+sushi.jpg')
+const myFam = require('./images/Family.jpg');
+const nateAndI = require('./images/Nate+I.jpg');
+const opener = require('./images/Opener.jpg');
+const token = require('./images/Token.jpg');
+const tzachiAndI = require('./images/Tzahi_and_I.jpg');
+
+const imagesArray = [benjiAtSushi,myFam, nateAndI, opener, token, tzachiAndI];
+const SnippetOfMyStory = 'I am currently a 25 year old web developer. I spent three years in Newcastle, where I studied Biomedical Sciences. After graduating I continued to study, teaching myself computer programming and I eventually went on to do a coding bootcamp course. Since finishing the course I have been working as a freelance web developer.  '
 class AboutMeOne extends Component <Props, State> {
-    state: State = {
-    };
+  state: State = {
+    slideImage: benjiAtSushi,
+    currentImageIndex: 0,
+  };
+  componentDidMount(){
+    this.changeSlide();
+  }
+  private changeSlide = () => {
+    let { slideImage, currentImageIndex } = this.state;
+    currentImageIndex ++;
+    currentImageIndex = currentImageIndex >= imagesArray.length? 0 : currentImageIndex;
+    slideImage = imagesArray[currentImageIndex];
 
+    this.setState({slideImage, currentImageIndex});
+    setTimeout(this.changeSlide, 3500)
+  }
     render() {
-
       return(
         <div style={{
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center'
+            alignItems: 'center',
+            paddingTop: '20px',
         }}> 
-            <div className="circle-image" id="slide"></div>
-            < ChapterHeading heading='About Me'/>
+            <div className="circle-image" id="slide" style={{
+              backgroundImage: `url(${this.state.slideImage})`
+              }}>
+            </div>
+            <ChapterHeading heading='About Me'/>
             <ParagraphText text={SnippetOfMyStory} />
-
         </div>
       )
     }

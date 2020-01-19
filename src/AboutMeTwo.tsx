@@ -6,8 +6,8 @@ interface State {}
 
 interface Props {}
 
-const myValues = 'I try very much to be a value-driven person. In the whirlwind and complexity of Life, values can be a great source of support, guidance, comfort and more. I value team-work, independence, strong-morals and doing what one is passionate about.'
-const myLikes = 'Besides programming I have other passions and joys. I am very interested in philosophy, religion and morality, and I also enjoy writing about them. Broadly speaking, I enjoy writing very much- I find it a great way to both express oneself and connect with one\'s inner thoughts. I also enjoy cooking, socialising and listening to music.'
+const myValues = 'What we find important in Life can determine so much of who we are, how we behave and the decisions which we make. This is why, I also find it important to bring one\'s values into their work. For me team-work, morals, doing that which you\'re passionate about and indepndence are important for me.'  
+const myLikes = 'Whilst I enjoy programming a lot, I also have other interests. I very much like to write, I find it a way to declutter my brain and organise my thoughts whilst resolving any concerns which I may have. Without writing, my mind can sometimes feel in overload. I also enjoy philospophy, morality and religion, as well as cooking, music and socialising.  '
 class AboutMeTwo extends Component <Props, State> {
     state: State = {
     };
@@ -20,9 +20,9 @@ class AboutMeTwo extends Component <Props, State> {
             flexDirection: 'column',
             alignItems: 'center'
         }}> 
-            <SubHeading subheading='my-values'/>
+            <SubHeading subheading='My Values'/>
             <ParagraphText text={myValues} />
-            <SubHeading subheading='my-likes'/>
+            <SubHeading subheading='My Likes'/>
             <ParagraphText text={myLikes} />
         </div>
       )

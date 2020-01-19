@@ -6,8 +6,8 @@ interface State {}
 
 interface Props {}
 
-const myValues = 'I try very much to be a value-driven person. In the whirlwind and complexity of Life, values can be a great source of support, guidance, comfort and more. I value team-work, independence, strong-morals and doing what one is passionate about.'
-const myLikes = 'Besides programming I have other passions and joys. I am very interested in philosophy, religion and morality, and I also enjoy writing about them. Broadly speaking, I enjoy writing very much- I find it a great way to both express oneself and connect with one\'s inner thoughts. I also enjoy cooking, socialising and listening to music.'
+const ITCDescriptionOne = 'Israel Tech Challenge was a five month bootcamp course. Typical days were between nine to twelve hours of intense studying. During this course I consolidated and added to the coding knowledge which I had already obtained beforehand. '
+const ITCDescriptionTwo = 'During this course we built websites, web applications and learnt heaps of new things. Do I spak of technologies learnt here?'
 class CodingEdTwo extends Component <Props, State> {
     state: State = {
     };
@@ -20,10 +20,9 @@ class CodingEdTwo extends Component <Props, State> {
             flexDirection: 'column',
             alignItems: 'center'
         }}> 
-            <SubHeading subheading='my-values'/>
-            <ParagraphText text={myValues} />
-            <SubHeading subheading='my-likes'/>
-            <ParagraphText text={myLikes} />
+            <SubHeading subheading='Israel Tech Challenge (ITC)'/>
+            <ParagraphText text={ITCDescriptionOne} />
+            <ParagraphText text={ITCDescriptionTwo} />
         </div>
       )
     }
