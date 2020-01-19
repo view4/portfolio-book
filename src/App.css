@@ -58,3 +58,9 @@
   font-size: 14px;
   padding: 10px;
 }
+
+.book-cover{
+  background-image: url('./images/front-cover.png.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

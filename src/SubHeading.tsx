@@ -12,6 +12,6 @@ export const SubHeading: FunctionComponent<Props> = ({subheading}) => (
         width: '100%',
         paddingLeft: '10px'
     }}>
-        <h5>{subheading}:</h5>
+        <h5>{subheading}</h5>
     </div>
   );

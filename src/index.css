@@ -135,6 +135,10 @@ h3, h5{
 	 margin-bottom: 0px;
  }
 
+
+ li{
+	 text-align: start;
+ }
  /* 
  Improve the front-cover: 
  --> Perhaps get an image of something? 

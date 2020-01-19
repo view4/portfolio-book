@@ -12,6 +12,7 @@ export const ProjectPageOne: FunctionComponent<Props> = ({title, description, te
   <div>
         <SubHeading subheading={title} />
         <ParagraphText text={description} />
+        <SubHeading subheading={'technologies used'} />
         <ul>
             {
                 technologies.map(technology => (

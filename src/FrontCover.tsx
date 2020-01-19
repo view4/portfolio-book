@@ -6,6 +6,6 @@ interface Props {
 
 export const FrontCover: FunctionComponent<Props> = ({handleClick}) => (
   <div className='book-cover' onClick={handleClick}>
-    <p>Gabriel's Portfolio</p>
+    {/* <p>Gabriel's Portfolio</p> */}
   </div>
 );

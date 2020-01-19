@@ -48,4 +48,16 @@ Be proactive in regards to waking up:
 Bind them as a sign 
 - Let in consciousness
 - it is something which is not completely me, but also something which is not pleasant  and can honder Life. 
+
+And also the process of pursuing and progressing with Israel in a spiritual sense is a deeply independent move, and although I may be lacking independence in certain areas of my Life, 
+There are many aspects of my Life which are deeply independent, such as my relationship with Life, and progression with the House and things like this. 
+
+I feel so fricking anxious and it is not something which is pleasant, not even in the slightest and it makes me upset. I feel upset by what I feel to be a lack of progress or success, I feel stressed and I do not like it and it is not pleasant, I think I have to be kind of content a bit in what I am doing. 
+Furthermore, I want to understand better why this is a good thing to be doing, well, it says to fear You, to love You, to cleave to You, and so it is not something which is very easy for me, I feel tired and stressed, I hate this stress - I hate it so much. And yet I want to be getting this project done, this web app done, and I want to move on. 
+What do You want from me? It makes sense to stay here to work, but I do not want that which makes sense, I want more than this, I want to live and I want to be in Israel. It upsets me to be here, it upsets me and I miss Israel, I miss it so much and I think I have to continue with the platform, and this portolfio is a part of it. I have such little patience and my soul is in agony, it is in pure agony, please alleviate it, please alleviate me and help me to be doing well. I feel super distraught and upset, and so this kind of upsets me, it upsets me a lot, and it makes me feel sad. 
+You are my King and my God and You have helped me before and I do not doubt that You will help me again. 
+
+
+Do I include heart of a belief into this? If so how is this supposed to occur, how is it tupposed to be and it is not clear to me. Lord, there is so much which I honestly do not know, there is so much which I have left to learn. 
+I am so ignorant, so unfixed and it is something which is kind of annoying for me, it kind of makes me feel a bit upset as well. And so this bothers me a fair bit.
 */

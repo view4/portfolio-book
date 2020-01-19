@@ -25,13 +25,13 @@ const orderPleaseOne = require('./images/orderPlease-one.png');
 const orderPleaseTwo = require('./images/orderPlease-two.png');
 const orderPleaseThree = require('./images/orderPlease-three.png');
 
-const petwellImageOne = require('./images/orderPlease-one.png');
-const petwellImageTwo = require('./images/orderPlease-two.png');
-const petwellImageThree = require('./images/orderPlease-three.png');
+const petwellImageOne = require('./images/petwell-two.png'); 
+const petwellImageTwo = require('./images/petwell-three.png'); 
+const petwellImageThree =  require('./images/petwell-four.png');
 
-const fleetonomyImageOne = require('./images/orderPlease-one.png');
-const fleetonomyImageTwo = require('./images/orderPlease-two.png');
-const fleetonomyImageThree = require('./images/orderPlease-three.png');
+const fleetonomyImageOne = require('./images/fleetonomy-one.png');
+const fleetonomyImageTwo = require('./images/fleetonomy-two.png');
+const fleetonomyImageThree = require('./images/fleetonomy-three.png');
 
 const toDoImageOne = require('./images/todo-one.png');
 const toDoImageTwo = require('./images/todo-two.png');
@@ -56,7 +56,7 @@ interface Props {
 
 
 // Portfolio Info
-const trooxDescription =" My role is to make multiple design based changes to this mobile app which is in the early stages of this release. ) Troox enables people to send ‘valuable treasures’ to contacts for example to celebrate special occasions. Available in google play store:"
+const trooxDescription =" My role on this project was to redo the User Interface of the App to improve the client experience. Troox enables people to send ‘valuable treasures’ to contacts on special occasions. \n Available in google play store:"
 const trooxTechnologies = ['React-native', 'react-redux', 'javascript'];
 const trooxImages = [
   {
@@ -65,21 +65,25 @@ const trooxImages = [
       height: '300px',
       width: '150px',
       left: '150px',
-      top: '100px',
+      top: '250px',
+      zIndex: 3,
     }
   },
-  // {
-  //   img: trooxImageTwo,
-  //   style: {
-  //     height: '300px',
-  //     width: '150px'
-  //   }
-  // },
+  {
+    img: trooxImageTwo,
+    style: {
+      height: '300px',
+      width: '150px',
+      left: '270px',
+      top: '36px',
+    }
+  },
   {
     img: trooxImageThree,
     style: {
       height: '300px',
       width: '150px',
+      top: '72px',
 
     }
   }
@@ -93,8 +97,8 @@ const orderPleaseImages = [
     style: {
       height: '300px',
       width: '150px',
-      left: '150px',
-      top: '120px',
+      left: '215px',
+      top: '54px',
       zIndex: 3,
     }
   },
@@ -104,7 +108,8 @@ const orderPleaseImages = [
     width: '150px',
     height: '300px',
     zIndex: 2,
-    left: '50px'
+    left: '90px',
+    top: '162px',
     }
   },
   {
@@ -112,7 +117,8 @@ const orderPleaseImages = [
     style: {
       height: '300px',
       width: '150px',
-      top: '100px',
+      top: '242px',
+      left: '18px',
     }
   }
 ];
@@ -123,22 +129,30 @@ const petwellhousevetsImages = [
   {
     img: petwellImageOne,
     style: {
-      height: '100px',
-      width: '300px'
+      height: '198px',
+      width: '378px',
+      top: '17px',
+      left: '36px',
     }
   },
   {
     img: petwellImageTwo,
     style: {
-      height: '100px',
-      width: '300px'
+      height: '210px',
+      width: '318px',
+      zIndex: 2, 
+      left: '18px',
+      top: '200px',
     }
   },
   {
     img: petwellImageThree,
     style: {
-      height: '100px',
-      width: '300px'
+      height: '180px',
+      width: '300px',
+      top: '396px',
+      zIndex: 3,
+      left: '72px',
     }
   }
 ];
@@ -149,22 +163,27 @@ const fleetonomyImages = [
   {
     img: fleetonomyImageOne,
     style: {
-      height: '100px',
-      width: '300px'
+      height: '108px',
+      top: '396px',
+      width: '180px',
+      left: '18px',
     }
   },
   {
     img: fleetonomyImageTwo,
     style: {
-      height: '100px',
-      width: '300px'
+      height: '216px',
+      width: '378px',
+      top: '180px',
+      left: '36px',
     }
   },
   {
     img: fleetonomyImageThree,
     style: {
-      height: '100px',
-      width: '300px'
+      height: '180px',
+      width: '300px',
+      left: '144px',
     }
   }
 ];
@@ -175,22 +194,27 @@ const appleWebPageImages = [
   {
     img: appleImageOne,
     style: {
-      height: '100px',
-      width: '300px'
+      height: '180px',
+      width: '360px',
+      left: '36px',
     }
   },
   {
     img: appleImageTwo,
     style: {
-      height: '100px',
-      width: '300px'
+      height: '180px',
+      width: '360px',
+      left: '36px',
+      top: '190px'
     }
   },
   {
     img: appleImageThree,
     style: {
-      height: '100px',
-      width: '300px'
+      height: '180px',
+      width: '360px',
+      left: '36px',
+      top: '378px',
     }
   }
 ];
@@ -200,22 +224,28 @@ const toDoImages = [
   {
     img: toDoImageOne,
     style: {
-      height: '100px',
-      width: '300px'
+      height: '180px',
+      width: '360px',
+      left: '72px',
+      top: '18px'
     }
   },
   {
     img: toDoImageTwo,
     style: {
-      height: '100px',
-      width: '300px'
+      height: '180px',
+      width: '360px',
+      left: '108px',
+      top: '198px',
     }
   },
   {
     img: toDoImageThree,
     style: {
-      height: '100px',
-      width: '300px'
+      height: '180px',
+      width: '360px',
+      left: '36px',
+      top: '396px',
     }
   }
 ];
@@ -226,22 +256,28 @@ const tvImages = [
   {
     img: tvImageOne,
     style: {
-      height: '100px',
-      width: '300px'
+      height: '180px',
+      width: '360px',
+      left: '54px',
+      top: '378px',
     }
   },
   {
     img: tvImageTwo,
     style: {
-      height: '100px',
-      width: '300px'
+      height: '180px',
+      width: '360px',
+      left: '18px',
+      top: '192px'
     }
   },
   {
     img: tvImageThree,
     style: {
-      height: '100px',
-      width: '300px'
+      height: '180px',
+      width: '360px',
+      left: '54px',
+      top: '7px'
     }
   }
 ];
@@ -252,22 +288,28 @@ const teachingsImages = [
   {
     img: teachingsImageOne,
     style: {
-      height: '100px',
-      width: '300px'
+      height: '180px',
+      width: '360px',
+      left: '54px',
+      top: '378px',
     }
   },
   {
     img: teachingsImageTwo,
     style: {
-      height: '100px',
-      width: '300px'
+      height: '180px',
+      width: '360px',
+      left: '54px',
+      top: '378px',
     }
   },
   {
     img: teachingsImageThree,
     style: {
-      height: '100px',
-      width: '300px'
+      height: '180px',
+      width: '360px',
+      left: '54px',
+      top: '378px',
     }
   }
 ];
