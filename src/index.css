@@ -17,10 +17,29 @@ body {
   background-repeat: no-repeat;
 }
 
+header {
+  width: 100%;
+  display: flex;
+  height: 7vh;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  background-color: darksalmon;
+  z-index: 3;
+  top: 0;
+}
+/* .nav-title > h5 {
+  margin-bottom: 0px;
+  margin-left: 7px;
+  font-family: "Amatic SC", auto;
+  font-weight: bold;
+  font-size: 17px;
+} */
+
 /* Outer book */
 .book-cover {
-  height: 450px;
-  width: 300px;
+  height: 600px;
+  width: 375px;
   border: 7px groove gray;
   background-color: #363333;
   color: #ffe557;
@@ -30,6 +49,7 @@ body {
   border-top-width: 18px;
   border-top-color: #cecece;
   border-radius: 13px;
+  border-left-color: #ff8b28;
 }
 
 .book-cover > p {
@@ -128,6 +148,11 @@ h3 {
 h5 {
   margin-bottom: 0px;
   padding-left: 18px;
+}
+
+h6 {
+  margin: 0;
+  text-align: left;
 }
 .contact-page {
   display: flex;

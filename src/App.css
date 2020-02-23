@@ -37,30 +37,29 @@
   }
 }
 
-
 .circle-image {
-	height: 270px;
-	width: 270px;
-	border-radius: 50%;
-	background-image: url('./images/Nate+I.jpg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+  height: 270px;
+  width: 270px;
+  border-radius: 50%;
+  background-image: url("./images/Nate+I.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.experience-list-item{
+.experience-list-item {
   display: flex;
   justify-content: space-between;
   margin-right: 0px;
 }
 
-.experience-list-item > span{
+.experience-list-item > span {
   font-size: 14px;
   padding: 10px;
 }
 
-.book-cover{
-  background-image: url('./images/front-cover.png.png');
+.book-cover {
+  background-image: url("./images/front-cover.png.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }

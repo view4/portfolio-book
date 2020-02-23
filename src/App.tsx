@@ -6,6 +6,11 @@ import "./App.css";
 const App: React.FC = () => {
   return (
     <div className="App">
+      <header>
+        {/* <div className="nav-title">
+          <h5> My portfolio </h5>
+        </div> */}
+      </header>
       <Book />
     </div>
   );
