@@ -32,7 +32,7 @@ class Book extends Component<{}, State> {
     let { pageNumber } = this.state;
     pageNumber = pageNumber + num;
 
-    if (pageNumber >= 1 && pageNumber <= 23) {
+    if (pageNumber >= 1 && pageNumber <= 24) {
       this.setState({ pageNumber: this.state.pageNumber + num });
     }
   };
@@ -44,6 +44,15 @@ class Book extends Component<{}, State> {
   public setPageNumber = (num: any) => {
     this.setState({ pageNumber: num });
   };
+
+  handleDownloadPress = () => {
+	const link = document.createElement('a');
+	link.href = `../Gabriel_Morris_CV.pdf`;
+	document.body.appendChild(link);
+	link.click();
+	document.body.removeChild(link);
+
+  }
 
   render() {
     const contextValue = {
@@ -74,6 +83,24 @@ class Book extends Component<{}, State> {
             </div>
           )}
         </div>
+
+	{ !isMobile && (
+	<div className="contact-button-container">
+		<button onClick={() => this.setState({pageNumber: 23, isOpen: true})}>
+			Contact Me
+		</button>
+	</div>)
+	}
+
+	{ /*  !isMobile && (
+	<div className="dl-cv-button-container">
+		<a href="../Gabriel_Morris_CV.pdf" download>
+		<button onClick={() => null /*this.handleDownloadPress}>
+			Download CV
+		</button>
+		</a>
+	</div>)
+	*/}
       </AppContextProvider>
     );
   }

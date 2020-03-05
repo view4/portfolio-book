@@ -15,29 +15,28 @@ class Page extends Component<Props> {
   };
   render() {
     const { pageNumber, handleClick } = this.props;
+
     return (
       <div className="page" style={isMobile ? { width: "100%" } : null}>
         {this.renderPageContent()}
         <div className="page-footer">
-          {!(pageNumber % 2 == 0) || isMobile ? (
+          {pageNumber !== 1 &&(!(pageNumber % 2 == 0) || isMobile ? (
             <button
               className="page-turner left"
               onClick={() => handleClick(isMobile ? -1 : -2)}
             >
-              {" "}
-              {"<"}{" "}
+		<img className="page-turner-icon" src={require("../images/icons/backward_icon.png")}/>
             </button>
-          ) : null}
+          ) : null)}
           <div className="page-index">- {pageNumber} -</div>
-          {pageNumber % 2 == 0 || isMobile ? (
+          { pageNumber < Object.keys(pageMap).length && (pageNumber % 2 == 0 || isMobile ? (
             <button
               className="page-turner right"
               onClick={() => handleClick(isMobile ? 1 : 2)}
             >
-              {" "}
-              {">"}{" "}
+		<img className="page-turner-icon" src={require("../images/icons/forward_icon.png")}/>
             </button>
-          ) : null}
+          ) : null)}
         </div>
       </div>
     );

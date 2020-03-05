@@ -4,7 +4,7 @@ import { ChapterHeading } from "../ChapterHeading";
 class ContactMePage extends Component<{} | null> {
   openEmailer = () => {
     window.open(
-      "mailto:gavrielmorris.dev@gmail.com?subject=Web Portfolio&body=Type your message here"
+      "mailto:morrisgaby987@gmail.com?subject=Web Portfolio&body=Type your message here"
     );
   };
 
@@ -13,14 +13,21 @@ class ContactMePage extends Component<{} | null> {
       <div className="contact-page">
         <ChapterHeading heading="Contact Me" />
         <div>
-          <h4> Want to be a part of this story? </h4>
+          <h4> Do you wish to help write the next part of the book? </h4>
+		<p>
+			I am always looking for a new challenge, for a new oppurtunity to grow through and to learn new things. I enjoy working with good people, and I am looking for the right environment to help me grow to the nect level. If you feel like you know of the right oppurtunity for me then please do reach out to me 
+		</p>
         </div>
-        <div style={{ paddingLeft: "19px" }}>
-          {/* phone number: +44 (0)7826930019
-                <br /> */}
-          <a onClick={this.openEmailer}> email: gavrielmorris.dev@gmail.com </a>
-          <br />
-          github: https://github.com/view4
+        <div className="contact-details-info" style={{ paddingLeft: "19px" }}>
+		<div>           
+		  Phone || +972 (0)58-590-2133
+                </div>
+		<div>
+          	  <a onClick={this.openEmailer}> Email || morrisgaby987@gmail.com </a>
+          	</div>
+		<div>
+          	  <a className="github-link" href="https://github.com/view4" target="_blank">Github || https://github.com/view4</a>
+		</div>
         </div>
       </div>
     );

@@ -8,8 +8,8 @@ interface State {
   isDeleting: Boolean;
 }
 
-let delta = 200 - Math.random() * 100;
-const period = 2000;
+
+const period = 360;
 
 class MovingTextPage extends Component<{}, State> {
   interval: any;
@@ -41,6 +41,7 @@ class MovingTextPage extends Component<{}, State> {
   private whoAmI() {
     const { statements } = this.state;
     let { text, isDeleting, loopNumber } = this.state;
+    let delta = 200 - Math.random() * 100;
     const i = loopNumber % statements.length;
     let fullText = statements[i];
 
@@ -50,10 +51,6 @@ class MovingTextPage extends Component<{}, State> {
     } else {
       text = fullText.substring(0, text.length + 1);
     }
-
-    // if (isDeleting) { Can I delete?
-    //   delta /= 2;
-    // }
 
     if (!isDeleting && text == fullText) {
       delta = period;
@@ -77,7 +74,8 @@ class MovingTextPage extends Component<{}, State> {
         <div
           style={{
             borderRight: "4px solid black",
-            display: "inline-block"
+            display: "inline-block",
+	    fontFamily: "monospace"
           }}
         >
           I am {this.state.text}

@@ -16,7 +16,18 @@ const tzachiAndI = require("../../images/Tzahi_and_I.jpg");
 
 const imagesArray = [benjiAtSushi, myFam, nateAndI, opener, token, tzachiAndI];
 const SnippetOfMyStory =
-  "I am currently a 25 year old web developer. I spent three years in Newcastle, where I studied Biomedical Sciences. After graduating I continued to study, teaching myself computer programming and I eventually went on to do a coding bootcamp course. Since finishing the course I have been working as a freelance web developer.  ";
+  "Despite gaining a lot from university it was time for change and a new challenge, after graduating. This change, and challenge, came in the form of learning to code. After many hours of independent learning, some internship experience an intensive bootcamp and a few freelance projects it is time for the next challenge, the next job.  ";
+
+/*
+* cleave to Him 
+* Let in Consciousness
+* speak of them 
+* worship Him 
+* care for others
+* write down this song
+
+ 
+*/
 
 class AboutMeOne extends Component<{}, State> {
   state: State = {

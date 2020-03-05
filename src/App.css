@@ -37,15 +37,7 @@
   }
 }
 
-.circle-image {
-  height: 270px;
-  width: 270px;
-  border-radius: 50%;
-  background-image: url("./images/Nate+I.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+
 
 .experience-list-item {
   display: flex;
@@ -59,7 +51,7 @@
 }
 
 .book-cover {
-  background-image: url("./images/front-cover.png.png");
+  background-image: url("./images/The-Portfolio.png");
   background-repeat: no-repeat;
   background-size: contain;
 }

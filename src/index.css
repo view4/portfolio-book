@@ -17,6 +17,16 @@ body {
   background-repeat: no-repeat;
 }
 
+.circle-image {
+  height: 270px;
+  width: 270px;
+  border-radius: 50%;
+  background-image: url("./images/Nate+I.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 header {
   width: 100%;
   display: flex;
@@ -42,21 +52,45 @@ header {
   width: 375px;
   border: 7px groove gray;
   background-color: #363333;
-  color: #ffe557;
-  font-size: 18px;
   border-left-width: 45px;
   border-left-style: solid;
   border-top-width: 18px;
   border-top-color: #cecece;
   border-radius: 13px;
-  border-left-color: #ff8b28;
+  border-left-color: #ffcaca;
+  position: relative;
+  cursor: pointer;
+}
+.click-container{
+  position: absolute;
+  right: -180px;
+  transform: rotate(72deg);
+  top: 180px;
+
 }
 
-.book-cover > p {
-  margin-top: 90px;
-  font-family: "Arial Narrow Bold", sans-serif;
-  font-size: 36px;
+.click-container > img {
+  height: 150px;
+  width: 225px;
 }
+
+.click-mobile-container{
+    position: absolute;
+    left: 36px;
+    bottom: 108px;
+    border: 4px dashed coral;
+    padding: 7px;
+    border-radius: 18px;
+}
+
+.click-mobile-container > img {
+   transform: rotate(260deg);
+   position: absolute;
+   top: -72px;
+   height: 90px;
+}
+
+
 .inner-book {
   border: 4px solid #363333;
   border-radius: 5px;
@@ -92,7 +126,7 @@ header {
 .page-turner {
   border-radius: 50%;
   position: absolute;
-  background-color: #e8c8ef6e;
+  background-color: #fbf2de61;
   border: none;
   text-align: center;
   vertical-align: middle;
@@ -101,6 +135,13 @@ header {
   font-size: 18px;
   height: 36px;
   width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-turner:hover {
+  background-color: #e8c8ef6e;
 }
 
 .page-turner.left {
@@ -143,11 +184,11 @@ header {
 }
 
 h3 {
-  margin-bottom: 0px;
+  margin: 3px;
 }
 h5 {
-  margin-bottom: 0px;
-  padding-left: 18px;
+  margin: 3px;
+  /*padding-left: 18px;*/
 }
 
 h6 {
@@ -180,16 +221,217 @@ h6 {
 
 p {
   font-weight: 100;
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 0px;
 }
 
 li {
   text-align: start;
 }
+
+.project-images-container{
+    position: relative;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+	padding: 9px;
+}
+
+.image-navigation-container{
+	width: 90%;
+	display: flex;
+	justify-content: space-between;
+	align-self: center;
+	margin-bottom: 10px;
+}
+
+.navigation-button {
+
+    opacity: 1;
+    background-color: lightgrey;
+    color: white;
+    border: none;
+    height: 36px;
+    width: 18px;
+    padding:  3px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.navigation-button:hover {
+	background-color: darkgrey;
+}
+
+.text-section-container {
+	border: 1px solid gray;
+	border-radius: 10px;
+	margin: 3px;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 90%;
+	cursor: pointer;
+	
+
+}
+.text-section-container:hover {
+
+}
+.paragraph-container{
+	display: none;
+	transition: all .3s ease;
+}
+
+.paragraph-container.display{
+	display: inline-block;
+}
+
+.technologies-used-container{
+	display: flex;
+}
+
+.technologies-used-section{
+	width: 50%
+}
+
+.carousel-container{
+	display: flex;
+	min-height: 50%;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 10px;
+	border: 1px solid black;
+}
+.carousel-icon{
+	height: 10px;
+}
+
+.page-turner-icon {
+	height: 18px;
+}
+
+.contact-details-info {
+	padding: 10px;
+	border: 1px solid gray;
+}
+
+.portfolio-image{
+	max-width: 90%;
+}
+
+.doodle-page-container{
+	height: 100%;
+	position: relative;
+	width: 100%;
+        background-color: #fff;
+	padding-top: 10px;
+	overflow: hidden;
+}
+
+.doodle-dot {
+	position: absolute;
+	border-radius: 50%;
+}
+.colors-container-wrapper {
+	width: 100%;
+    	bottom: 36px;
+    	position: absolute;
+	justify-content: center;
+}
+.colors-container {
+    width: 90%;
+    border: 1px solid black;
+    height: 36px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    justify-content: space-around;
+    padding: 3px;
+}
+
+.colour-option-dot {
+	height: 18px;
+	width: 18px;
+	border-radius: 50%;
+	margin-left: 10px;
+	padding: 3px;
+	cursor: pointer;
+}
+
+.clear-doodle-box{
+	border: 1px solid lightblue;
+	color: lightblue;
+	padding: 4px;
+	margin-left: 18px;
+	cursor: pointer;
+}
+
+.doodle-header{
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+.contact-button-container{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 10px;
+    margin-top: 3px;
+}
+
+.contact-button-container > button {
+    background-color: #fffc;
+    padding: 7px;
+    color: #20cde8;
+    border: 2px dashed lightblue;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.dl-cv-button-container{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 10px;
+    margin-top: 3px;
+
+}
+
+.dl-cv-button-container > button {
+    background-color: #fffc;
+    padding: 7px;
+    color: #20cde8;
+    border: 2px dashed lightblue;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.contact-details-info > div{
+	font-weight: 700;
+	padding:3px;
+}
+
+.github-link{
+    text-decoration: none;
+    color: #000;
+}
+
 /* 
  Improve the front-cover: 
  --> Perhaps get an image of something? 
  ----> IS there a website where you can design your own bookcover or something like that. 
 
+
+Improve styling of contact page: 
+
+Include an intro: 
+- speak of them 
+- love Him 
+- connect with meaning 
  */

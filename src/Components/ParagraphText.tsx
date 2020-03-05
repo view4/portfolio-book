@@ -3,28 +3,31 @@ import React, { FunctionComponent } from "react";
 interface Props {
   text: string;
   customStyle?: object;
+
 }
 
 export const ParagraphText: FunctionComponent<Props> = ({
   text,
-  customStyle
+  customStyle,
 }) => (
   <div
-    className="paragraph"
+    className={`paragraph`}
     style={
       customStyle
         ? customStyle
         : {
-            display: "flex",
-            justifyContent: "flex-start",
+            display:"flex",
+            justifyContent: "center",
             width: "90%",
-            padding: "18px",
+            padding: "7px",
             paddingTop: "0px",
             fontSize: "13px",
-            textAlign: "left"
+            textAlign: "left",
+	    margin: "auto",
           }
     }
   >
+
     <p style={customStyle || null}>{text}</p>
   </div>
 );

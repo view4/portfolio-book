@@ -9,9 +9,8 @@ export const SubHeading: FunctionComponent<Props> = ({ subheading }) => (
     className="chapter heading"
     style={{
       display: "flex",
-      justifyContent: "flex-start",
+      justifyContent: "center",
       width: "100%",
-      paddingLeft: "10px"
     }}
   >
     <h5>{subheading}</h5>

@@ -12,8 +12,8 @@ class ContentsPage extends Component<{} | null> {
       <AppContextConsumer>
         {appContext =>
           appContext && (
-            <div className={"contents-item"}>
-              <div onClick={() => appContext.setPageNumber(chapter.pageNumber)}>
+            <div className={"contents-item"} onClick={() => appContext.setPageNumber(chapter.pageNumber)}>
+              <div >
                 {chapter.name}
               </div>
               <div>{chapter.pageNumber}</div>
@@ -26,7 +26,7 @@ class ContentsPage extends Component<{} | null> {
   render() {
     return (
       <div className="contents-page">
-        <ChapterHeading heading="Contents!" />
+        <ChapterHeading heading="Contents" />
         <br />
         {this.renderContents()}
       </div>
