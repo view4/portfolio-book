@@ -23,7 +23,7 @@ class DoodlePage extends Component<{} | null> {
 		colors: ["blue", "pink", "green", "red", "yellow", "purple", "grey"]
 	};
 	componentDidMount() {
-		this.getPosition(document.getElementById("doodle-container"))
+		this.getPosition(document.getElementById("drawBoard"))
 
 	}
 
@@ -43,13 +43,18 @@ class DoodlePage extends Component<{} | null> {
 
 	}
 	addDoodle = (event) => {
-		const { dots, containerX, containerY} = this.state;
+		const { dots, containerX, containerY, activeColor, currentDotSize} = this.state;
+
+		if(event.target !== document.getElementById("drawBoard")  && event.target !== document.getElementById("doodle-dots-container")){
+			return;
+		}
 	
 		let doodleDot = {
 			x: this.getCoordinates(event)[0] - containerX,
 			y: this.getCoordinates(event)[1] - containerY,
-			color: this.state.activeColor,
-			size: this.state.currentDotSize
+			color: activeColor,
+			size: currentDotSize,
+			id: dots.length
 		}
 
 	dots.push(doodleDot)
@@ -83,24 +88,29 @@ class DoodlePage extends Component<{} | null> {
 	this.setState({drawSwitch: "off"})
   }
 
-
-
 	render () {
 		const {dots, colors} = this.state;
 		return(
-			<div className="doodle-page-container" id="doodle-container" onClick={ !isMobile && this.addDoodle} onMouseMove={this.flow} onMouseUp={this.flickOff} onMouseDown={this.flickOn} onTouchStart={this.flickOn} onTouchEnd={this.flickOff} onTouchMove={this.flow}>
+			<div className="doodle-page-container" onClick={ !isMobile && this.addDoodle} onMouseMove={this.flow} onMouseUp={this.flickOff} onMouseDown={this.flickOn} onTouchStart={this.flickOn} onTouchEnd={this.flickOff} onTouchMove={this.flow} id="drawBoard">
 				<h3 className="doodle-header">
 					Fancy A Doodle? 
 				</h3>
-				<div className="doodle-dots-container">
+				<div className="doodle-range-container">
+					<span>-</span> 
+					<input type="range" defaultValue="18" min="10" max="72" onChange={(event) => this.setState({currentDotSize: event.target.value})} />
+					<span>+</span>
+				</div>
+				<div className="doodle-dots-container" id="doodle-dots-container">
 					{dots.map((dot) => (
 						<div className="doodle-dot" style={{
 						backgroundColor: dot.color,
 						top: dot.y + "px",
 						left: dot.x + "px",
-						height: "10px",
-						width: "10px"
-						}}>
+						height: dot.size + "px",
+						width: dot.size + "px"
+						}}
+						key={`key=(${dot.x},${dot.y})${dot.id}`}
+						>
 						</div>
 					))}
 				</div>
@@ -109,7 +119,7 @@ class DoodlePage extends Component<{} | null> {
 						{
 						  colors.map((color) => (
 							<div className={`colour-option-dot ${color}`} style={{ backgroundColor: color}}
-onTouchStart={() => this.setState({activeColor:color})} onClick={() => this.setState({activeColor: color})}></div>
+onTouchStart={() => this.setState({activeColor:color})} onClick={() => this.setState({activeColor: color})} key={`key=${color}`}></div>
 						))} 
 						<div className="clear-doodle-box" onClick={() => this.setState({dots: []})}> clear </div>
 					</div>

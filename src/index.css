@@ -1,3 +1,11 @@
+/*
+<a target="_blank" href="https://icons8.com/icons/set/github">GitHub icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+<a target="_blank" href="https://icons8.com/icons/set/cell-phone">Cell Phone icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+
+*/
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -178,6 +186,10 @@ header {
   padding: 7px;
 }
 
+.contents-item {
+	text-align: left;
+}
+
 .contents-item:hover {
   background-color: #e8c8ef61;
   cursor: pointer;
@@ -185,9 +197,11 @@ header {
 
 h3 {
   margin: 3px;
+  margin-top: 10px;
 }
 h5 {
   margin: 3px;
+  margin-top: 7px;
   /*padding-left: 18px;*/
 }
 
@@ -203,25 +217,16 @@ h6 {
 }
 .contact-page > div {
   text-align: left;
-  margin: 18px;
+  margin: 4px;
 }
 
-.contact-page > div > textarea {
-  height: 180px;
-  width: 360px;
-  margin-top: 10px;
-  margin-left: 19px;
-}
-.contact-page > div > button {
-  margin-left: 19px;
-}
 .paragraph {
   padding-bottom: 0px;
 }
 
 p {
-  font-weight: 100;
-  font-size: 16px;
+  font-weight: 300;
+  font-size: 18px;
   margin-bottom: 0px;
 }
 
@@ -247,11 +252,10 @@ li {
 
 .navigation-button {
 
-    opacity: 1;
-    background-color: lightgrey;
+    background-color: #d3d3d391;
     color: white;
     border: none;
-    height: 36px;
+    height: 100%;
     width: 18px;
     padding:  3px;
 	display: flex;
@@ -261,7 +265,7 @@ li {
 }
 
 .navigation-button:hover {
-	background-color: darkgrey;
+	background-color: #a9a9a9cc;
 }
 
 .text-section-container {
@@ -297,14 +301,16 @@ li {
 
 .carousel-container{
 	display: flex;
-	min-height: 50%;
-	justify-content: space-between;
+	min-height:90%;
 	align-items: center;
 	border-radius: 10px;
 	border: 1px solid black;
+	overflow: hidden;
+	flex-direction: column;
+	padding: 7px;
 }
 .carousel-icon{
-	height: 10px;
+	height: 18px;
 }
 
 .page-turner-icon {
@@ -312,8 +318,8 @@ li {
 }
 
 .contact-details-info {
-	padding: 10px;
-	border: 1px solid gray;
+	padding: 7px;
+	border: 4px dashed #01bffd;
 }
 
 .portfolio-image{
@@ -366,9 +372,10 @@ li {
 	padding: 4px;
 	margin-left: 18px;
 	cursor: pointer;
+	font-weight: 700;
 }
 
-.doodle-header{
+.doodle-header, .doodle-range-container > *{
     user-select: none; /* supported by Chrome and Opera */
    -webkit-user-select: none; /* Safari */
    -khtml-user-select: none; /* Konqueror HTML */
@@ -381,6 +388,7 @@ li {
     right: 0px;
     margin: 10px;
     margin-top: 3px;
+    z-index: 18;
 }
 
 .contact-button-container > button {
@@ -403,7 +411,7 @@ li {
 }
 
 .dl-cv-button-container > button {
-    background-color: #fffc;
+    background-color: #ffffffe6;
     padding: 7px;
     color: #20cde8;
     border: 2px dashed lightblue;
@@ -415,13 +423,78 @@ li {
 .contact-details-info > div{
 	font-weight: 700;
 	padding:3px;
+	color: #01bffd;
 }
 
-.github-link{
+.github-link, .phone-link, .email-link{
     text-decoration: none;
-    color: #000;
+    color: #01bffd;
 }
 
+.doodle-range-container{
+	position: absolute;
+	right: -36px;
+    	top: 72px;
+	padding: 10px;
+	border: 1px solid black;
+	background-color: #fff;
+	z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.doodle-range-container, .doodle-range-container > span {
+	transform: rotate(-90deg);
+	font-weight: 600;
+}
+
+.phone.link{
+	list-style-image: url(images/icons/phone.png);
+}
+
+.phone.link:before{
+
+}
+
+.email.link{
+	list-style-image: url(images/icons/email.png);
+	cursor: pointer;
+}
+
+.github.link{
+	list-style-image: url(images/icons/github.png);
+}
+
+.github-link, .phone-link, .email-link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.displayed-image-container{
+	width: 100%;
+	height: 54%;
+	background-size: cover; 
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: space-between; 
+	align-items: center;
+	background-position: center center;
+	margin-bottom: 10px;
+}
+
+.inner-page-container{
+	max-height: 90%;
+	overflow: scroll;
+}
+
+.contact-name {
+	text-align: center;
+    font-size: 18px;
+    text-decoration: underline;
+    color: #267ad0;
+}
 /* 
  Improve the front-cover: 
  --> Perhaps get an image of something? 

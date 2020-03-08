@@ -5,7 +5,7 @@ import { SubHeading } from "../SubHeading";
 
 
 const bootcampOne =
-  "Genuinely some of the best months were experienced during this course. The course was with a good group of people, with varying levels of experience and we all gained so much through this course. It was fun, it was difficult and it was challenging. It was about twelve hour days and they tried to cram as much into us as possible teaching us - front-end (HTML/CSS, Javascript, Jquery, React & responsive design), back-end (Python, Django, SQL) and git.  ";
+  "Genuinely some of the best months were experienced during this course. The course was with a good group of people, with varying levels of experience and we all gained so much through it. It was fun, it was difficult and it was challenging. It was about twelve hour days and they tried to cram as much into us as possible teaching us - front-end (HTML/CSS, Javascript, Jquery, React & responsive design), back-end (Python, Django, SQL) and git.  ";
 
 
 /*
@@ -25,10 +25,7 @@ Since finishing the course learning new things has become easier and joyful, and
 
 
 const bootcampTwo =
-  "The second half of the bootcamp was a professional internship - time to test the metal, but actually it was way easier than the bootcamp course. The pressure from the course was about twice as much. The main challenges was adapting to the size of the code base, working heavily with other people's code and ensuring code written was of good quality. It was here that experience writing code in a professional setting was gained. On the internship technolgies used include React, React-redux, Flask, SQLAlchemy, Docker, git, Madrill. ";
-/*
-cosnt bootcampThree = "Since finishing the course learning new things has become easier and joyful, and has been a continuous factor on eithr personal or professional projects.";
-*/
+  "The second half of the bootcamp was a professional internship - time to test the metal. Actually the internship was easier than the bootcamp course, the pressure and demand from the course was much more intense. The main challenges was adapting to the size of the code base, working heavily with other people's code and ensuring code written was of good quality. It was here that experience writing code in a professional setting was gained. On the internship technolgies used include React, React-redux, Flask, SQLAlchemy, Docker, git, Madrill. ";
 
 
 const frontEndTechnologies = ["HTML & CSS", "Javascript", "JQuery", "React", "React-Redux", "React-Native"]

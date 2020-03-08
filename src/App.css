@@ -53,5 +53,5 @@
 .book-cover {
   background-image: url("./images/The-Portfolio.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }

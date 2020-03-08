@@ -7,7 +7,7 @@ import { SubHeading } from "../SubHeading";
 // I think short sentences help to keep this engaging. --? This could move to pageMap and be passed as props?
 
 const intro =
-  "As Rome is not built in a day, a good developer is not created overnight. The progress and achievements achieved often comes with struggles and hard work.  ";
+  "As Rome was not built in a day, a good developer is not created overnight. Progress and achievements attained often come with struggles and hard work.";
 
 /* 
 * Fear the L-rd... 
@@ -21,7 +21,7 @@ As Rome is not built in a day, a good developer is not created overnight. The pr
 */ 
 
 const selfTaught =
-  "The beginning was the hardest part. Entering the unknown without much guidance was difficult. However after hours and hours of working through free online content, doing courses and attending multiple meetups, a very solid foundation was created. It became clear how much there was to truly learn.";
+  "The beginning was the hardest part. Entering the unknown without much guidance was difficult. However after hours and hours of working through free online content, doing courses and attending multiple meetups, a very solid foundation was created. It also became clear how much there was to truly learn.";
 
 /* 
 * fear Him 
@@ -83,7 +83,7 @@ class CodingEdOne extends Component<{} | null> {
 		<Expand open={this.state.sectionNumber === 2}> 
 
 			<p>
-			 Shout out to <a href=''>MIT OpenCourseware</a>, <a href=''>FreeCodeCamp</a> and <a href=''>Code wars</a> (which are all free) for helping to learn the basics of HTML, CSS, Javascript, algorithmics, Python and basics of Data Science. </p>
+			 Shout out to <a target="_blank" href='https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00-introduction-to-computer-science-and-programming-fall-2008/'>MIT OpenCourseware</a>, <a target="_blank" href='https://www.freecodecamp.org/fcc70f22894-9009-4800-b637-ce47cd15355e'>FreeCodeCamp</a> and <a target="_blank" href='https://www.codewars.com/users/view4'>Code wars</a> (which are all free) for helping to learn the basics of HTML, CSS, Javascript, algorithmics, Python and basics of Data Science. </p>
 		</Expand>
 	</div>
       </div>

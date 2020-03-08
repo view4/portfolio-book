@@ -4,7 +4,7 @@ import { ParagraphText } from "../ParagraphText";
 import { SubHeading } from "../SubHeading";
 
 const values =
-  "What we find important in Life can determine so much of who we are, how we behave and the decisions we make. It is therefore a good thing to bring such important and fundamental parts of ourselves into the workplace, so that we may bring passion and pride into what we do. Therefore it is also important to work with people who have similarly strong values. ";
+  "What we find important in Life determines so much of who we are, how we behave and the decisions we make. It is therefore a good thing to bring these valuable, fundamental and positive parts of ourselves into the workplace, so that we may bring passion and pride into what we do. It is also important to work with people who have similar values and a positive attitude in the  workplace. ";
 
 
 /*
@@ -13,11 +13,10 @@ const values =
 * Speak of them 
 * Worship Him 
 
-What we find important in Life can determine so much of who we are, how we behave and the decisions we make. It is therefore a good thing to bring such important and fundamental parts of ourselves into the workplace, so that we may bring passion and pride into what we do. Therefore it is also important to work with people who have similarly strong values. 
 
 */
 const likes =
-  "Whilst programming is very fulfilling and enjoyable, so are a lot of other things in Life. Such as writing, which helps to express and organise one's thoughts. As well as cooking, exercising, socialising and listening to music.";
+  "Whilst programming is fulfilling, enjoyable and a primary passion of mine. I do have some passions outside of programming too, such as writing, which can help to express and organise one's thoughts. As well as cooking, exercising, socialising and listening to music.";
 
 /* 
 Is there a way to make this more digestible? Perhaps questions and answers or something like that, or perhaps to make this interactive in some kind of way, therefore promoting some kind of interactivity with the user this seems like it could be a good thing and also make this kind of less rigid. What would be so cool would be to kind of have little circles and when clicked on they kind of expand and fill with the relevant information, this would be awesome but it is not clear of the best way to be doing this. well changing the styling would not be too hard, but having the kind of transition for this may perhaps be a little bit difficult. Also working freelance was awesome but it was also hard, it was enjoyable and it was fun. 
@@ -53,7 +52,6 @@ class AboutMeTwo extends Component<{} | null> {
 
   render() {
     const {sectionNumber} = this.state;
-	console.log(sectionNumber === 1)
     return (
       <div
         style={{

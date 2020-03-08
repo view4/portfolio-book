@@ -51,7 +51,7 @@ const addLink = (link, innerText) => {
 
 // Portfolio Info
 const trooxDescription =
-  " My aim for this project was to completely redo the User Interface (UI) for the App to provide a drastically better design and improved feel. The App itself is a messaging app with a twist, whereby valuable 'troox' are sent to friends or family on special occasions.";
+  " My aim for this project was to completely redo the User Interface (UI) for the App to provide a drastically better design and feel. The App itself is a messaging app with a twist, whereby valuable 'troox' are sent to friends or family on special occasions.";
 const trooxTechnologies = ["React-Native", "React-Redux", "Javascript"];
 const trooxImages = [
   {
@@ -63,7 +63,8 @@ const trooxImages = [
       left: "150px",
       top: "250px",
       zIndex: 3
-    }
+    },
+    isMobile: true
   },
   {
     img: trooxImageTwo,
@@ -73,7 +74,8 @@ const trooxImages = [
       width: "152px",
       left: "270px",
       top: "36px"
-    }
+    },
+    isMobile: true
   },
   {
     img: trooxImageThree,
@@ -82,7 +84,8 @@ const trooxImages = [
       height: "270px",
       width: "152px",
       top: "72px"
-    }
+    },
+    isMobile: true
   }
 ];
 const trooxAvailability = "Available in google play store:"
@@ -100,7 +103,8 @@ const orderPleaseImages = [
       left: "215px",
       top: "54px",
       zIndex: 3
-    }
+    },
+    isMobile: true
   },
   {
     img: orderPleaseTwo,
@@ -111,7 +115,8 @@ const orderPleaseImages = [
       zIndex: 2,
       left: "90px",
       top: "162px"
-    }
+    },
+    isMobile: true
   },
   {
     img: orderPleaseThree,
@@ -121,14 +126,15 @@ const orderPleaseImages = [
       width: "152px",
       top: "242px",
       left: "18px"
-    }
+    },
+    isMobile: true
   }
 ];
 
 const orderPleaseAvailability = "Available via Expo:"
 
 const petwellHouseVetsDescription =
-  "Petwell House, a veterinary practice based in the UK, hired myself to recreate their old-fashioned website with a renewed and sleek design and layout. The new site enables customer registration as well as booking appointments.";
+  "Petwell House, a veterinary practice based in the UK, hired myself to recreate their old-fashioned website with a sleek and new design and layout. The new site enables customer registration as well as booking appointments.";
 const petwellHouseVetsTechnologies = ["WordPress", "CSS3", "Google API"];
 const petwellhousevetsImages = [
   {
@@ -173,7 +179,7 @@ const petwellhousevetsImages = [
 const petwellHouseVetsAvailability = "Available@ http://petwellhousevets.co.uk/";
 
 const fleetonomyDescription =
-  "Involved in multiple aspects of the startup’s platform, performing front-end and back-end tasks. Working with developers with many years of experience and with high expectations for the quality of code, caused a drastic improvement in coding capability. Tasks included developing front-end features, often developing from design. This startup is based in Tel-Aviv, and was mostly involved in working on their dashboard and also with their microservices for the client Jaguar- Land Rover in the UK.";
+  "I was involved in multiple aspects of the startup’s platform, performing front-end and back-end tasks. Working with developers with many years of experience and with high expectations for the quality of code which caused a recognisable improvement in my own coding capability. Tasks included developing front-end features, often developing from design. This startup is based in Tel-Aviv, and was mostly involved in working on their dashboard and also with their microservices for the client Jaguar- Land Rover in the UK.";
 const fleetonomyTechnologies = [
   "React",
   "React-Redux",
@@ -231,36 +237,22 @@ const appleWebPageImages = [
   {
     img: appleImageOne,
     description: "This website was recreated with full device responsiveness so that it would be suitable for mobile as well. ",
-    style: {
-      height: "180px",
-      width: "306px",
-      left: "36px",
-      borderRadius: "7px",
-      //marginTop: "36px"
+    customStyle: {
+		backgroundSize: "100% 72%"
     }
   },
   {
     img: appleImageTwo,
     description: "This project was design focused, not focusing on functionality.",
-    style: {
-      height: "180px",
-      width: "306px",
-      left: "36px",
-      top: "190px",
-      borderRadius: "7px",
-      //marginTop: "36px"
+    customStyle: {
+		backgroundSize: "100% 72%"
     }
   },
   {
     img: appleImageThree,
     description: "The end result was achieved without copying the code of their official site.",
-    style: {
-      height: "180px",
-      width: "306px",
-      left: "36px",
-      top: "378px",
-      borderRadius: "7px",
-      //marginTop: "36px"
+    customStyle: {
+		backgroundSize: "100% 72%"
     }
   }
 ];
@@ -271,37 +263,22 @@ const toDoImages = [
   {
     img: toDoImageOne,
     description: "Displayed here is an expanded item within the list giving full details of the task which was submitted. The web application was split into two different screens.",
-    style: {
-      height: "180px",
-      width: "306px",
-      left: "36px",
-      top: "18px",
-      borderRadius: "7px",
-      //marginTop: "36px"
+    customStyle: {
+		backgroundSize: "100% 72%"
     }
   },
   {
     img: toDoImageTwo,
     description: "The panel for creating a task has several fields which could optionally be filled, including the linking of values to the task and also a description and specifications panel. ",
-    style: {
-      height: "180px",
-      width: "306px",
-      left: "54px",
-      top: "208px",
-      borderRadius: "7px",
-      //marginTop: "36px"
+    customStyle: {
+		backgroundSize: "100% 72%"
     }
   },
   {
     img: toDoImageThree,
     description: "A list of the tasks, here you can see that the status of the task is displayed through colour coding. Each of the tasks could also be fully edited too .",
-    style: {
-      height: "180px",
-      width: "306px",
-      left: "36px",
-      top: "396px",
-      borderRadius: "7px",
-      //marginTop: "36px"
+    customStyle: {
+		backgroundSize: "100% 72%"
     }
   }
 ];

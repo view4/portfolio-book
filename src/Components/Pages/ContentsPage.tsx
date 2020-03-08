@@ -9,7 +9,7 @@ class ContentsPage extends Component<{} | null> {
   private renderContents = () => {
     const contentsArray = Object.values(myContents);
     return contentsArray.map(chapter => (
-      <AppContextConsumer>
+      <AppContextConsumer key={`key=${chapter.name}`}>
         {appContext =>
           appContext && (
             <div className={"contents-item"} onClick={() => appContext.setPageNumber(chapter.pageNumber)}>
