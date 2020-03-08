@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio-book/static/css/main.bb89cac1.chunk.css",
+    "main.css": "/portfolio-book/static/css/main.15a00238.chunk.css",
     "main.js": "/portfolio-book/static/js/main.0cdcd9e4.chunk.js",
     "main.js.map": "/portfolio-book/static/js/main.0cdcd9e4.chunk.js.map",
     "runtime-main.js": "/portfolio-book/static/js/runtime-main.bdfddc25.js",
@@ -8,9 +8,9 @@
     "static/js/2.f31b4536.chunk.js": "/portfolio-book/static/js/2.f31b4536.chunk.js",
     "static/js/2.f31b4536.chunk.js.map": "/portfolio-book/static/js/2.f31b4536.chunk.js.map",
     "index.html": "/portfolio-book/index.html",
-    "precache-manifest.5836d041c4ae21bf83381614dbb00534.js": "/portfolio-book/precache-manifest.5836d041c4ae21bf83381614dbb00534.js",
+    "precache-manifest.85865036a39bd1a033e9af9076ee8bd3.js": "/portfolio-book/precache-manifest.85865036a39bd1a033e9af9076ee8bd3.js",
     "service-worker.js": "/portfolio-book/service-worker.js",
-    "static/css/main.bb89cac1.chunk.css.map": "/portfolio-book/static/css/main.bb89cac1.chunk.css.map",
+    "static/css/main.15a00238.chunk.css.map": "/portfolio-book/static/css/main.15a00238.chunk.css.map",
     "static/js/2.f31b4536.chunk.js.LICENSE": "/portfolio-book/static/js/2.f31b4536.chunk.js.LICENSE",
     "static/media/Benj+sushi.jpg": "/portfolio-book/static/media/Benj+sushi.5cf1b5f8.jpg",
     "static/media/Family.jpg": "/portfolio-book/static/media/Family.441aa419.jpg",
@@ -46,7 +46,7 @@
   "entrypoints": [
     "static/js/runtime-main.bdfddc25.js",
     "static/js/2.f31b4536.chunk.js",
-    "static/css/main.bb89cac1.chunk.css",
+    "static/css/main.15a00238.chunk.css",
     "static/js/main.0cdcd9e4.chunk.js"
   ]
 }
