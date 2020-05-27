@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/portfolio-book/static/css/main.90fc97fb.chunk.css",
-    "main.js": "/portfolio-book/static/js/main.0cdcd9e4.chunk.js",
-    "main.js.map": "/portfolio-book/static/js/main.0cdcd9e4.chunk.js.map",
+    "main.js": "/portfolio-book/static/js/main.b81bd1ed.chunk.js",
+    "main.js.map": "/portfolio-book/static/js/main.b81bd1ed.chunk.js.map",
     "runtime-main.js": "/portfolio-book/static/js/runtime-main.bdfddc25.js",
     "runtime-main.js.map": "/portfolio-book/static/js/runtime-main.bdfddc25.js.map",
     "static/js/2.f31b4536.chunk.js": "/portfolio-book/static/js/2.f31b4536.chunk.js",
     "static/js/2.f31b4536.chunk.js.map": "/portfolio-book/static/js/2.f31b4536.chunk.js.map",
     "index.html": "/portfolio-book/index.html",
-    "precache-manifest.f68467e601848a7ae4314615979a25dd.js": "/portfolio-book/precache-manifest.f68467e601848a7ae4314615979a25dd.js",
+    "precache-manifest.a11e27e4c2930ef7864ad9c1440c7f2b.js": "/portfolio-book/precache-manifest.a11e27e4c2930ef7864ad9c1440c7f2b.js",
     "service-worker.js": "/portfolio-book/service-worker.js",
     "static/css/main.90fc97fb.chunk.css.map": "/portfolio-book/static/css/main.90fc97fb.chunk.css.map",
     "static/js/2.f31b4536.chunk.js.LICENSE": "/portfolio-book/static/js/2.f31b4536.chunk.js.LICENSE",
@@ -22,10 +22,19 @@
     "static/media/apple-two.png": "/portfolio-book/static/media/apple-two.8562e894.png",
     "static/media/apple.png": "/portfolio-book/static/media/apple.a71011b8.png",
     "static/media/click-me.png": "/portfolio-book/static/media/click-me.e2573ded.png",
+    "static/media/dmiOne.png": "/portfolio-book/static/media/dmiOne.efe02ab5.png",
+    "static/media/dmiThree.png": "/portfolio-book/static/media/dmiThree.d27803c9.png",
+    "static/media/dmiTwo.png": "/portfolio-book/static/media/dmiTwo.94cc2cb2.png",
+    "static/media/fitmeOne.png": "/portfolio-book/static/media/fitmeOne.f9bd2541.png",
+    "static/media/fitmeThree.png": "/portfolio-book/static/media/fitmeThree.5b0b6329.png",
+    "static/media/fitmeTwo.png": "/portfolio-book/static/media/fitmeTwo.2a63f8f9.png",
     "static/media/fleetonomy-three.png": "/portfolio-book/static/media/fleetonomy-three.4486f8ac.png",
     "static/media/fleetonomy-two.png": "/portfolio-book/static/media/fleetonomy-two.437e7088.png",
     "static/media/hob-one.png": "/portfolio-book/static/media/hob-one.519133b3.png",
     "static/media/hob-two.png": "/portfolio-book/static/media/hob-two.5ad7e5bb.png",
+    "static/media/myStockOne.png": "/portfolio-book/static/media/myStockOne.42252039.png",
+    "static/media/myStockThree.png": "/portfolio-book/static/media/myStockThree.74dcc63f.png",
+    "static/media/myStockTwo.png": "/portfolio-book/static/media/myStockTwo.b4d151b3.png",
     "static/media/orderPlease-one.png": "/portfolio-book/static/media/orderPlease-one.a7762eae.png",
     "static/media/orderPlease-three.png": "/portfolio-book/static/media/orderPlease-three.addb299e.png",
     "static/media/orderPlease-two.png": "/portfolio-book/static/media/orderPlease-two.c6542847.png",
@@ -47,6 +56,6 @@
     "static/js/runtime-main.bdfddc25.js",
     "static/js/2.f31b4536.chunk.js",
     "static/css/main.90fc97fb.chunk.css",
-    "static/js/main.0cdcd9e4.chunk.js"
+    "static/js/main.b81bd1ed.chunk.js"
   ]
 }

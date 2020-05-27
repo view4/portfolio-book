@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d4cb93f4577ced99e7cde5d69b5d3094",
+    "revision": "28df90bfb0709076054dac29fc424ec4",
     "url": "/portfolio-book/index.html"
   },
   {
-    "revision": "711a43df9cca4a02f676",
+    "revision": "30d67a9e77046f8a31c8",
     "url": "/portfolio-book/static/css/main.90fc97fb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio-book/static/js/2.f31b4536.chunk.js.LICENSE"
   },
   {
-    "revision": "711a43df9cca4a02f676",
-    "url": "/portfolio-book/static/js/main.0cdcd9e4.chunk.js"
+    "revision": "30d67a9e77046f8a31c8",
+    "url": "/portfolio-book/static/js/main.b81bd1ed.chunk.js"
   },
   {
     "revision": "b6dd612a6f30b0af3e16",
@@ -64,6 +64,30 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio-book/static/media/click-me.e2573ded.png"
   },
   {
+    "revision": "efe02ab5024c0b24c6ceac3fe0a15310",
+    "url": "/portfolio-book/static/media/dmiOne.efe02ab5.png"
+  },
+  {
+    "revision": "d27803c984145463216a72d531a71d70",
+    "url": "/portfolio-book/static/media/dmiThree.d27803c9.png"
+  },
+  {
+    "revision": "94cc2cb2c9d96fd46e913f23996966e1",
+    "url": "/portfolio-book/static/media/dmiTwo.94cc2cb2.png"
+  },
+  {
+    "revision": "f9bd254184e67e5b5b7a87fe871dcb8b",
+    "url": "/portfolio-book/static/media/fitmeOne.f9bd2541.png"
+  },
+  {
+    "revision": "5b0b63295a055dd6360ddca12d0c9d40",
+    "url": "/portfolio-book/static/media/fitmeThree.5b0b6329.png"
+  },
+  {
+    "revision": "2a63f8f9dfcc7a26d5d55b0bdcb39509",
+    "url": "/portfolio-book/static/media/fitmeTwo.2a63f8f9.png"
+  },
+  {
     "revision": "4486f8ac167988b0c268ed546e041971",
     "url": "/portfolio-book/static/media/fleetonomy-three.4486f8ac.png"
   },
@@ -78,6 +102,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5ad7e5bbef883c77cde79668c12ff221",
     "url": "/portfolio-book/static/media/hob-two.5ad7e5bb.png"
+  },
+  {
+    "revision": "422520392eade0007c9607f5561760b3",
+    "url": "/portfolio-book/static/media/myStockOne.42252039.png"
+  },
+  {
+    "revision": "74dcc63f17dc88e39a3c79e92192dfb8",
+    "url": "/portfolio-book/static/media/myStockThree.74dcc63f.png"
+  },
+  {
+    "revision": "b4d151b34b3717641c4d93726a1b9888",
+    "url": "/portfolio-book/static/media/myStockTwo.b4d151b3.png"
   },
   {
     "revision": "a7762eaee0a27e4c0c7943429bd3ab37",
