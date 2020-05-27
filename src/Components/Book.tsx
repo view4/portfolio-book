@@ -32,7 +32,7 @@ class Book extends Component<{}, State> {
     let { pageNumber } = this.state;
     pageNumber = pageNumber + num;
 
-    if (pageNumber >= 1 && pageNumber <= 24) {
+    if (pageNumber >= 1 && pageNumber <= 30) {
       this.setState({ pageNumber: this.state.pageNumber + num });
     }
   };
@@ -86,7 +86,7 @@ class Book extends Component<{}, State> {
 
 	{ !isMobile && (
 	<div className="contact-button-container">
-		<button onClick={() => this.setState({pageNumber: 23, isOpen: true})}>
+		<button onClick={() => this.setState({pageNumber: 29, isOpen: true})}>
 			Contact Me
 		</button>
 	</div>)

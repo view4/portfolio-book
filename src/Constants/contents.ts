@@ -17,10 +17,10 @@ export const contents = {
   },
   nonProfessionalProjects: {
     name: "Personal Development Projects",
-    pageNumber: 15
+    pageNumber: 21
   },
   contactPage: {
     name: "Contact Me",
-    pageNumber: 23
+    pageNumber: 29
   }
 };

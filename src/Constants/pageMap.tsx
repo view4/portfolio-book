@@ -41,6 +41,20 @@ const tvImageThree = require("../images/tv-three.png");
 const teachingsImageOne = require("../images/hob-one.png");
 const teachingsImageTwo = require("../images/hob-two.png");
 
+const fitMeImageOne = require("../images/fitmeOne.png");
+const fitMeImageTwo = require("../images/fitmeTwo.png");
+const fitMeImageThree = require("../images/fitmeThree.png");
+
+const myStockImageOne = require("../images/myStockOne.png");
+const myStockImageTwo = require("../images/myStockTwo.png");
+const myStockImageThree = require("../images/myStockThree.png");
+
+const dmiImageOne = require("../images/dmiOne.png");
+const dmiImageTwo = require("../images/dmiTwo.png");
+const dmiImageThree = require("../images/dmiThree.png");
+
+
+
 const addLink = (link, innerText) => {
 	return ""
 	return(
@@ -358,6 +372,147 @@ const teachingsImages = [
   }
 ];
 
+
+const fitMeDescription = 
+  `A project to connect the fitness industry with individuals looking to improve their personal fitness. Catering for gyms/ studios, personal trainers, therapists and nutritionists and fitness classes it provides a selection of options suitable for a plethora of people. Solely developed and most of the design done by myself.`;
+
+const fitMeTechnologies = ["NodeJS", "Express", "Postgres", "React"];
+
+const fitMeImages = [
+  {
+    img: fitMeImageOne,
+    description: "The website is in place to be launching very soon, so watch this space :)",
+    style: {
+      height: "180px",
+      width: "306px",
+      left: "54px",
+      top: "72px",
+      borderRadius: "7px",
+      //marginTop: "36px"
+    }
+  },
+  {
+    img: fitMeImageTwo,
+    description: "A choice of soloutions for your fitness needs!",
+    style: {
+      height: "180px",
+      width: "306px",
+      left: "18px",
+      top: "252px",
+      borderRadius: "7px",
+      //marginTop: "36px"
+    }
+  },
+  {
+    img: fitMeImageThree,
+    description: "Find the right class for you nearby",
+    style: {
+      height: "180px",
+      width: "306px",
+      left: "18px",
+      top: "252px",
+      borderRadius: "7px",
+      //marginTop: "36px"
+    }
+  }
+];
+
+const myStockDescription = 
+  `An intimate and personal prototype based app developed using expo. The essence of this is to be creating and utilising a back office stock app suitably aimed for a small business with special features including downloading pdf documents with details for all products all from within the mobile app! `;
+
+const myStockTechnologies = ["Expo", "React-Native", "Firebase"];
+
+const myStockImages = [
+  {
+    img: myStockImageOne,
+    description: "Ability to enter new products ...",
+    style: {
+      height: "180px",
+      width: "306px",
+      left: "54px",
+      top: "72px",
+      borderRadius: "7px",
+      //marginTop: "36px"
+    },
+    isMobile: true
+  },
+  {
+    img: myStockImageTwo,
+    description: "Download a pdf document of the inventory...",
+    style: {
+      height: "180px",
+      width: "306px",
+      left: "18px",
+      top: "252px",
+      borderRadius: "7px",
+      //marginTop: "36px"
+    },
+    isMobile: true
+  },
+  {
+    img: myStockImageThree,
+    description: "Product overview ",
+    style: {
+      height: "180px",
+      width: "306px",
+      left: "18px",
+      top: "252px",
+      borderRadius: "7px",
+      //marginTop: "36px"
+    },
+    isMobile: true
+  },
+];
+
+
+const dmiDescription = 
+  `Professional website for a professional individual. This website was set up for an individual’s career divergence to be working more independently, something which is personally valued very much. `;
+
+const dmiTechnologies = ["Bootstrap", "HTML/CSS"];
+
+const dmiImages = [
+  {
+    img: dmiImageOne,
+    description: "Clean and well developed website a fellow independent worker",
+    style: {
+      height: "180px",
+      width: "306px",
+      left: "54px",
+      top: "72px",
+      borderRadius: "7px",
+      //marginTop: "36px"
+    }
+  },
+  {
+    img: dmiImageTwo,
+    description: "Host of soloutions available.",
+    style: {
+      height: "180px",
+      width: "306px",
+      left: "18px",
+      top: "252px",
+      borderRadius: "7px",
+      //marginTop: "36px"
+    }
+  },
+  {
+    img: dmiImageThree,
+    description: "Nurture growth. ",
+    style: {
+      height: "180px",
+      width: "306px",
+      left: "18px",
+      top: "252px",
+      borderRadius: "7px",
+      //marginTop: "36px"
+    }
+  }
+];
+
+
+
+
+
 const teachingsAvailability = "Javascript Code available @ https://github.com/view4/Connecting-with-values";
 
 export const pageMap = {
@@ -382,6 +537,43 @@ export const pageMap = {
   7: {
     component: (
       <ProjectPageOne
+        title="FitMe"
+        description={fitMeDescription}
+        technologies={fitMeTechnologies}
+      />
+    )
+  },
+  8: {
+    component: <ProjectPageTwo images={fitMeImages} />
+  },
+  9: {
+    component: (
+      <ProjectPageOne
+        title="MyStock"
+        description={myStockDescription}
+        technologies={myStockTechnologies}
+      />
+    )
+  },
+  10: {
+    component: <ProjectPageTwo images={myStockImages} />
+  },
+  11: {
+    component: (
+      <ProjectPageOne
+        title="DMI Accountantcy"
+        description={dmiDescription}
+        technologies={dmiTechnologies}
+
+      />
+    )
+  },
+  12: {
+    component: <ProjectPageTwo images={dmiImages} />
+  },
+  13: {
+    component: (
+      <ProjectPageOne
         title="Troox"
         description={trooxDescription}
         technologies={trooxTechnologies}
@@ -389,10 +581,10 @@ export const pageMap = {
       />
     )
   },
-  8: {
+  14: {
     component: <ProjectPageTwo images={trooxImages} />
   },
-  9: {
+  15: {
     component: (
       <ProjectPageOne
         title="Cheque Please!"
@@ -402,10 +594,10 @@ export const pageMap = {
       />
     )
   },
-  10: {
+  16: {
     component: <ProjectPageTwo images={orderPleaseImages} />
   },
-  11: {
+  17: {
     component: (
       <ProjectPageOne
         title="Petwell House Vets"
@@ -416,10 +608,10 @@ export const pageMap = {
       />
     )
   },
-  12: {
+  18: {
     component: <ProjectPageTwo images={petwellhousevetsImages} />
   },
-  13: {
+  19: {
     component: (
       <ProjectPageOne
         title="Fleetonomy"
@@ -428,10 +620,10 @@ export const pageMap = {
       />
     )
   },
-  14: {
+  20: {
     component: <ProjectPageTwo images={fleetonomyImages} />
   },
-  15: {
+  21: {
     component: (
       <ProjectPageOne
         title="Recreating the Apple landing page"
@@ -440,10 +632,10 @@ export const pageMap = {
       />
     )
   },
-  16: {
+  22: {
     component: <ProjectPageTwo images={appleWebPageImages} />
   },
-  17: {
+  23: {
     component: (
       <ProjectPageOne
         title="To Do App"
@@ -453,10 +645,10 @@ export const pageMap = {
       />
     )
   },
-  18: {
+  24: {
     component: <ProjectPageTwo images={toDoImages} />
   },
-  19: {
+  25: {
     component: (
       <ProjectPageOne
         title="Tv Guide"
@@ -466,10 +658,10 @@ export const pageMap = {
       />
     )
   },
-  20: {
+  26: {
     component: <ProjectPageTwo images={tvImages} />
   },
-  21: {
+  27: {
     component: (
       <ProjectPageOne
         title="Heart of a belief"
@@ -479,13 +671,13 @@ export const pageMap = {
       />
     )
   },
-  22: {
+  28: {
     component: <ProjectPageTwo images={teachingsImages} />
   },
-  23: {
+  29: {
     component: <ContactMePage />
   },
-  24: {
+  30: {
     component: <DoodlePage />
   }
 };
