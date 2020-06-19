@@ -18,6 +18,9 @@ class Page extends Component<Props> {
 
     return (
       <div className="page" style={isMobile ? { width: "100%" } : null}>
+        <div className={"top-bg-page"}/>
+        <div className={"top-bg-page"}/>
+        <div className={"top-bg-page"}/>
         {this.renderPageContent()}
         <div className="page-footer">
           {pageNumber !== 1 &&(!(pageNumber % 2 == 0) || isMobile ? (

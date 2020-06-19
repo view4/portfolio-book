@@ -83,7 +83,7 @@ class CodingEdOne extends Component<{} | null> {
 		<Expand open={this.state.sectionNumber === 2}> 
 
 			<p>
-			 Shout out to <a target="_blank" href='https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00-introduction-to-computer-science-and-programming-fall-2008/'>MIT OpenCourseware</a>, <a target="_blank" href='https://www.freecodecamp.org/fcc70f22894-9009-4800-b637-ce47cd15355e'>FreeCodeCamp</a> and <a target="_blank" href='https://www.codewars.com/users/view4'>Code wars</a> (which are all free) for helping to learn the basics of HTML, CSS, Javascript, algorithmics, Python and basics of Data Science. </p>
+			 Shout out to <a className={"grat-link"} target="_blank" href='https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00-introduction-to-computer-science-and-programming-fall-2008/'>MIT OpenCourseware</a>, <a className={"grat-link"} target="_blank" href='https://www.freecodecamp.org/fcc70f22894-9009-4800-b637-ce47cd15355e'>FreeCodeCamp</a> and <a className={"grat-link"} target="_blank" href='https://www.codewars.com/users/view4'>Code wars</a> (which are all free) for helping to learn the basics of HTML, CSS, Javascript, algorithmics, Python and basics of Data Science. </p>
 		</Expand>
 	</div>
       </div>

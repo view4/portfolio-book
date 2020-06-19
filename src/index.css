@@ -5,22 +5,17 @@
 
 
 */
-
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  margin: 0px;
 }
+
 .App {
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("./images/plain.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -55,17 +50,19 @@ header {
 } */
 
 /* Outer book */
+.book {
+ box-shadow: 10px 10px 18px #7c7c7c42;
+}
+
 .book-cover {
-  height: 600px;
-  width: 375px;
-  border: 7px groove gray;
-  background-color: #363333;
-  border-left-width: 45px;
+  border: 7px groove #cecece;
+  background-color: #fbf2deab;
+  border-left-width: 36px;
   border-left-style: solid;
   border-top-width: 18px;
-  border-top-color: #cecece;
+  border-top: 18px double #cecece;
   border-radius: 13px;
-  border-left-color: #ffcaca;
+  border-left-color: #f38282c9;
   position: relative;
   cursor: pointer;
 }
@@ -116,7 +113,7 @@ header {
   flex-direction: column;
   position: relative;
   padding: "20px";
-  background-color: #fbf2de61;
+  background-color: #ead9a60f;
 }
 
 .page-index {
@@ -149,7 +146,7 @@ header {
 }
 
 .page-turner:hover {
-  background-color: #e8c8ef6e;
+  background-color: #bebebe18;;
 }
 
 .page-turner.left {
@@ -178,11 +175,10 @@ header {
 .contents-item {
   display: flex;
   justify-content: space-between;
-  border: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
   margin: 18px;
   font-weight: 400;
   font-size: 18px;
-  border-radius: 18px;
   padding: 7px;
 }
 
@@ -191,8 +187,13 @@ header {
 }
 
 .contents-item:hover {
-  background-color: #e8c8ef61;
+  background-color: #e3d1e613;;
   cursor: pointer;
+}
+
+.grat-link {
+  text-decoration: none;
+  font-style: italic;
 }
 
 h3 {
@@ -202,7 +203,6 @@ h3 {
 h5 {
   margin: 3px;
   margin-top: 7px;
-  /*padding-left: 18px;*/
 }
 
 h6 {
@@ -304,8 +304,6 @@ li {
 	display: flex;
 	min-height:90%;
 	align-items: center;
-	border-radius: 10px;
-	border: 1px solid black;
 	overflow: hidden;
 	flex-direction: column;
 	padding: 7px;
@@ -319,8 +317,7 @@ li {
 }
 
 .contact-details-info {
-	padding: 7px;
-	border: 4px dashed #01bffd;
+  padding: 7px;
 }
 
 .portfolio-image{
@@ -396,10 +393,15 @@ li {
     background-color: #fffc;
     padding: 7px;
     color: #20cde8;
-    border: 2px dashed lightblue;
+    border: none;
     border-radius: 10px;
     cursor: pointer;
     font-weight: 800;
+  font-size: 16px;
+}
+
+.contact-button-container > button:hover {
+  color: #20a0e8;
 }
 
 .dl-cv-button-container{
@@ -497,6 +499,19 @@ li {
     text-decoration: underline;
     color: #267ad0;
 }
+
+.bg-page {
+  height: 99%;
+  border: 1px solid gray;
+  margin: 0.7px;
+}
+
+.top-bg-page {
+ /* width: 99%;
+  border: 0.7px solid gray;
+  height: 0.3px;*/
+}
+
 /* 
  Improve the front-cover: 
  --> Perhaps get an image of something? 

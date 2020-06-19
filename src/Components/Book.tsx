@@ -45,14 +45,16 @@ class Book extends Component<{}, State> {
     this.setState({ pageNumber: num });
   };
 
-  handleDownloadPress = () => {
-	const link = document.createElement('a');
-	link.href = `../Gabriel_Morris_CV.pdf`;
-	document.body.appendChild(link);
-	link.click();
-	document.body.removeChild(link);
+  private renderBgPages = (num:any) => {
 
-  }
+    return(
+      <>
+         {
+           Array(Math.round(num)).fill(<div className="bg-page" />)
+         }
+      </>
+    )
+  };
 
   render() {
     const contextValue = {
@@ -60,6 +62,7 @@ class Book extends Component<{}, State> {
     };
 
     const { isOpen, pageNumber } = this.state;
+
     return (
       <AppContextProvider value={contextValue}>
         <div className="book">
@@ -70,6 +73,7 @@ class Book extends Component<{}, State> {
               className="inner-book"
               style={isMobile ? mobileBookStyle : null}
             >
+              {this.renderBgPages(pageNumber / 4) }
               <Page
                 handleClick={num => this.turnPage(num)}
                 pageNumber={pageNumber}
@@ -80,6 +84,8 @@ class Book extends Component<{}, State> {
                   pageNumber={pageNumber + 1}
                 />
               ) : null}
+
+              {this.renderBgPages((30 - pageNumber) / 4) }
             </div>
           )}
         </div>
@@ -92,15 +98,6 @@ class Book extends Component<{}, State> {
 	</div>)
 	}
 
-	{ /*  !isMobile && (
-	<div className="dl-cv-button-container">
-		<a href="../Gabriel_Morris_CV.pdf" download>
-		<button onClick={() => null /*this.handleDownloadPress}>
-			Download CV
-		</button>
-		</a>
-	</div>)
-	*/}
       </AppContextProvider>
     );
   }
