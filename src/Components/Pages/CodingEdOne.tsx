@@ -7,7 +7,7 @@ import { SubHeading } from "../SubHeading";
 // I think short sentences help to keep this engaging. --? This could move to pageMap and be passed as props?
 
 const intro =
-  "As Rome was not built in a day, a good developer is not created overnight. Progress and achievements attained often come with struggles and hard work.";
+  '"Rome was not built in a day" and a good developer is not created overnight. Progress and achievement attained often came with struggle and hard work.';
 
 /* 
 * Fear the L-rd... 
@@ -21,7 +21,7 @@ As Rome is not built in a day, a good developer is not created overnight. The pr
 */ 
 
 const selfTaught =
-  "The beginning was the hardest part. Entering the unknown without much guidance was difficult. However after hours and hours of working through free online content, doing courses and attending multiple meetups, a very solid foundation was created. It also became clear how much there was to truly learn.";
+  "The beginning was probably the hardest part. Entering the unknown without much guidance was difficult. However after hours and hours of working through free online content, doing courses and attending multiple meetups, a fairly solid foundation was created. It also became clear how much there was to truly learn, and that often the best way to grow is through independent learning.";
 
 /* 
 * fear Him 
@@ -73,7 +73,7 @@ class CodingEdOne extends Component<{} | null> {
         <ParagraphText text={intro} />
 	
 	<div className={"text-section-container"} onClick={() => this.toggleSectionDisplay(1) }>
-		<SubHeading subheading="Self-taught Experience" />
+		<SubHeading subheading="Self-Taught Experience" />
 		<Expand open={this.state.sectionNumber === 1}> 
 			<ParagraphText text={selfTaught} />
 		</Expand>
@@ -83,7 +83,7 @@ class CodingEdOne extends Component<{} | null> {
 		<Expand open={this.state.sectionNumber === 2}> 
 
 			<p>
-			 Shout out to <a className={"grat-link"} target="_blank" href='https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00-introduction-to-computer-science-and-programming-fall-2008/'>MIT OpenCourseware</a>, <a className={"grat-link"} target="_blank" href='https://www.freecodecamp.org/fcc70f22894-9009-4800-b637-ce47cd15355e'>FreeCodeCamp</a> and <a className={"grat-link"} target="_blank" href='https://www.codewars.com/users/view4'>Code wars</a> (which are all free) for helping to learn the basics of HTML, CSS, Javascript, algorithmics, Python and basics of Data Science. </p>
+			 Thanks to <a className={"grat-link"} target="_blank" href='https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00-introduction-to-computer-science-and-programming-fall-2008/'>MIT OpenCourseware</a>, <a className={"grat-link"} target="_blank" href='https://www.freecodecamp.org/fcc70f22894-9009-4800-b637-ce47cd15355e'>FreeCodeCamp</a> and <a className={"grat-link"} target="_blank" href='https://www.codewars.com/users/view4'>Code wars</a> (which are all free) for helping to learn the basics of HTML, CSS, Javascript, algorithmics, Python and basics of Data Science. </p>
 		</Expand>
 	</div>
       </div>

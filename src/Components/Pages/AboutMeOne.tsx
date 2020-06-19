@@ -16,7 +16,7 @@ const tzachiAndI = require("../../images/Tzahi_and_I.jpg");
 
 const imagesArray = [benjiAtSushi, myFam, nateAndI, token, tzachiAndI];
 const SnippetOfMyStory =
-  "Despite gaining a lot from university, after graduating, it was time for change and a new challenge. This change, and challenge, came in the form of learning to code. After many hours of independent learning, some internship experience an intensive bootcamp and a few freelance projects it is time for the next challenge, the next job.";
+  "Despite gaining a lot from university, upon graduating, it was time for change and a new challenge. This change and challenge, came in the form of learning to code. After many hours of independent learning, some internship experience an intensive bootcamp and several freelance projects a mound of professional and technical understanding has been gained, and there's still so much more to learn and create.";
 
 /*
 * cleave to Him 
@@ -73,7 +73,7 @@ class AboutMeOne extends Component<{}, State> {
             backgroundImage: `url(${this.state.slideImage})`
           }}
         ></div>
-        <ChapterHeading heading="About Me:" />
+        <ChapterHeading heading="Introduction:" />
         <ParagraphText text={SnippetOfMyStory} />
       </div>
     );

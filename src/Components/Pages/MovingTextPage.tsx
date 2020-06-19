@@ -8,7 +8,6 @@ interface State {
   isDeleting: Boolean;
 }
 
-
 const period = 360;
 
 class MovingTextPage extends Component<{}, State> {
@@ -22,13 +21,13 @@ class MovingTextPage extends Component<{}, State> {
   state: State = {
     text: "",
     statements: [
-      "Gabriel Morris",
       "a thinker",
       "a do-er",
       "a creator",
       "a developer",
       "a believer",
-      "so much more."
+      "so much more.",
+      "Gabriel Morris"
     ],
     loopNumber: 0,
     isDeleting: false

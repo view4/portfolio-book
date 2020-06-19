@@ -4,7 +4,7 @@ export interface contents {
 }
 export const contents = {
   aboutMe: {
-    name: "About Me",
+    name: "Introduction",
     pageNumber: 3
   },
   codingEducation: {
@@ -20,7 +20,7 @@ export const contents = {
     pageNumber: 21
   },
   contactPage: {
-    name: "Contact Me",
+    name: "Contact Details",
     pageNumber: 29
   }
 };

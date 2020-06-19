@@ -93,7 +93,7 @@ class Book extends Component<{}, State> {
 	{ !isMobile && (
 	<div className="contact-button-container">
 		<button onClick={() => this.setState({pageNumber: 29, isOpen: true})}>
-			Contact Me
+			Contact
 		</button>
 	</div>)
 	}

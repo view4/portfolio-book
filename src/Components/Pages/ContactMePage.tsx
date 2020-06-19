@@ -2,7 +2,13 @@ import React, { Component } from "react";
 import { ChapterHeading } from "../ChapterHeading";
 import { ParagraphText } from "../ParagraphText";
 import { SubHeading } from "../SubHeading";
-const contactText = "I am always looking for a new challenge, for a new oppurtunity to grow through and to learn new things. I enjoy working with good people, and I am looking for the right environment to help me grow to the nect level. If you feel like you know of the right oppurtunity for me then please do reach out to me. ";
+
+
+const contactText = 
+  "Looking to work on good projects with good people, whilst hoping to be involved in new challenges which help to enable growth and learning. Have a special preference for working on projects with good core values and which seek to affect positive change.  "
+/*
+"I am always looking for a new challenge, for a new oppurtunity to grow through and to learn new things. I enjoy working with good people, and I am looking for the right environment to help me grow to the nect level. If you feel like you know of the right oppurtunity for me then please do reach out to me. ";
+*/
 
 class ContactMePage extends Component<{} | null> {
   openEmailer = () => {
@@ -14,9 +20,9 @@ class ContactMePage extends Component<{} | null> {
   render() {
     return (
       <div className="contact-page">
-        <ChapterHeading heading="Contact Me:" />
+        <ChapterHeading heading="Contact Details:" />
         <div>
-          <SubHeading subheading="Do you wish to help write the next part of the book?" />
+          <SubHeading subheading="Do you wish to be a part of the next chapter?" />
 	        <ParagraphText text={contactText} />
         </div>
         <div className="contact-details-info" style={{ paddingLeft: "19px" }}>
