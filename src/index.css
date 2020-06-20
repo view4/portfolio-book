@@ -16,9 +16,77 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
+
+.background-screen-one{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./images/flowers.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+  opacity: 0.36;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+}
+
+.background-screen-two{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./images/flowers.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.36;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+}
+
+/* Review   */
+.review-wrapper {
+  position: absolute; 
+  left: 36px;
+  top: 72px;
+  background-color: #ffffffa7;
+  border-radius: 36px;
+  border: 1px dashed #00000036;
+  transition: opacity 1.8s;
+  opacity: 1;
+}
+
+.review-wrapper.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.review-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 108px;
+
+}
+
+.review-context-text {
+  font-size: 18px;
+  
+}
+
+.review-author-text {
+  font-size: 16px;
+  font-weight: 700;
+}
+.review-left-icon, .review-right-icon {
+  margin: 7px;
+  opacity: 0.36;
+} 
+.review-container:hover * {
+  opacity: 0.9;
+}
+
 
 .circle-image {
   height: 270px;
@@ -52,6 +120,7 @@ header {
 /* Outer book */
 .book {
  box-shadow: 10px 10px 18px #7c7c7c42;
+ z-index: 1;
 }
 
 .book-cover {
