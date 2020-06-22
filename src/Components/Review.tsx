@@ -33,8 +33,13 @@ const Review = () => {
   const [ hide, setHide ] = useState(true);
 
   useEffect(() => {
-    window.setInterval(()=> setHide(false), 1800)
+    setTimeout(callSetHide, 1800)
   },[]);
+
+  const callSetHide = () => {
+    setHide(false)
+    return;
+  } 
 
   const handleNavClick = (indexChange) => {
     setActiveReviewIndex((activeReviewIndex + indexChange) % reviewItems.length);
