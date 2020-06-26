@@ -38,14 +38,14 @@ interface State {
 const GratitudeSect = () => {
   return (
     <p>
-      Thanks to
+      Thanks to {' '}
       <a
         className={"grat-link"}
         target="_blank"
         href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00-introduction-to-computer-science-and-programming-fall-2008/"
       >
         MIT OpenCourseware
-      </a>
+      </a>{", "}
       <a
         className={"grat-link"}
         target="_blank"
@@ -53,7 +53,7 @@ const GratitudeSect = () => {
       >
         FreeCodeCamp
       </a>
-      and
+       {" "}and{" "}
       <a
         className={"grat-link"}
         target="_blank"
@@ -61,7 +61,7 @@ const GratitudeSect = () => {
       >
         Code wars
       </a>{" "}
-      (which are all free) for helping to learn the basics of HTML, CSS,
+      (all free), for helping to learn the basics of HTML, CSS,
       Javascript, algorithmics, Python and basics of Data Science.{" "}
     </p>
   );

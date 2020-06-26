@@ -3,6 +3,7 @@ import { isMobile } from "react-device-detect";
 
 import { FrontCover } from "./FrontCover";
 import Page from "./Page";
+import Reviews from "./Reviews";
 import { pages } from "../Constants/pageMap";
 import Blurb from "./Blurb";
 
@@ -17,7 +18,7 @@ const PageMenu = ({frontCoverClick, contentsClick, contactClick, blurbClick}) =>
   const [ isActive, setIsActive ] = useState(false);
 
   return (
-    <div className="menu-container">
+    <div className={"menu-container" + (isActive ? " active": "")}>
       <div id="menu-button" className={isActive && "active"} onClick={() => setIsActive(!isActive)}>
         <div id="line-1" className={isActive && "active"}></div>
         <div id="line-2" className={isActive && "active"}></div>
@@ -66,7 +67,7 @@ class Book extends Component<{}, State> {
 
     if (pageNumber >= 0) {
       this.setState({ pageNumber: this.state.pageNumber + num });
-    } else if (pageNumber === 0) {
+    } else if (pageNumber < 0) {
       this.setState({ isOpen: false });
     }
   };
@@ -119,6 +120,7 @@ class Book extends Component<{}, State> {
     const contextValue = {
       setPageNumber: this.setPageNumber,
     };
+    const { displayBlurb, isOpen } = this.state;
 
     return (
       <AppContextProvider value={contextValue}>
@@ -132,6 +134,7 @@ class Book extends Component<{}, State> {
             blurbClick={() => this.setState({displayBlurb: true, pageNumber: 40})}
           />
           }
+        {  !isOpen && !displayBlurb && <Reviews /> }
       </AppContextProvider>
     );
   }

@@ -5,22 +5,22 @@ export interface contents {
 export const contents = {
   aboutMe: {
     name: "Introduction",
-    pageNumber: 3
+    pageNumber: 2
   },
   codingEducation: {
     name: "Coding Education",
-    pageNumber: 5
+    pageNumber: 4
   },
   projects: {
     name: "Professional Projects",
-    pageNumber: 7
+    pageNumber: 6
   },
   nonProfessionalProjects: {
     name: "Personal Development Projects",
-    pageNumber: 21
+    pageNumber: 20
   },
   contactPage: {
     name: "Contact Details",
-    pageNumber: 29
+    pageNumber: 28
   }
 };

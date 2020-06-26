@@ -11,7 +11,7 @@ const ReviewAuthor = ({ name, relation }) => (
   </div>
 );
 
-const Review = ({ review, position }) => {
+const Review = ({ review, index }) => {
   const [hide, setHide] = useState(true);
 
   useEffect(() => {
@@ -26,11 +26,13 @@ const Review = ({ review, position }) => {
   return (
     <div
       className={"review-wrapper" + (hide ? " hide" : " open")}
-      style={{
+      style={{ left: "7vw", top: (22 * (index+1))+ "vh"
+
+	/*
         top: position.top && position.top,
         left: position.left && position.left,
         right: position.right && position.right,
-        bottom: position.bottom && position.bottom,
+        bottom: position.bottom && position.bottom,*/
       }}
     >
       <div className={"review-container"}>

@@ -8,7 +8,7 @@ const BlurbDescription = () => {
   return (
     <>
       <p>
-          The decision to be freelancing is because of difficulties in an office setting, from a desire to break the norm, and not to be stuck in the same place, in the same chair all day. It came from wanting to do things 'my' way and this is something which is fundamentally important, creative freedom, independence and pride in the work.
+          {content.blurb.text}
       </p>
     </>
   );
@@ -16,7 +16,7 @@ const BlurbDescription = () => {
 
 
 const BlurbReviews = () => {
-    return <>
+    return <div className={"blurb-reviews-wrapper"}>
     {
     content.reviews.map((review, i) => (
         <div>
@@ -26,14 +26,16 @@ const BlurbReviews = () => {
     )
     )}
 
-    </>
+    </ div>
 }
 
 const Blurb = ({ handleClick }) => {
   return (
     <div className={"blurb-wrapper"} onClick={() => handleClick()}>
-      <BlurbDescription />
-      <BlurbReviews />
+      <div className={"blurb-inner-wrapper"}>
+        <BlurbDescription />
+        <BlurbReviews />
+      </div>
     </div>
   );
 };

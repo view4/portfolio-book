@@ -36,7 +36,9 @@ export const ProjectPageOne: FunctionComponent<Props> = ({
 
 	return (
   <div>
-    <SubHeading subheading={title} />
+    { //<SubHeading subheading={title} />
+    }
+    <h2 className={"project-title"}>{title}</h2>
     <ParagraphText text={description} />
     <div className={"text-section-container"} onClick={() => setDisplay(!display)}>
 	    <SubHeading subheading={"Technologies Used"} />

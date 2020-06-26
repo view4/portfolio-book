@@ -3,13 +3,26 @@ import React, { Component } from "react";
 const Navigation = ({ setIndex }) => {
   return (
     <>
-      <button className="navigation-button" onClick={() => setIndex(-1)}>
+      <button 
+        className="navigation-button"
+        onClick={
+          (e) => {
+            e.stopPropagation();
+            setIndex(-1);
+         }}>
         <img
           className="carousel-icon"
           src={require("../../images/icons/backward_white_icon.png")}
         />
       </button>
-      <button className="navigation-button" onClick={() => setIndex(1)}>
+      <button 
+        className="navigation-button" 
+        onClick={
+          (e) => {
+            e.stopPropagation();
+            setIndex(-1);
+         }}>
+      >
         <img
           className="carousel-icon"
           src={require("../../images/icons/forward_white_icon.png")}
@@ -50,9 +63,11 @@ const ExpandedView = ({ isMobile, image, setIndex, text, close }) => {
               e.stopPropagation();
             }}
           >
-            <Navigation setIndex={(indexChange) => setIndex(indexChange)} />
+            {//<Navigation setIndex={(indexChange) => setIndex(indexChange)} />
+	    }
           </div>
-          <Description text={text} />
+          {//<Description text={text} />
+          }
         </div>
       </div>
     </div>

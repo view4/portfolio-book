@@ -1,16 +1,16 @@
 {
 
     "about-me": {
-        "snippet": "Despite gaining a lot from university, upon graduating, it was time for change and a new challenge. This change and challenge, came in the form of learning to code. After many hours of independent learning, some internship experience an intensive bootcamp and several freelance projects a mound of professional and technical understanding has been gained, and there's still so much more to learn and create.",
-         "values": "That which is valued in Life can determine so much of ourselves. It is personally felt important to bring such fundamental parts of ourselves into everything we do, including our work. Doing so can encourage passion, pride and fulfillment ",
-         "likes": "Whilst programming is fulfilling, enjoyable and a primary passion, other hobbies include - writing, cooking, exercising, socialising and listening to music."
+        "snippet": "Despite gaining much from university, after graduating it was time for change and a new challenge. This partially came in the form of learning to code. After many hours of independent learning, some internship experience an intensive bootcamp and several freelance projects, a mound of professional and technical understanding has been gained- and there's still so much more to learn and create.",
+         "values": "That which is valued in Life can determine so much of who we are. It is personally felt important to bring such fundamental parts of ourselves into everything we do, including our work. Doing so can encourage passion, pride and fulfillment ",
+         "likes": "Whilst programming is enjoyable, fulfilling and a personal passion, other hobbies include - writing, cooking, exercising, socialising and listening to music."
     },
 
     "education": {
         "intro": " \"Rome was not built in a day\" and a good developer is not created overnight. Progress and achievement attained often came with struggle and hard work.",
         "selfTaught":   "The beginning was probably the hardest part. Entering the unknown without much guidance was difficult. However after hours and hours of working through free online content, doing courses and attending multiple meetups, a fairly solid foundation was created. It also became clear how much there was to truly learn, and that often the best way to grow is through independent learning.",
-        "bootcamp":   "This course was great. It was fun, it was difficult, it was stressfull and challenging. On the course was with a great group of people and we all learnt and gained so much through it. The days were long about ten to twelve hours and they tried to cram as much into us as possible teaching us - front-end (HTML/CSS, Javascript, Jquery, React & responsive design), back-end (Python, Django, SQL) and git.  ",
-        "internship":   "The second half of the bootcamp was a professional internship, gaving a real taste to the industry. Main challenges were adapting to the size of the code base, working heavily with other people's code and maintaining high quality code. During these two months experience writing code in a professional setting was gained. Internship technolgies used include React, React-redux, Flask, SQLAlchemy, Docker, Git, Madrill. ",
+        "bootcamp":   "The course was great. It was fun, it was difficult, it was stressfull, it was challenging all rolled into one. The days were long about ten to twelve hours onsite and they tried to cram as much into us as possible teaching us - front-end (HTML/CSS, Javascript, Jquery, React & responsive design), back-end (Python, Django, SQL) and git. There were some great people and we all learnt and gained so much through it.  ",
+        "internship":   "The second half of the bootcamp was a professional internship, gaving a real taste of the industry. The main challenges were adapting to the size of the code base, working heavily with other people's code and maintaining high quality code. During these two months, experience writing code in a professional setting was gained. Internship technolgies used include React, React-redux, Flask, SQLAlchemy, Docker, Git, Madrill. ",
         "front-end-technologies": ["HTML & CSS", "Javascript", "JQuery", "React", "React-Redux", "React-Native"],
         "back-end-technologies": ["Python", "Java", "Flask", "Django", "SQL", "Firebase"]
     },
@@ -20,7 +20,7 @@
 
     "projects": {
       "troox": {
-        "description":   " My aim for this project was to completely redo the User Interface (UI) for the App to provide a drastically better design and feel. The App itself is a messaging app with a twist, whereby valuable 'troox' are sent to friends or family on special occasions.",
+        "description":   " The aim of this project was to implement a complete overhaul of the app design to provide a better user interface (UI). The App itself is a messaging app with a twist, whereby valuable 'troox' are sent to friends or family on special occasions.",
         "technologies": ["React-Native", "React-Redux", "Javascript"],
         "availability": "Available in google play store:",
         "images": [
@@ -77,7 +77,7 @@
         ] 
       },
       "fleetonomy": {
-        "description":" I was involved in multiple aspects of the startup’s platform, performing front-end and back-end tasks. Working with developers with many years of experience and with high expectations for the quality of code which caused a recognisable improvement in my own coding capability. Tasks included developing front-end features, often developing from design. This startup is based in Tel-Aviv, and was mostly involved in working on their dashboard and also with their microservices for the client Jaguar- Land Rover in the UK.",
+        "description":" Being involved in multiple aspects of the startup’s platform, performing front-end and back-end tasks provided a better understanding of systems with a large code infrastructure. Working with developers with many years of experience and with high standards for the quality of code triggered a recognisable improvement in coding capability. Tasks included developing front-end features, often developing from design. This startup is based in Tel-Aviv, and was mostly involved in working on their dashboard and also with their microservices for the client Jaguar- Land Rover in the UK.",
         "technologies": ["React", "React-Redux", "Docker", "Python", "Flask", "Mandrill"],
         "availability": "Not available",
         "images": [
@@ -207,7 +207,7 @@
       },
 
       "dmi": {
-        "description":" Professional website for a professional individual. This website was set up for an individual’s career divergence to be working more independently, something which is personally valued very much.",
+        "description":" Professional website for an individual who is taking the great step towards providing his services to the public more independently - something which is personally deeply valued.",
         "technologies": ["Bootstrap", "HTML/CSS"],
         "availability": "Coming soon...",
         "images": [
@@ -236,7 +236,7 @@
             "index": 1,
             "position": {
               "top": "72vh",
-              "right": "10vw"
+              "left": "7vw"
             }
           },
           {
@@ -245,8 +245,8 @@
             "relation": "Imaginary person",
             "index": 2,
             "position": {
-              "top": "18vh",
-              "left": "18vh"
+              "top": "44vh",
+              "left": "7vw"
             }
           },
           {
@@ -256,10 +256,13 @@
             "index": 3,
             "position": {
               "top": "18vh",
-              "right": "18vh"
+              "left": "7vw"
             }
           }
-    ]
+    ],
+  "blurb": {
+     "text": "The decision to freelance was partially born from difficulties adapting to an office setting, but also paralleled by a deep universal desire to break the norm and not to be stuck in the same place, or the same chair all day. It came from wanting to do things 'my' way and this is something which is fundamentally important, alongside creative freedom, independence and the ability to take pride in work."
+   }
 
     
     

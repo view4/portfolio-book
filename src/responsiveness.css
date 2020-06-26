@@ -1,3 +1,4 @@
+
 @media only screen and (max-height: 600px) {
   body {
 
@@ -5,7 +6,7 @@
   .book-cover {
 	height: 450px;
 	width: 282px;
-  }
+  }s
   .inner-book{
     height: 504px;
     width: 774px;
