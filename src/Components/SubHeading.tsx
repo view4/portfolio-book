@@ -5,14 +5,7 @@ interface Props {
 }
 
 export const SubHeading: FunctionComponent<Props> = ({ subheading }) => (
-  <div
-    className="chapter heading"
-    style={{
-      display: "flex",
-      justifyContent: "center",
-      width: "100%",
-    }}
-  >
+  <div className="chapter heading">
     <h5>{subheading}</h5>
   </div>
 );

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { ChapterHeading } from "../ChapterHeading";
 import { isMobile } from "react-device-detect";
 
 interface State {
@@ -39,6 +38,7 @@ class DoodlePage extends Component<{} | null> {
     natesArray = [x, y];
     return natesArray;
   };
+
   addDoodle = (event) => {
     const {
       dots,
@@ -149,9 +149,8 @@ class DoodlePage extends Component<{} | null> {
             <div
               className="clear-doodle-box"
               onClick={() => this.setState({ dots: [] })}
-            >
-              {" "}
-              clear{" "}
+            >  
+              clear
             </div>
           </div>
         </div>

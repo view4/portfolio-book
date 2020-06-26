@@ -3,6 +3,7 @@ import { isMobile } from "react-device-detect";
 
 import { FrontCover } from "./FrontCover";
 import Page from "./Page";
+import { pages } from "../Constants/pageMap";
 
 interface State {
   pageNumber: number;
@@ -25,14 +26,14 @@ const mobileBookStyle = {
 class Book extends Component<{}, State> {
   state = {
     isOpen: false,
-    pageNumber: 1,
+    pageNumber: 0,
   };
 
   private turnPage = (num: number) => {
     let { pageNumber } = this.state;
     pageNumber = pageNumber + num;
 
-    if (pageNumber >= 1 && pageNumber <= 30) {
+    if (pageNumber >= 1 && pageNumber <= pages.length) {
       this.setState({ pageNumber: this.state.pageNumber + num });
     }
   };

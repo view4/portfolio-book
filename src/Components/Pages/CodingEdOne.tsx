@@ -4,7 +4,7 @@ import { ChapterHeading } from "../ChapterHeading";
 import { ParagraphText } from "../ParagraphText";
 import { SubHeading } from "../SubHeading";
 
-import content from "../content/content.json";
+import content from "../../content/content.json";
 
 /* 
 
@@ -15,7 +15,7 @@ MORE PRAISE!
 * cleave to Him 
 * Speak of them 
 
-*/ 
+*/
 
 /*
 
@@ -29,47 +29,81 @@ The beginning was the hardest part in learning to code, entering the unknown wit
 
 Shout out to MIT OpenCourseware, FreeCodeCamp and Code wars (which are all free) for helping to learn the basics of HTML, CSS, Javascript, algorithmics, Python and basics of Data Science. 
 
-*/ 
+*/
+
 interface State {
   sectionNumber: number;
 }
 
+const GratitudeSect = () => {
+  return (
+    <p>
+      Thanks to
+      <a
+        className={"grat-link"}
+        target="_blank"
+        href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00-introduction-to-computer-science-and-programming-fall-2008/"
+      >
+        MIT OpenCourseware
+      </a>
+      <a
+        className={"grat-link"}
+        target="_blank"
+        href="https://www.freecodecamp.org/fcc70f22894-9009-4800-b637-ce47cd15355e"
+      >
+        FreeCodeCamp
+      </a>
+      and
+      <a
+        className={"grat-link"}
+        target="_blank"
+        href="https://www.codewars.com/users/view4"
+      >
+        Code wars
+      </a>{" "}
+      (which are all free) for helping to learn the basics of HTML, CSS,
+      Javascript, algorithmics, Python and basics of Data Science.{" "}
+    </p>
+  );
+};
 
 class CodingEdOne extends Component<{} | null> {
-	state: State = {
-		sectionNumber: 0
-	}
+  state: State = {
+    sectionNumber: 0,
+  };
 
   toggleSectionDisplay = (sectionNumber) => {
-	if(this.state.sectionNumber === sectionNumber){
-		this.setState({sectionNumber: 0})
-		return;
-	}
-	this.setState({sectionNumber})
-	
-  } 
+    if (this.state.sectionNumber === sectionNumber) {
+      this.setState({ sectionNumber: 0 });
+      return;
+    }
+    this.setState({ sectionNumber });
+  };
 
   render() {
     return (
-      <div className={'coding-ed-one-p-wrapper'}
-      >
+      <div className={"coding-ed-one-p-wrapper"}>
         <ChapterHeading heading="My Coding Education" />
         <ParagraphText text={content.education.intro} />
-	
-	<div className={"text-section-container"} onClick={() => this.toggleSectionDisplay(1) }>
-		<SubHeading subheading="Self-Taught Experience" />
-		<Expand open={this.state.sectionNumber === 1}> 
-			<ParagraphText text={content.education.selfTaught} />
-		</Expand>
-	</div>
-	<div className={"text-section-container"} onClick={() => this.toggleSectionDisplay(2) }>
-			<SubHeading subheading="Thanks to ..." />
-		<Expand open={this.state.sectionNumber === 2}> 
 
-			<p>
-			 Thanks to <a className={"grat-link"} target="_blank" href='https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00-introduction-to-computer-science-and-programming-fall-2008/'>MIT OpenCourseware</a>, <a className={"grat-link"} target="_blank" href='https://www.freecodecamp.org/fcc70f22894-9009-4800-b637-ce47cd15355e'>FreeCodeCamp</a> and <a className={"grat-link"} target="_blank" href='https://www.codewars.com/users/view4'>Code wars</a> (which are all free) for helping to learn the basics of HTML, CSS, Javascript, algorithmics, Python and basics of Data Science. </p>
-		</Expand>
-	</div>
+        <div
+          className={"text-section-container"}
+          onClick={() => this.toggleSectionDisplay(1)}
+        >
+          <SubHeading subheading="Self-Taught Experience" />
+          <Expand open={this.state.sectionNumber === 1}>
+            <ParagraphText text={content.education.selfTaught} />
+          </Expand>
+        </div>
+        <div
+          className={"text-section-container"}
+          onClick={() => this.toggleSectionDisplay(2)}
+        >
+          <SubHeading subheading="Thanks to ..." />
+          <Expand open={this.state.sectionNumber === 2}>
+			  <GratitudeSect />
+		  </Expand>
+        </div>
       </div>
     );
   }

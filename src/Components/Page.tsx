@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { isMobile } from "react-device-detect";
 
-import { pageMap } from "../Constants/pageMap";
+import { pageMap, pages } from "../Constants/pageMap";
 
 interface Props {
   pageNumber: number;
@@ -11,7 +11,7 @@ interface Props {
 class Page extends Component<Props> {
   private renderPageContent = () => {
     const { pageNumber } = this.props;
-    return pageMap[pageNumber] ? pageMap[pageNumber].component : null;
+    return pages[pageNumber] ? pages[pageNumber] : null;
   };
   render() {
     const { pageNumber, handleClick } = this.props;
@@ -32,7 +32,7 @@ class Page extends Component<Props> {
                 />
               </button>
             ) : null)}
-          <div className="page-index">- {pageNumber} -</div>
+          <div className="page-index">- {pageNumber !== 0 && pageNumber} -</div>
           {pageNumber < Object.keys(pageMap).length &&
             (pageNumber % 2 == 0 || isMobile ? (
               <button

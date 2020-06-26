@@ -1,7 +1,32 @@
 import React, { Component } from "react";
-import { isMobile } from "react-device-detect";
+
+const Navigation = ({ setIndex }) => {
+  return (
+    <>
+      <button className="navigation-button" onClick={() => setIndex(-1)}>
+        <img
+          className="carousel-icon"
+          src={require("../../images/icons/backward_white_icon.png")}
+        />
+      </button>
+      <button className="navigation-button" onClick={() => setIndex(1)}>
+        <img
+          className="carousel-icon"
+          src={require("../../images/icons/forward_white_icon.png")}
+        />
+      </button>
+    </>
+  );
+};
+
+const Description = ({text}) => (
+  <div className="image-description-container">
+    <p>{text}</p>
+  </div>
+);
 
 interface Props {
+  isMobile?: boolean | false;
   images: Array<any>;
 }
 
@@ -9,71 +34,54 @@ interface State {
   currentImageIndex: number;
 }
 
-class ProjectPageTwo extends Component<{ images: Array<any> }, State> {
+class ProjectPageTwo extends Component<
+  { images: Array<any>; isMobile?: boolean },
+  State
+> {
   state: State = {
     currentImageIndex: 0,
   };
 
   componentDidUpdate(prevProps) {
-    if (prevProps.images[0].img !== this.props.images[0].img) {
+    if (prevProps.images[0].source !== this.props.images[0].source) {
       this.setState({ currentImageIndex: 0 });
     }
   }
 
   render() {
     const { currentImageIndex } = this.state;
-    const { images } = this.props;
-    const currentImage = images[Math.abs(currentImageIndex % images.length)];
+    const { images, isMobile } = this.props;
+    const imageFileName =
+      images[Math.abs(currentImageIndex % images.length)].source;
+    const image = require("../../images/" + imageFileName + ".png");
+
     return (
       <div className="project-images-container">
         <div className="carousel-container">
           <div
-            className="displayed-image-container"
+            className={
+              "displayed-image-container" + (isMobile ? " -mobile" : " -web")
+            }
             style={{
-              backgroundImage: `url(${currentImage.img})`,
-              backgroundSize: currentImage.isMobile
-                ? "contain"
-                : isMobile
-                ? "100% 90%"
-                : "cover",
-              height: currentImage.isMobile ? "72%" : "54%",
-              ...(currentImage.customStyle && isMobile
-                ? currentImage.customStyle
-                : null),
+              backgroundImage: `url(${image})`,
             }}
             onClick={() =>
               this.setState({ currentImageIndex: currentImageIndex + 1 })
             }
           >
-            <button
-              className="navigation-button"
-              onClick={() =>
-                this.setState({ currentImageIndex: currentImageIndex - 1 })
+            <Navigation
+              setIndex={(indexChange) =>
+                this.setState({
+                  currentImageIndex: currentImageIndex + indexChange,
+                })
               }
-            >
-              <img
-                className="carousel-icon"
-                src={require("../../images/icons/backward_white_icon.png")}
-              />
-            </button>
-            <button
-              className="navigation-button"
-              onClick={() =>
-                this.setState({ currentImageIndex: currentImageIndex + 1 })
-              }
-            >
-              <img
-                className="carousel-icon"
-                src={require("../../images/icons/forward_white_icon.png")}
-              />
-            </button>
+            />
           </div>
-
-          <div className="image-description-container">
-            <p>
-              {images[Math.abs(currentImageIndex % images.length)].description}
-            </p>
-          </div>
+          <Description
+            text={
+              images[Math.abs(currentImageIndex % images.length)].description
+            }
+          />
         </div>
       </div>
     );

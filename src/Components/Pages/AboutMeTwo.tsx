@@ -3,7 +3,7 @@ import Expand from "react-expand-animated";
 import { ParagraphText } from "../ParagraphText";
 import { SubHeading } from "../SubHeading";
 
-import content from "../content/content.json";
+import content from "../../content/content.json";
 
 /*  PRAISE! Please let this be for good and for love and for Life, and a as a means of connecting with God and with goodness as well. 
 * cleave to Him 

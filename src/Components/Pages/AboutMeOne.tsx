@@ -1,12 +1,12 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import { ChapterHeading } from "../ChapterHeading";
 import { ParagraphText } from "../ParagraphText";
 
-import content from "../content/content.json";
+import content from "../../content/content.json";
 
 interface State {
-  slideImage: string;
-  currentImageIndex: number;
+  image: string;
+  index: number;
 }
 
 const benjiAtSushi = require("../../images/Benj+sushi.jpg");
@@ -16,8 +16,12 @@ const nateAndI = require("../../images/Nate+I.jpg");
 const token = require("../../images/Token.jpg");
 const tzachiAndI = require("../../images/Tzahi_and_I.jpg");
 
-const imagesArray = [benjiAtSushi, myFam, nateAndI, token, tzachiAndI];
+const images = [benjiAtSushi, myFam, nateAndI, token, tzachiAndI];
 
+
+const Slide = ({image}) => {
+  return <div className="circle-image" style={{ backgroundImage: `url(${image})`}}/>
+}
 /*
 PRAISE!! A
 
@@ -33,48 +37,32 @@ PRAISE!! A
 
 class AboutMeOne extends Component<{}, State> {
   state: State = {
-    slideImage: benjiAtSushi,
-    currentImageIndex: 0
+    image: benjiAtSushi,
+    index: 0
   };
   interval: any;
 
   componentDidMount() {
-    this.changeSlide();
+    this.interval = setInterval(() => this.changeSlide(), 3500)
   }
 
   private changeSlide = () => {
-    let { slideImage, currentImageIndex } = this.state;
-    currentImageIndex++;
-    currentImageIndex =
-      currentImageIndex >= imagesArray.length ? 0 : currentImageIndex;
-    slideImage = imagesArray[currentImageIndex];
-
-    this.setState({ slideImage, currentImageIndex });
-    this.interval = setTimeout(this.changeSlide, 3500);
+    const { index } = this.state
+    const newIndex = index + 1;
+    this.setState({
+      index: newIndex,
+      image: images[newIndex % images.length] 
+    })
   };
 
   componentWillUnmount() {
-    clearTimeout(this.interval);
+    clearInterval(this.interval);
   }
 
   render() {
     return (
-      <div
-	className="inner-page-container"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          paddingTop: "20px"
-        }}
-      >
-        <div
-          className="circle-image"
-          id="slide"
-          style={{
-            backgroundImage: `url(${this.state.slideImage})`
-          }}
-        ></div>
+      <div className="inner-page-container">
+        <Slide image={this.state.image}/>
         <ChapterHeading heading="Introduction:" />
         <ParagraphText text={content["about-me"].snippet} />
       </div>

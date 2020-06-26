@@ -1,0 +1,267 @@
+{
+
+    "about-me": {
+        "snippet": "Despite gaining a lot from university, upon graduating, it was time for change and a new challenge. This change and challenge, came in the form of learning to code. After many hours of independent learning, some internship experience an intensive bootcamp and several freelance projects a mound of professional and technical understanding has been gained, and there's still so much more to learn and create.",
+         "values": "That which is valued in Life can determine so much of ourselves. It is personally felt important to bring such fundamental parts of ourselves into everything we do, including our work. Doing so can encourage passion, pride and fulfillment ",
+         "likes": "Whilst programming is fulfilling, enjoyable and a primary passion, other hobbies include - writing, cooking, exercising, socialising and listening to music."
+    },
+
+    "education": {
+        "intro": " \"Rome was not built in a day\" and a good developer is not created overnight. Progress and achievement attained often came with struggle and hard work.",
+        "selfTaught":   "The beginning was probably the hardest part. Entering the unknown without much guidance was difficult. However after hours and hours of working through free online content, doing courses and attending multiple meetups, a fairly solid foundation was created. It also became clear how much there was to truly learn, and that often the best way to grow is through independent learning.",
+        "bootcamp":   "This course was great. It was fun, it was difficult, it was stressfull and challenging. On the course was with a great group of people and we all learnt and gained so much through it. The days were long about ten to twelve hours and they tried to cram as much into us as possible teaching us - front-end (HTML/CSS, Javascript, Jquery, React & responsive design), back-end (Python, Django, SQL) and git.  ",
+        "internship":   "The second half of the bootcamp was a professional internship, gaving a real taste to the industry. Main challenges were adapting to the size of the code base, working heavily with other people's code and maintaining high quality code. During these two months experience writing code in a professional setting was gained. Internship technolgies used include React, React-redux, Flask, SQLAlchemy, Docker, Git, Madrill. ",
+        "front-end-technologies": ["HTML & CSS", "Javascript", "JQuery", "React", "React-Redux", "React-Native"],
+        "back-end-technologies": ["Python", "Java", "Flask", "Django", "SQL", "Firebase"]
+    },
+    "contact": {
+        "text":   "Looking to work on good projects with good people, whilst hoping to be involved in new challenges which help to enable growth and learning. Have a special preference for working on projects with good core values and which seek to affect positive change. "
+    },
+
+    "projects": {
+      "troox": {
+        "description":   " My aim for this project was to completely redo the User Interface (UI) for the App to provide a drastically better design and feel. The App itself is a messaging app with a twist, whereby valuable 'troox' are sent to friends or family on special occasions.",
+        "technologies": ["React-Native", "React-Redux", "Javascript"],
+        "availability": "Available in google play store:",
+        "images": [
+          {
+            "source": "troox-one",
+            "description": "The new message list, an important screen within the app, displays all incoming and outgoing messages. Each message item displays various pieces of information. The UI for this was totally recreated by myself. "
+          },
+          {
+            "source": "troox-two",
+            "description": "Implemented the new design for all screens to provide an overall improved experience for the user by providing a much better feel to this page and all others. "
+          },
+          {
+            "source": "troox-three",
+            "description": "Various attachment types could be added to the message - such as, videos, images, voice notes." 
+          }
+        ] 
+      },
+      "order-please": {
+        "description":" This App, is a specialised app to improve the restaurant experience by automatically splitting the bill for clients and also easing the ordering process for waiters/ waitresses. Many features were included in the app including a QR scanning capability and SMS message generation. Just to note, as this app was a prototype design was not a priority which is why the outline is so basic. The app was dual facing, making it usable for either the customer or the waiter and consisted of multiple screens. ",
+        "technologies": ["React-Native", "Expo", "Firebase"],
+        "availability": "Available in google play store:",
+        "images": [
+          {
+            "source": "orderPlease-one",
+            "description": "The menu was displayed, which was retrieved from a firebase database and displayed within the screen here. "
+          },
+          {
+            "source": "orderPlease-two",
+            "description": "As this project was a prototype, design was not a requirement, despite having a basic layout the app was fully functional. You can see here the amount spent by each member of the table."
+          },
+          {
+            "source": "orderPlease-three",
+            "description": "Clicking on the send bill button (previous image), directs the waiter/waitress to a premade SMS message with the bill for the customers on the table dynamically created. "
+          }
+        ] 
+      },
+      "petwell-house": {
+        "description":  "Petwell House, a veterinary practice based in the UK, hired myself to recreate their old-fashioned website with a sleek and new design and layout. The new site enables customer registration as well as booking appointments." ,
+        "technologies": ["WordPress", "CSS3", "Google API"],
+        "availability": "Available in google play store:",
+        "images": [
+          {
+            "source": "petwell-two",
+            "description": "The vets provided a range of services and as visible here they are described in flip over panels, displayed upon hovering over. The panels flipped with a smooth animation for a good user experience. "
+          },
+          {
+            "source": "petwell-three",
+            "description": "The booking an appointment was enabled on the site through using contact forms available via WordPress plugins. Submitting the form sends an email message to the vets using google API’s with all of the relevant information within."
+          },
+          {
+            "source": "petwell-four",
+            "description": "The team at Petwell House deserved a proper website to as a testament to the good work they are doing."
+          }
+        ] 
+      },
+      "fleetonomy": {
+        "description":" I was involved in multiple aspects of the startup’s platform, performing front-end and back-end tasks. Working with developers with many years of experience and with high expectations for the quality of code which caused a recognisable improvement in my own coding capability. Tasks included developing front-end features, often developing from design. This startup is based in Tel-Aviv, and was mostly involved in working on their dashboard and also with their microservices for the client Jaguar- Land Rover in the UK.",
+        "technologies": ["React", "React-Redux", "Docker", "Python", "Flask", "Mandrill"],
+        "availability": "Not available",
+        "images": [
+          {
+            "source": "fleetonomy-one",
+            "description": "Fleetonomy, an exciting startup, is fast making a name for themselves in the automotive industry."
+          },
+          {
+            "source": "fleetonomy-two",
+            "description": "Here is a screenshot example for one of the pages I created for their dashboard. This screen enabled filtering by date and search queries as well. "
+          },
+          {
+            "source": "fleetonomy-three",
+            "description": "Feel free to read about some of the great things they are doing in the automotive industry." 
+          }
+        ]
+      },
+      "apple": {
+        "description":" This was a prime example of displaying the appropriate skills for developing from design because, whilst also implementing and perfecting the ‘bread and butter’ of web development - HTML and CSS.",
+        "technologies": ["HTML", "CSS"],
+        "availability": "Code available upon request:" ,
+        "images": [
+          {
+            "source": "apple",
+            "description": "This website was recreated with full device responsiveness so that it would be suitable for mobile as well. "
+          },
+          {
+            "source": "apple-two",
+            "description": "This project was design focused, not focusing on functionality."
+          },
+          {
+            "source": "apple-three",
+            "description": "The end result was achieved without copying the code of their official site." 
+          }
+        ] 
+      },
+      "to-do": {
+        "description": "Get things done! Using this To-do app, which utilises full CRUD functionality, and is well scaled for growth. More than a standard To-Do app, provides linking of justifications for the task via values and beliefs to help actualise their success.",
+        "technologies": ["React", "Firebase", "HTML", " CSS"],
+        "availability": "Code available @ https://github.com/view4/todolist",
+        "images": [
+          {
+            "source": "todo-one",
+            "description": "Displayed here is an expanded item within the list giving full details of the task which was submitted. The web application was split into two different screens."
+          },
+          {
+            "source": "todo-two",
+            "description": "The panel for creating a task has several fields which could optionally be filled, including the linking of values to the task and also a description and specifications panel. "
+          },
+          {
+            "source": "todo-three",
+            "description": "A list of the tasks, here you can see that the status of the task is displayed through colour coding. Each of the tasks could also be fully edited too ." 
+          }
+        ] 
+      },
+      "tv-app": {
+        "description":" My aim for this project was to completely redo the User Interface (UI) for the App to provide a drastically better design and feel. The App itself is a messaging app with a twist, whereby valuable 'troox' are sent to friends or family on special occasions.",
+        "technologies": ["React-Native", "React-Redux", "Javascript"],
+        "availability": "Code available @ https://github.com/view4/tvsearch; live app available upon request",
+        "images": [
+          {
+            "source": "tv-one",
+            "description": "The information for the app was retrieved using an API call, and the data was successfully parsed from the JSON to be displayed appropriately for the client. "
+          },
+          {
+            "source": "tv-two",
+            "description": "Also included in the app was search capability which communicated with the backend. The data was filtered according to the user input to return the proper information."
+          },
+          {
+            "source": "tv-three",
+            "description": "All episodes from each TV series was visible within the app, complete with all information associated with the episode. "
+          }
+        ] 
+      },
+      "heart-of-a-belief": {
+        "description":  "So this was built for fun and experimentation. The app provides a way to record various teachings derived from a belief. Life can feel overwhelming and anxiety-inducing attempting to connect with moral can often help to alleviate such pressure. The interesting thing about the code here is it is entirely dynamically rendered within Javascript Classes using only vanilla Javascript." ,
+        "technologies": ["VanillaJS", "OOP", "Firebase", "HTML/CSS"],
+        "availability": "Available upon requests:",
+        "images": [
+          {
+            "source": "hob-one",
+            "description": "The teachings for each study of the belief is displayed here, organised into three different directions, with relevant teachings split into four different domains - actions, thoughts ..."          },
+          {
+            "source": "hob-two",
+            "description": "The input of the study of the belief is shown here. Entries are stored in a Firebase database."
+          }
+        ] 
+      },
+      "fitme": {
+        "description":" A project to connect the fitness industry with individuals looking to improve their personal fitness. Catering for gyms/ studios, personal trainers, therapists and nutritionists and fitness classes it provides a selection of options suitable for a plethora of people. Solely developed and most of the design done by myself.",
+        "technologies": ["NodeJS", "Express", "Postgres", "React", "Firebase", "Javascript", "HTML/CSS", "Digital Ocean"],
+        "availability": "Available in google play store:",
+        "images": [
+          {
+            "source": "fitmeOne",
+            "description": "The website is in place to be launching very soon, so watch this space :)"
+          },
+          {
+            "source": "fitmeTwo",
+            "description": "A choice of soloutions for your fitness needs!"
+          },
+          {
+            "source":"fitmeThree",
+            "description": "Find the right class for you nearby" 
+          }
+        ] 
+      },
+
+      "myStock": {
+        "description":" An intimate and personal prototype based app developed using expo. The essence of this is to be creating and utilising a back office stock app suitably aimed for a small business with special features including downloading pdf documents with details for all products all from within the mobile app!",
+        "technologies": ["Expo", "React-Native", "Firebase", "Javascript"],
+        "availability": "Not available",
+        "images": [
+          {
+            "source": "myStockOne",
+            "description": "Ability to enter new products ..."
+          },
+          {
+            "source": "myStockTwo",
+            "description": "Download a pdf document of the inventory..."
+          },
+          {
+            "source": "myStockThree",
+            "description": "Product overview " 
+          }
+        ] 
+      },
+
+      "dmi": {
+        "description":" Professional website for a professional individual. This website was set up for an individual’s career divergence to be working more independently, something which is personally valued very much.",
+        "technologies": ["Bootstrap", "HTML/CSS"],
+        "availability": "Coming soon...",
+        "images": [
+          {
+            "source": "dmiOne",
+            "description": "Clean and well developed website a fellow independent worker"
+          },
+          {
+            "source": "dmiTwo",
+            "description": "Host of soloutions available."
+          },
+          {
+            "source": "dmiThree",
+            "description": "Nurture growth. "
+          }
+        ] 
+      }
+        
+    },
+    
+    "reviews": [
+        {
+            "author": "Ellush",
+            "text": " Lorem ipsum, it was nice, lala .... ",
+            "relation": "Flatmate",
+            "index": 1,
+            "position": {
+              "top": "72vh",
+              "right": "10vw"
+            }
+          },
+          {
+            "author": "Leah",
+            "text": " Lorem ipsum, it was okay, lala .... ",
+            "relation": "Imaginary person",
+            "index": 2,
+            "position": {
+              "top": "18vh",
+              "left": "18vh"
+            }
+          },
+          {
+            "author": "Mark",
+            "text": " Lorem ipsum, it was fine, lala .... ",
+            "relation": "Imaginary Person 2",
+            "index": 3,
+            "position": {
+              "top": "18vh",
+              "right": "18vh"
+            }
+          }
+    ]
+
+    
+    
+
+}

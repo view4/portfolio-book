@@ -10,24 +10,7 @@ export const ParagraphText: FunctionComponent<Props> = ({
   text,
   customStyle,
 }) => (
-  <div
-    className={`paragraph`}
-    style={
-      customStyle
-        ? customStyle
-        : {
-            display:"flex",
-            justifyContent: "center",
-            width: "90%",
-            padding: "7px",
-            paddingTop: "0px",
-            fontSize: "13px",
-            textAlign: "left",
-	    margin: "auto",
-          }
-    }
-  >
-
+  <div className={`paragraph`} style={ customStyle && customStyle}>
     <p style={customStyle || null}>{text}</p>
   </div>
 );
