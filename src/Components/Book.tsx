@@ -19,13 +19,13 @@ export const AppContextConsumer = ctxt.Consumer;
 
 const mobileBookStyle = {
   width: "90vw",
-  height: "90vh"
+  height: "90vh",
 };
 
 class Book extends Component<{}, State> {
   state = {
     isOpen: false,
-    pageNumber: 1
+    pageNumber: 1,
   };
 
   private turnPage = (num: number) => {
@@ -45,20 +45,13 @@ class Book extends Component<{}, State> {
     this.setState({ pageNumber: num });
   };
 
-  private renderBgPages = (num:any) => {
-
-    return(
-      <>
-         {
-           Array(Math.round(num)).fill(<div className="bg-page" />)
-         }
-      </>
-    )
+  private renderBgPages = (num: any) => {
+    return <>{Array(Math.round(num)).fill(<div className="bg-page" />)}</>;
   };
 
   render() {
     const contextValue = {
-      setPageNumber: this.setPageNumber
+      setPageNumber: this.setPageNumber,
     };
 
     const { isOpen, pageNumber } = this.state;
@@ -73,31 +66,32 @@ class Book extends Component<{}, State> {
               className="inner-book"
               style={isMobile ? mobileBookStyle : null}
             >
-              {this.renderBgPages(pageNumber / 4) }
+              {this.renderBgPages(pageNumber / 4)}
               <Page
-                handleClick={num => this.turnPage(num)}
+                handleClick={(num) => this.turnPage(num)}
                 pageNumber={pageNumber}
               />
-              {!isMobile ? (
+              {!isMobile && (
                 <Page
-                  handleClick={num => this.turnPage(num)}
+                  handleClick={(num) => this.turnPage(num)}
                   pageNumber={pageNumber + 1}
                 />
-              ) : null}
+              )}
 
-              {this.renderBgPages((30 - pageNumber) / 4) }
+              {this.renderBgPages((30 - pageNumber) / 4)}
             </div>
           )}
         </div>
 
-	{ !isMobile && (
-	<div className="contact-button-container">
-		<button onClick={() => this.setState({pageNumber: 29, isOpen: true})}>
-			Contact
-		</button>
-	</div>)
-	}
-
+        {!isMobile && (
+          <div className="contact-button-container">
+            <button
+              onClick={() => this.setState({ pageNumber: 29, isOpen: true })}
+            >
+              Contact
+            </button>
+          </div>
+        )}
       </AppContextProvider>
     );
   }

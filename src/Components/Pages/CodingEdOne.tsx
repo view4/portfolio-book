@@ -4,26 +4,23 @@ import { ChapterHeading } from "../ChapterHeading";
 import { ParagraphText } from "../ParagraphText";
 import { SubHeading } from "../SubHeading";
 
-// I think short sentences help to keep this engaging. --? This could move to pageMap and be passed as props?
-
-const intro =
-  '"Rome was not built in a day" and a good developer is not created overnight. Progress and achievement attained often came with struggle and hard work.';
+import content from "../content/content.json";
 
 /* 
+
+MORE PRAISE! 
+
 * Fear the L-rd... 
 * six days you shall work, but the seventh day shall be a day of rest, and so there is a notion of rest 
 * cleave to Him 
 * Speak of them 
 
-As Rome is not built in a day, a good developer is not created overnight. The progress and achievements achieved often comes with struggles and hard work. 
-
-
 */ 
 
-const selfTaught =
-  "The beginning was probably the hardest part. Entering the unknown without much guidance was difficult. However after hours and hours of working through free online content, doing courses and attending multiple meetups, a fairly solid foundation was created. It also became clear how much there was to truly learn, and that often the best way to grow is through independent learning.";
+/*
 
-/* 
+
+ANd let some goodness come forth through this and with love and with meaning as well. 
 * fear Him 
 * Help someone with a heavy load 
 * Cleave to Him 
@@ -33,14 +30,6 @@ The beginning was the hardest part in learning to code, entering the unknown wit
 Shout out to MIT OpenCourseware, FreeCodeCamp and Code wars (which are all free) for helping to learn the basics of HTML, CSS, Javascript, algorithmics, Python and basics of Data Science. 
 
 */ 
-const openCourseWare =
-  "So in this module I learned about the fundamentals of Data Science, whilst also being introduced to practical coding skills in Python 2";
-const freecodecamp =
-  "Praise to freecodecamp for providing me with endless hours of practice and free education on the fundamentals of web development.";
-
-const Codewars =
-  "The tough challenges on codewars provided me with correct training to tackle complex coding commonplace in most web-development related endeavours";
-
 interface State {
   sectionNumber: number;
 }
@@ -62,20 +51,15 @@ class CodingEdOne extends Component<{} | null> {
 
   render() {
     return (
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center"
-        }}
+      <div className={'coding-ed-one-p-wrapper'}
       >
         <ChapterHeading heading="My Coding Education" />
-        <ParagraphText text={intro} />
+        <ParagraphText text={content.education.intro} />
 	
 	<div className={"text-section-container"} onClick={() => this.toggleSectionDisplay(1) }>
 		<SubHeading subheading="Self-Taught Experience" />
 		<Expand open={this.state.sectionNumber === 1}> 
-			<ParagraphText text={selfTaught} />
+			<ParagraphText text={content.education.selfTaught} />
 		</Expand>
 	</div>
 	<div className={"text-section-container"} onClick={() => this.toggleSectionDisplay(2) }>

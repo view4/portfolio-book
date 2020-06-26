@@ -3,6 +3,8 @@ import Expand from "react-expand-animated";
 import { ParagraphText } from "../ParagraphText";
 import { SubHeading } from "../SubHeading";
 
+import content from "../content/content.json";
+
 
 const bootcampOne =
   "This course was great. It was fun, it was difficult, it was stressfull and challenging. On the course was with a great group of people and we all learnt and gained so much through it. The days were long about ten to twelve hours and they tried to cram as much into us as possible teaching us - front-end (HTML/CSS, Javascript, Jquery, React & responsive design), back-end (Python, Django, SQL) and git.  ";
@@ -62,13 +64,13 @@ class CodingEdTwo extends Component<{} | null> {
 	<div className={"text-section-container"} onClick={() => this.toggleSectionDisplay(1)}>
 		<SubHeading subheading="The Bootcamp" />
 		<Expand open={this.state.sectionNumber === 1}>
-        		<ParagraphText text={bootcampOne} />
+        		<ParagraphText text={content.education.bootcamp} />
 		</Expand>
 	</div>
 	<div className={"text-section-container"} onClick={() => this.toggleSectionDisplay(2)}>
 		<SubHeading subheading="The Internship" />
 		<Expand open={this.state.sectionNumber === 2}>
-        <ParagraphText text={bootcampTwo} />
+        <ParagraphText text={content.education.internship} />
 		</Expand>
 	</div>
 	<div className={"text-section-container"} onClick={() => this.toggleSectionDisplay(3)}>
@@ -76,14 +78,14 @@ class CodingEdTwo extends Component<{} | null> {
 		<Expand open={this.state.sectionNumber === 3}>
         		<div className="technologies-used-container">
 				<div className="technologies-used-section">
-					{frontEndTechnologies.map(tech=> (
+					{content.education["front-end-technologies"].map(tech=> (
 						<div key={`key${tech}`}>
 							{tech}
 						</div>
 					))}
 				</div>
 				<div className="technologies-used-section">
-					{backEndTechnologies.map(tech=> (
+					{content.education["back-end-technologies"].map(tech=> (
 						<div key={`key${tech}`}>
 							{tech}
 						</div>

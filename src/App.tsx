@@ -1,23 +1,17 @@
 import React from "react";
+
+import Background from "./Components/Background";
+import Reviews from "./Components/Reviews";
 import Book from "./Components/Book";
 import "./App.css";
-
-import Review from "./Components/Review"
 
 //App Rendering
 const App: React.FC = () => {
   return (
     <div className="App">
-      {/*<header>
-         <div className="nav-title">
-          <h5> My portfolio </h5>
-        </div> 
-      </header>*/}
+      <Background />
+      <Reviews />
       <Book />
-      <div  className={"background-screen-one"} />
-      <div  className={"background-screen-two"} />
-      <Review />
-      
     </div>
   );
 };

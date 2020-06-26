@@ -70,13 +70,7 @@ class MovingTextPage extends Component<{}, State> {
   render() {
     return (
       <div className="typewriter-container">
-        <div
-          style={{
-            borderRight: "4px solid black",
-            display: "inline-block",
-	    fontFamily: "monospace"
-          }}
-        >
+        <div className={"moving-text"}>
           I am {this.state.text}
         </div>
       </div>

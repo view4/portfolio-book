@@ -3,7 +3,62 @@ import { isMobile } from "react-device-detect";
 
 import { pageMap } from "../Constants/pageMap";
 
-import "../flip.css"
+interface Props {
+  pageNumber: number;
+  handleClick: (event: any) => void;
+}
+
+class Page extends Component<Props> {
+  private renderPageContent = () => {
+    const { pageNumber } = this.props;
+    return pageMap[pageNumber] ? pageMap[pageNumber].component : null;
+  };
+  render() {
+    const { pageNumber, handleClick } = this.props;
+
+    return (
+      <div className="page" style={isMobile ? { width: "100%" } : null}>
+        {this.renderPageContent()}
+        <div className="page-footer">
+          {pageNumber !== 1 &&
+            (!(pageNumber % 2 == 0) || isMobile ? (
+              <button
+                className="page-turner left"
+                onClick={() => handleClick(isMobile ? -1 : -2)}
+              >
+                <img
+                  className="page-turner-icon"
+                  src={require("../images/icons/backward_icon.png")}
+                />
+              </button>
+            ) : null)}
+          <div className="page-index">- {pageNumber} -</div>
+          {pageNumber < Object.keys(pageMap).length &&
+            (pageNumber % 2 == 0 || isMobile ? (
+              <button
+                className="page-turner right"
+                onClick={() => handleClick(isMobile ? 1 : 2)}
+              >
+                <img
+                  className="page-turner-icon"
+                  src={require("../images/icons/forward_icon.png")}
+                />
+              </button>
+            ) : null)}
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Page;
+
+/*import React, { Component } from "react";
+import { isMobile } from "react-device-detect";
+
+import { pageMap } from "../Constants/pageMap";
+
+//import "../flip.css"
 
 interface Props {
   pageNumber: number;
@@ -42,7 +97,7 @@ class Page extends Component<Props> {
       } else if (newState === false) {
           this.flippedIndex = 999 - this.index
           this.$emit('pageFlip', this.index)
-      }*/
+      }
   }
 
   private renderNextPageContent = () => {
@@ -56,8 +111,8 @@ class Page extends Component<Props> {
     const { flipping } = this.state;
     return (
 
-      <div className={"page-flip-container"+ (flipping ? " flipping" : "")}>
-      <div className={"flipper"}>
+      // <div className={"page-flip-container"+ (flipping ? " flipping" : "")}>
+      {/* <div className={"flipper"}> 
       <div className={"page" + " front" } style={isMobile ? { width: "100%" } : null}>
         {this.renderPageContent()}
         <div className="page-footer">
@@ -66,7 +121,7 @@ class Page extends Component<Props> {
               className="page-turner left"
               onClick={() => this.flipCard(isMobile ? -1 : -2)}
             >
-		<img className="page-turner-icon" src={require("../images/icons/backward_icon.png")}/>
+		       <img className="page-turner-icon" src={require("../images/icons/backward_icon.png")}/>
             </button>
           ) : null)}
           <div className="page-index">- {pageNumber} -</div>
@@ -80,12 +135,12 @@ class Page extends Component<Props> {
           ) : null)}
         </div>
       </div>
-      <div className={"page back"}>
+      {/* <div className={"page back"}>
         {this.renderNextPageContent()
 }
-      </div>
-      </div>
-      </div>
+      </div> 
+      {/* </div> 
+      // </div>
     );
   }
 }
@@ -102,9 +157,10 @@ class Page extends Component<Props> {
 	    </div>
 	  </div> */
 
-                /*this.setState({flipping: true})
-                handleClick(isMobile ? 1 : 2)*/
+/*this.setState({flipping: true})
+                handleClick(isMobile ? 1 : 2)
 
                /* this.setState({flipping: true})
-                handleClick(isMobile ? -1 : -2)*/
+                handleClick(isMobile ? -1 : -2)
 export default Page;
+*/

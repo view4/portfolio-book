@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { ChapterHeading } from "../ChapterHeading";
 import { ParagraphText } from "../ParagraphText";
 
+import content from "../content/content.json";
+
 interface State {
   slideImage: string;
   currentImageIndex: number;
@@ -15,10 +17,10 @@ const token = require("../../images/Token.jpg");
 const tzachiAndI = require("../../images/Tzahi_and_I.jpg");
 
 const imagesArray = [benjiAtSushi, myFam, nateAndI, token, tzachiAndI];
-const SnippetOfMyStory =
-  "Despite gaining a lot from university, upon graduating, it was time for change and a new challenge. This change and challenge, came in the form of learning to code. After many hours of independent learning, some internship experience an intensive bootcamp and several freelance projects a mound of professional and technical understanding has been gained, and there's still so much more to learn and create.";
 
 /*
+PRAISE!! A
+
 * cleave to Him 
 * Let in Consciousness
 * speak of them 
@@ -74,7 +76,7 @@ class AboutMeOne extends Component<{}, State> {
           }}
         ></div>
         <ChapterHeading heading="Introduction:" />
-        <ParagraphText text={SnippetOfMyStory} />
+        <ParagraphText text={content["about-me"].snippet} />
       </div>
     );
   }
