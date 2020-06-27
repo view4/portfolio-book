@@ -19,7 +19,27 @@ const Navigation = ({ setIndex }) => {
   );
 };
 
-const Description = ({text}) => (
+const ExpandedView = ({ isMobile, image }) => {
+  return (
+    <div className={"expanded-view-wrapper"}>
+      <div className={"expanded-view-content"}>
+        <div
+          className={
+            "expanded-image-container" + (isMobile ? " -mobile" : " -web")
+          }
+          style={{
+            backgroundImage: `url(${image})`,
+          }}
+        >
+                  <Navigation setIndex={() => null}/>
+
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Description = ({ text }) => (
   <div className="image-description-container">
     <p>{text}</p>
   </div>
@@ -83,6 +103,7 @@ class ProjectPageTwo extends Component<
             }
           />
         </div>
+        <ExpandedView image={image} isMobile={isMobile}/>
       </div>
     );
   }

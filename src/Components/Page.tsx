@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { isMobile } from "react-device-detect";
 
-import { pageMap, pages } from "../Constants/pageMap";
+import { pages } from "../Constants/pageMap";
 
 interface Props {
   pageNumber: number;
@@ -20,21 +20,26 @@ class Page extends Component<Props> {
       <div className="page" style={isMobile ? { width: "100%" } : null}>
         {this.renderPageContent()}
         <div className="page-footer">
-          {pageNumber !== 1 &&
-            (!(pageNumber % 2 == 0) || isMobile ? (
-              <button
-                className="page-turner left"
-                onClick={() => handleClick(isMobile ? -1 : -2)}
-              >
-                <img
-                  className="page-turner-icon"
-                  src={require("../images/icons/backward_icon.png")}
-                />
-              </button>
-            ) : null)}
-          <div className="page-index">- {pageNumber !== 0 && pageNumber} -</div>
-          {pageNumber < Object.keys(pageMap).length &&
-            (pageNumber % 2 == 0 || isMobile ? (
+          <span>
+            {pageNumber !== 1 &&
+              (pageNumber % 2 == 0 || isMobile ? (
+                <button
+                  className="page-turner left"
+                  onClick={() => handleClick(isMobile ? -1 : -2)}
+                >
+                  <img
+                    className="page-turner-icon"
+                    src={require("../images/icons/backward_icon.png")}
+                  />
+                </button>
+              ) : null)}
+          </span>
+          <div className="page-index">
+            {pageNumber !== 0 && `- ${pageNumber} -`}
+          </div>
+          <span>
+          {pageNumber < pages.length &&
+            (pageNumber % 2 == 1 || isMobile ? (
               <button
                 className="page-turner right"
                 onClick={() => handleClick(isMobile ? 1 : 2)}
@@ -45,6 +50,7 @@ class Page extends Component<Props> {
                 />
               </button>
             ) : null)}
+            </span>
         </div>
       </div>
     );

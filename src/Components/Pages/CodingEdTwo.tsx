@@ -13,6 +13,8 @@ So there is so much meaning and goodness in this, the course was fun and it was 
 - love Him 
 - fear Him 
 
+Please heed the belief and the love and please enable some kind of balance of both because there is meaning in Life and a desire to be living and also serving faith and belief, and so to be managing some level of both as well. 
+
 Genuinely some of the best months were experienced during this course. The course was with a good group of people, with varying levels of experience and we all gained so much through this course. It was fun, it was difficult and it was challenging. It was about twelve hour days and they tried to cram as much into us as possible teaching us - front-end (HTML/CSS, Javascript, Jquery, React & responsive design), back-end (Python, Django, SQL) and git. 
 
 The second half of the bootcamp was a professional internship - time to test the metal, but actually it was way easier than the bootcamp course. The pressure from the course was about twice as much. The main challenges was adapting to the size of the code base, working heavily with other people's code and ensuring code written was of good quality. It was here that experience writing code in a professional setting was gained. On the internship technolgies used include React, React-redux, Flask, SQLAlchemy, Docker, git, Madrill. 
@@ -21,7 +23,6 @@ Since finishing the course learning new things has become easier and joyful, and
 
  In reality it was easier than the bootcamp course, the pressure and demand from the course was much more intense.
 */
-
 interface State {
   sectionNumber: number;
 }
