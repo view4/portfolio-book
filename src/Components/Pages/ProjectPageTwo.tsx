@@ -19,31 +19,45 @@ const Navigation = ({ setIndex }) => {
   );
 };
 
-const ExpandedView = ({ isMobile, image }) => {
-  return (
-    <div className={"expanded-view-wrapper"}>
-      <div className={"expanded-view-content"}>
-        <div
-          className={
-            "expanded-image-container" + (isMobile ? " -mobile" : " -web")
-          }
-          style={{
-            backgroundImage: `url(${image})`,
-          }}
-        >
-                  <Navigation setIndex={() => null}/>
+const Description = ({ text }) => (
+  <div
+    className="image-description-container"
+    onClick={(e) => {
+      e.stopPropagation();
+    }}
+  >
+    <p>{text}</p>
+  </div>
+);
 
+const ExpandedView = ({ isMobile, image, setIndex, text, close }) => {
+  return (
+    <div
+      className={"expanded-view-wrapper"}
+      id={"expanded-wrapper"}
+      onClick={close}
+    >
+      <div className={"expanded-view-content-wrapper"}>
+        <div className={"expanded-view-content" + (isMobile ? "  mobile" : "  web") }>
+          <div
+            className={
+              "expanded-image-container" + (isMobile ? "  mobile" : "  web")
+            }
+            style={{
+              backgroundImage: `url(${image})`,
+            }}
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+          >
+            <Navigation setIndex={(indexChange) => setIndex(indexChange)} />
+          </div>
+          <Description text={text} />
         </div>
       </div>
     </div>
   );
 };
-
-const Description = ({ text }) => (
-  <div className="image-description-container">
-    <p>{text}</p>
-  </div>
-);
 
 interface Props {
   isMobile?: boolean | false;
@@ -52,6 +66,7 @@ interface Props {
 
 interface State {
   currentImageIndex: number;
+  displayExpandedView: boolean;
 }
 
 class ProjectPageTwo extends Component<
@@ -60,6 +75,7 @@ class ProjectPageTwo extends Component<
 > {
   state: State = {
     currentImageIndex: 0,
+    displayExpandedView: false,
   };
 
   componentDidUpdate(prevProps) {
@@ -69,7 +85,7 @@ class ProjectPageTwo extends Component<
   }
 
   render() {
-    const { currentImageIndex } = this.state;
+    const { currentImageIndex, displayExpandedView } = this.state;
     const { images, isMobile } = this.props;
     const imageFileName =
       images[Math.abs(currentImageIndex % images.length)].source;
@@ -85,8 +101,9 @@ class ProjectPageTwo extends Component<
             style={{
               backgroundImage: `url(${image})`,
             }}
-            onClick={() =>
-              this.setState({ currentImageIndex: currentImageIndex + 1 })
+            onClick={
+              () => this.setState({ displayExpandedView: true })
+              //this.setState({ currentImageIndex: currentImageIndex + 1 })
             }
           >
             <Navigation
@@ -103,7 +120,21 @@ class ProjectPageTwo extends Component<
             }
           />
         </div>
-        <ExpandedView image={image} isMobile={isMobile}/>
+        {displayExpandedView && (
+          <ExpandedView
+            setIndex={(indexChange) =>
+              this.setState({
+                currentImageIndex: currentImageIndex + indexChange,
+              })
+            }
+            image={image}
+            isMobile={isMobile}
+            text={
+              images[Math.abs(currentImageIndex % images.length)].description
+            }
+            close={() => this.setState({ displayExpandedView: false })}
+          />
+        )}
       </div>
     );
   }
