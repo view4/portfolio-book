@@ -11,6 +11,8 @@ import content from "../../content/content.json";
 * Speak of them 
 * Worship Him 
 
+Please, please, please help this to bring forth some goodness and meaning and truth. The first few months with this was good and also difficult, but also there is belief of being able to do this better and being able to grow and do some goodness and so please enable some truth and meaning and love and compassion to be coming forth. For there is great and tremendous love in Life. 
+
 
 */
 /* 

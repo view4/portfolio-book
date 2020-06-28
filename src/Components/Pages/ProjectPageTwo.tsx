@@ -22,7 +22,6 @@ const Navigation = ({ setIndex }) => {
             e.stopPropagation();
             setIndex(-1);
          }}>
-      >
         <img
           className="carousel-icon"
           src={require("../../images/icons/forward_white_icon.png")}
@@ -43,36 +42,6 @@ const Description = ({ text }) => (
   </div>
 );
 
-const ExpandedView = ({ isMobile, image, setIndex, text, close }) => {
-  return (
-    <div
-      className={"expanded-view-wrapper"}
-      id={"expanded-wrapper"}
-      onClick={close}
-    >
-      <div className={"expanded-view-content-wrapper"}>
-        <div className={"expanded-view-content" + (isMobile ? "  mobile" : "  web") }>
-          <div
-            className={
-              "expanded-image-container" + (isMobile ? "  mobile" : "  web")
-            }
-            style={{
-              backgroundImage: `url(${image})`,
-            }}
-            onClick={(e) => {
-              e.stopPropagation();
-            }}
-          >
-            {//<Navigation setIndex={(indexChange) => setIndex(indexChange)} />
-	    }
-          </div>
-          {//<Description text={text} />
-          }
-        </div>
-      </div>
-    </div>
-  );
-};
 
 interface Props {
   isMobile?: boolean | false;
@@ -135,7 +104,7 @@ class ProjectPageTwo extends Component<
             }
           />
         </div>
-        {displayExpandedView && (
+        {/* {displayExpandedView && (
           <ExpandedView
             setIndex={(indexChange) =>
               this.setState({
@@ -149,7 +118,7 @@ class ProjectPageTwo extends Component<
             }
             close={() => this.setState({ displayExpandedView: false })}
           />
-        )}
+        )} */}
       </div>
     );
   }

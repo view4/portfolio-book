@@ -107,5 +107,5 @@ export const pages = [
   
   <ContactMePage />,
   
-  <DoodlePage />,
+  //<DoodlePage />,
 ];
