@@ -1,27 +1,28 @@
 import React, { Component } from "react";
+import { AppContextConsumer } from "../Book";
 
 const Navigation = ({ setIndex }) => {
   return (
     <>
-      <button 
+      <button
         className="navigation-button"
-        onClick={
-          (e) => {
-            e.stopPropagation();
-            setIndex(-1);
-         }}>
+        onClick={(e) => {
+          e.stopPropagation();
+          setIndex(-1);
+        }}
+      >
         <img
           className="carousel-icon"
           src={require("../../images/icons/backward_white_icon.png")}
         />
       </button>
-      <button 
-        className="navigation-button" 
-        onClick={
-          (e) => {
-            e.stopPropagation();
-            setIndex(-1);
-         }}>
+      <button
+        className="navigation-button"
+        onClick={(e) => {
+          e.stopPropagation();
+          setIndex(-1);
+        }}
+      >
         <img
           className="carousel-icon"
           src={require("../../images/icons/forward_white_icon.png")}
@@ -41,7 +42,6 @@ const Description = ({ text }) => (
     <p>{text}</p>
   </div>
 );
-
 
 interface Props {
   isMobile?: boolean | false;
@@ -78,26 +78,37 @@ class ProjectPageTwo extends Component<
     return (
       <div className="project-images-container">
         <div className="carousel-container">
-          <div
-            className={
-              "displayed-image-container" + (isMobile ? " -mobile" : " -web")
+          <AppContextConsumer>
+            {(appContext) =>
+              appContext && (
+                <>
+                  <div
+                    className={
+                      "displayed-image-container" +
+                      (isMobile ? " -mobile" : " -web")
+                    }
+                    style={{
+                      backgroundImage: `url(${image})`,
+                    }}
+                    onClick={
+                      (e) => appContext.setDisplayExpandedImage(image)
+                      //() => this.setState({ displayExpandedView: true })
+                      //this.setState({ currentImageIndex: currentImageIndex + 1 })
+                    }
+                  >
+                    <Navigation
+                      setIndex={(indexChange) =>
+                        this.setState({
+                          currentImageIndex: currentImageIndex + indexChange,
+                        })
+                      }
+                    />{" "}
+                  </div>
+                </>
+              )
             }
-            style={{
-              backgroundImage: `url(${image})`,
-            }}
-            onClick={
-              () => this.setState({ displayExpandedView: true })
-              //this.setState({ currentImageIndex: currentImageIndex + 1 })
-            }
-          >
-            <Navigation
-              setIndex={(indexChange) =>
-                this.setState({
-                  currentImageIndex: currentImageIndex + indexChange,
-                })
-              }
-            />
-          </div>
+          </AppContextConsumer>
+
           <Description
             text={
               images[Math.abs(currentImageIndex % images.length)].description

@@ -9,6 +9,9 @@ import Reviews from "./Reviews";
 import { pages } from "../Constants/pageMap";
 import Blurb from "./Blurb";
 import DoodleBoard from "./Pages/DoodlePage";
+import ExpandedImageView from "./ExpandedImageView"
+
+import content from "../content/content.json"
 
 interface State {
   pageNumber: number;
@@ -16,6 +19,9 @@ interface State {
   displayBlurb: boolean;
   isTurning: boolean;
   isTurningBack: boolean;
+  displayDoodleBoard: boolean;
+  displayExpandedImage: boolean;
+  expandedImageFile: string;
 }
 // ----Context---
 
@@ -24,6 +30,7 @@ const PageMenu = ({
   contentsClick,
   contactClick,
   blurbClick,
+  doodleClick
 }) => {
   const [isActive, setIsActive] = useState(false);
 
@@ -44,6 +51,8 @@ const PageMenu = ({
           <li onClick={contentsClick}>Contents</li>
           <li onClick={contactClick}>Contact</li>
           <li onClick={blurbClick}>Blurb</li>
+          <li onClick={doodleClick}>Doodle</li>
+
         </ul>
       </div>
     </div>
@@ -52,6 +61,8 @@ const PageMenu = ({
 
 interface AppContextInterface {
   setPageNumber: (num: any) => void;
+  setDisplayExpandedImage: (string: any) => void;
+
 }
 const ctxt = React.createContext<AppContextInterface | null>(null);
 
@@ -71,6 +82,8 @@ class Book extends Component<{}, State> {
     isTurning: false,
     isTurningBack: false,
     displayDoodleBoard: false,
+    displayExpandedImage: false,
+    expandedImageFile: undefined
   };
 
   private turnPage = (num: number) => {
@@ -100,105 +113,84 @@ class Book extends Component<{}, State> {
     return <>{Array(Math.round(num)).fill(<div className="bg-page" />)}</>;
   };
 
-  // renderInnerBook = () => {
-  //   const { pageNumber, isTurning, isTurningBack } = this.state;
+  renderInnerBook = () => {
+    const { pageNumber, isTurning, isTurningBack } = this.state;
 
-  //   return (
-  //     <FlipPage
-  //       orientation={"horizontal"}
-  //       width={850}
-  //       height={600}
-  //       flipOnTouch={true}
-  //       animationDuration={360}
-  //       perspective={"1000px"}
-  //     >
-  //       {pages.slice(0, pages.length / 2).map((page, i) => (
-  //         /*i % 2 === 0 &&*/ <div
-  //           style={{
-  //             display: "flex",
-  //             width: "100%",
-  //             height: "100%",
-  //           }}
-  //         >
-  //           <Page
-  //             pageNumber={i * 2}
-  //             handleClick={(num) => console.log("page turn")}
-  //           />
-  //           <Page
-  //             pageNumber={i * 2 + 1}
-  //             handleClick={(num) => console.log("page turn")}
-  //           />
-  //         </div>
-  //       ))}
-  //     </FlipPage>
+    return (
+      <FlipPage
+      orientation={"horizontal"}
+      width={850}
+      height={600}
+      flipOnTouch={true}
+      animationDuration={360}
+      perspective={"1000px"}
+      firstComponent={<FrontCover handleClick={() => null} />}
+      lastComponent={<Blurb handleClick={() => null} />}
+      loopForever={false}
+      onPageChange={(pageIndex, direction) => this.setState({pageNumber: pageIndex})}
+    >
+      {pages.slice(0, (pages.length / 2)).map((page, i) => (
+        /*i % 2 === 0 &&*/ <div
+          style={{
+            display: "flex",
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          <Page
+            pageNumber={i * 2}
+            handleClick={(num) => console.log("page turn")}
+          />
+          <Page
+            pageNumber={i * 2 + 1}
+            handleClick={(num) => console.log("page turn")}
+          />
+        </div>
+      ))}
+    </FlipPage>
 
-  //   );
-  // };
+    );
+  };
 
-  // renderBookDisplay = () => {
-  //   const { isOpen, pageNumber, displayBlurb } = this.state;
-  //   if (!isOpen && !displayBlurb) {
-  //     return <FrontCover handleClick={this.openBook} />;
-  //   } else if (displayBlurb || pageNumber >= pages.length) {
-  //     return (
-  //       <Blurb
-  //         handleClick={() =>
-  //           this.setState({ isOpen: false, displayBlurb: false, pageNumber: 0 })
-  //         }
-  //       />
-  //     );
-  //   } else if (0 <= pageNumber && pageNumber < pages.length) {
-  //     return (
-  //       <div className="inner-book" style={isMobile ? mobileBookStyle : null}>
-  //         {this.renderBgPages(pageNumber / 4)}
-  //         {this.renderInnerBook()}
-  //         {this.renderBgPages((30 - pageNumber) / 4)}
-  //       </div>
-  //     );
-  //   }
-  // };
+  renderBookDisplay = () => {
+    const { isOpen, pageNumber, displayBlurb } = this.state;
+    if (!isOpen && !displayBlurb) {
+      return <FrontCover handleClick={this.openBook} />;
+    } else if (displayBlurb || pageNumber >= pages.length) {
+      return (
+        <Blurb
+          handleClick={() =>
+            this.setState({ isOpen: false, displayBlurb: false, pageNumber: 0 })
+          }
+        />
+      );
+    } else if (0 <= pageNumber && pageNumber < pages.length) {
+      return (
+        <div className="inner-book" style={isMobile ? mobileBookStyle : null}>
+          {this.renderBgPages(pageNumber / 4)}
+          {this.renderInnerBook()}
+          {this.renderBgPages((30 - pageNumber) / 4)}
+        </div>
+      );
+    }
+  };
 
   render() {
+
+    const { displayBlurb, expandedImageFile, isOpen, displayDoodleBoard, displayExpandedImage} = this.state;
+
     const contextValue = {
       setPageNumber: this.setPageNumber,
+      displayExpandedImage,
+      setDisplayExpandedImage: (File) => this.setState({displayExpandedImage: true, expandedImageFile: File})
     };
-    const { displayBlurb, isOpen, displayDoodleBoard } = this.state;
 
     return (
       <AppContextProvider value={contextValue}>
-        {displayDoodleBoard && <DoodleBoard />}
+        {displayDoodleBoard && <DoodleBoard close={() => this.setState({displayDoodleBoard: false})}/>}
         <div className="book">
-          {/* {this.renderBookDisplay()} */}
-          <FlipPage
-            orientation={"horizontal"}
-            width={850}
-            height={600}
-            flipOnTouch={true}
-            animationDuration={360}
-            perspective={"1000px"}
-            firstComponent={<FrontCover handleClick={() => null} />}
-            lastComponent={<Blurb handleClick={() => null} />}
-            loopForever={false}
-          >
-            {pages.slice(0, (pages.length / 2)).map((page, i) => (
-              /*i % 2 === 0 &&*/ <div
-                style={{
-                  display: "flex",
-                  width: "100%",
-                  height: "100%",
-                }}
-              >
-                <Page
-                  pageNumber={i * 2}
-                  handleClick={(num) => console.log("page turn")}
-                />
-                <Page
-                  pageNumber={i * 2 + 1}
-                  handleClick={(num) => console.log("page turn")}
-                />
-              </div>
-            ))}
-          </FlipPage>
+           {this.renderBookDisplay()} 
+
         </div>
         {!isMobile && (
           <PageMenu
@@ -220,9 +212,11 @@ class Book extends Component<{}, State> {
             blurbClick={() =>
               this.setState({ displayBlurb: true, pageNumber: 40 })
             }
+            doodleClick={() => this.setState({displayDoodleBoard: true})}
           />
         )}
         {!isOpen && !displayBlurb && <Reviews />}
+        {displayExpandedImage && <ExpandedImageView isMobile={false} image={expandedImageFile} close={()=> this.setState({displayExpandedImage: false})}/>}
       </AppContextProvider>
     );
   }

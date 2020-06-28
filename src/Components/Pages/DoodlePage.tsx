@@ -11,7 +11,11 @@ interface State {
   colors: Array<string>;
 }
 
-class DoodleBoard extends Component<{} | null> {
+interface Props {
+  close: (event: any) => void;
+}
+
+class DoodleBoard extends Component< Props, {}> {
   state: State = {
     dots: [],
     activeColor: "black",
@@ -95,8 +99,8 @@ class DoodleBoard extends Component<{} | null> {
   render() {
     const { dots, colors } = this.state;
     return (
-      <div className={"doodle-board-wrapper"}>
-        <div>
+      <div className={"doodle-board-wrapper"} onClick={this.props.close}>
+        <div onClick={(e) => e.stopPropagation()}>
           <div
             className="doodle-page-container"
             onClick={!isMobile && this.addDoodle}

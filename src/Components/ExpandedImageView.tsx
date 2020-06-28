@@ -1,8 +1,10 @@
 import React from "react";
 
 
-const ExpandedImageView = ({ isMobile, image, setIndex, text, close }) => {
-    return (
+const ExpandedImageView = ({ isMobile, image, close }) => {
+  
+//let imageFile = require("../images/" + image + ".png");
+  return (
       <div
         className={"expanded-view-wrapper"}
         id={"expanded-wrapper"}
