@@ -1,94 +1,119 @@
-
-@media only screen and (max-height: 600px) {
-  body {
-
-  }
+@media only screen and (max-width: 600px) {
   .book-cover {
-	height: 450px;
-	width: 282px;
-  }s
-  .inner-book{
-    height: 504px;
-    width: 774px;
+    height: 54vh;
+    width: 60vw;
+  }
+  .inner-book {
+    height: 82vh;
+    width: 90vw;
+  }
+
+  .inner-book  div {
+	  max-height: 100%;
+  }
+
+  .menu-container {
+	right: calc(50vw - 75px);
+	top: 7px;
   }
   .circle-image {
-	height: 180px;
-	width: 180px;
+    height: 180px;
+    width: 180px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  .blurb-wrapper {
+    max-height: 72vh;
+    max-width: 72vw;
+  }
+
+  .blurb-wrapper p {
+    font-size: 18px;
+  }
+  .displayed-image-container.-web {
+    background-size: contain;
+  }
+
+  .page {
+	  max-width: 50%;
 
   }
 
-
+  .phone-link, .email-link, .github-link {
+	  font-size: 14px;
+  }
 }
 
-
 @media only screen and (max-width: 540px) {
-	.colors-container-wrapper {
-    		bottom: 72px;
-	}
+  .colors-container-wrapper {
+    bottom: 72px;
+  }
 }
 
 @media only screen and (device-width: 768px) {
   /* For general iPad layouts */
-	.contents-item {
-		font-size: 36px;
-	}
+  .contents-item {
+    font-size: 36px;
+  }
 
-	h3{ 
-		font-size: 54px;
-   		letter-spacing: 6.2px;
-	}
+  h3 {
+    font-size: 54px;
+    letter-spacing: 6.2px;
+  }
 
-	p, .technologies-used-section, .tu-container{
-		font-size: 4.4vw !important;
-	}
+  p,
+  .technologies-used-section,
+  .tu-container {
+    font-size: 4.4vw !important;
+  }
 
-	h5{
-		font-size: 36px;
-	}
+  h5 {
+    font-size: 36px;
+  }
 
-	.text-section-container{
-		border-radius: 36px;
-		padding: 3px;
-	}
+  .text-section-container {
+    border-radius: 36px;
+    padding: 3px;
+  }
 
-	.inner-page-container{
-		max-height: 90%;
-		overflow: scroll;
-	}
+  .inner-page-container {
+    max-height: 90%;
+    overflow: scroll;
+  }
 
-	.navigation-button{
-		height: 72px;
-		width: 36px;
-	}
+  .navigation-button {
+    height: 72px;
+    width: 36px;
+  }
 
-	.carousel-icon{
-		height: 36px;
-	}
+  .carousel-icon {
+    height: 36px;
+  }
 
-	.colors-container-wrapper{
-		bottom: 72px;
-		height: 72px;
-	}
+  .colors-container-wrapper {
+    bottom: 72px;
+    height: 72px;
+  }
 
-	.colors-container {
-		justify-content: space-around;
-		height: 100%;
-		
-	}
-	.colour-option-dot{
-		height: 36px;
-		width: 36px;
-	}
+  .colors-container {
+    justify-content: space-around;
+    height: 100%;
+  }
+  .colour-option-dot {
+    height: 36px;
+    width: 36px;
+  }
 
-	.clear-doodle-box{
-		height: 36px;
-		display: flex;
-		align-items: center;
-		width: 72px;
-		justify-content: center;
-		font-size: 18px;
-		font-weight: bold;
-	}
-
-
+  .clear-doodle-box {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    width: 72px;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
 }
