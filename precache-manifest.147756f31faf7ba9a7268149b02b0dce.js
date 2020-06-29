@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "28df90bfb0709076054dac29fc424ec4",
+    "revision": "a933376b27abfcd7d6edcc0726d6233e",
     "url": "/portfolio-book/index.html"
   },
   {
-    "revision": "30d67a9e77046f8a31c8",
-    "url": "/portfolio-book/static/css/main.90fc97fb.chunk.css"
+    "revision": "a7be3c0108444d987521",
+    "url": "/portfolio-book/static/css/main.ff10b19b.chunk.css"
   },
   {
-    "revision": "8ee78e0e5d8a201a75f7",
-    "url": "/portfolio-book/static/js/2.f31b4536.chunk.js"
+    "revision": "700d8cb3bec5c81b6319",
+    "url": "/portfolio-book/static/js/2.e5e7a13b.chunk.js"
   },
   {
     "revision": "333cdd120ec335387dba84a5da98ccd5",
-    "url": "/portfolio-book/static/js/2.f31b4536.chunk.js.LICENSE"
+    "url": "/portfolio-book/static/js/2.e5e7a13b.chunk.js.LICENSE"
   },
   {
-    "revision": "30d67a9e77046f8a31c8",
-    "url": "/portfolio-book/static/js/main.b81bd1ed.chunk.js"
+    "revision": "a7be3c0108444d987521",
+    "url": "/portfolio-book/static/js/main.6dd3438e.chunk.js"
   },
   {
     "revision": "b6dd612a6f30b0af3e16",
@@ -34,6 +34,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3b8e254586e7224225e4a7c8b29aa5fb",
     "url": "/portfolio-book/static/media/Nate+I.3b8e2545.jpg"
+  },
+  {
+    "revision": "a71011b807ab99074ae77c65a2251500",
+    "url": "/portfolio-book/static/media/Screenshot 2019-10-07 at 2.40.39 AM - Edited.a71011b8.png"
   },
   {
     "revision": "9a4d6b37ed75192011ae235a18ac057b",
@@ -60,6 +64,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio-book/static/media/apple.a71011b8.png"
   },
   {
+    "revision": "1ae3215bef33b26b34d2c855578992e7",
+    "url": "/portfolio-book/static/media/boto-one.1ae3215b.png"
+  },
+  {
+    "revision": "6f1d246b0c425af7058202e6d34f6519",
+    "url": "/portfolio-book/static/media/boto-three.6f1d246b.png"
+  },
+  {
+    "revision": "4820b733403e11d28a27686e94e1ff71",
+    "url": "/portfolio-book/static/media/boto-two.4820b733.png"
+  },
+  {
     "revision": "e2573dedb560fc5934df8e9c01c1bf07",
     "url": "/portfolio-book/static/media/click-me.e2573ded.png"
   },
@@ -74,6 +90,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "94cc2cb2c9d96fd46e913f23996966e1",
     "url": "/portfolio-book/static/media/dmiTwo.94cc2cb2.png"
+  },
+  {
+    "revision": "116fb4bd1a87d8092a688f20c14209dd",
+    "url": "/portfolio-book/static/media/fitMeFour.116fb4bd.png"
   },
   {
     "revision": "f9bd254184e67e5b5b7a87fe871dcb8b",
@@ -96,12 +116,32 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio-book/static/media/fleetonomy-two.437e7088.png"
   },
   {
+    "revision": "9140150388a7f15934e192738d995517",
+    "url": "/portfolio-book/static/media/flowers.91401503.png"
+  },
+  {
+    "revision": "32b776a89172a3334435d1ec322727d7",
+    "url": "/portfolio-book/static/media/front-cover.png.32b776a8.png"
+  },
+  {
     "revision": "519133b3f8b2aa8fc6a545ea6c3e4f72",
     "url": "/portfolio-book/static/media/hob-one.519133b3.png"
   },
   {
     "revision": "5ad7e5bbef883c77cde79668c12ff221",
     "url": "/portfolio-book/static/media/hob-two.5ad7e5bb.png"
+  },
+  {
+    "revision": "0a15909ce3a84b92e9f5ddac6d33806f",
+    "url": "/portfolio-book/static/media/memory-one.0a15909c.png"
+  },
+  {
+    "revision": "fab88f4c74fdb097d6d5df8d178d0800",
+    "url": "/portfolio-book/static/media/memory-three.fab88f4c.png"
+  },
+  {
+    "revision": "c90eee0db64285b3a1be75ec74031e95",
+    "url": "/portfolio-book/static/media/memory-two.c90eee0d.png"
   },
   {
     "revision": "422520392eade0007c9607f5561760b3",
@@ -132,6 +172,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio-book/static/media/petwell-four.7ae04854.png"
   },
   {
+    "revision": "b33c95f6a5a76d39de9b48c2900a704d",
+    "url": "/portfolio-book/static/media/petwell-one.b33c95f6.png"
+  },
+  {
     "revision": "4fbafa2b051125ba2eccc8874ff71565",
     "url": "/portfolio-book/static/media/petwell-three.4fbafa2b.png"
   },
@@ -140,8 +184,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio-book/static/media/petwell-two.a7e330a9.png"
   },
   {
-    "revision": "1d09b670268aca767a720dc5134ff1f4",
-    "url": "/portfolio-book/static/media/plain.1d09b670.jpg"
+    "revision": "f4861d6681bcc706cfd91e5a41b4c964",
+    "url": "/portfolio-book/static/media/react_native.f4861d66.png"
   },
   {
     "revision": "adf0902f979fa557911eee7a70c6cbae",
