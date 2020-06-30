@@ -57,14 +57,14 @@
   }
     .displayed-image-container.-web {
       background-size: 90% 72%;
-      min-height: 54%;
-      min-width: 90%;
+      min-height: 180px;
+      min-width: 540px;
   }
 
   .displayed-image-container.-mobile {
     background-size: 36% 90%;
-    min-height: 72%;
-    min-width: 54%
+    min-height: 540px;
+    min-width: 180px;
   }
   .phone-link, .email-link, .github-link {
 	  font-size: 14px;

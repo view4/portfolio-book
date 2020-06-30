@@ -83,7 +83,8 @@
         "images": [
           {
             "source": "fleetonomy-one",
-            "description": "Fleetonomy, an exciting startup, is fast making a name for themselves in the automotive industry."
+            "description": "Fleetonomy, an exciting startup, is fast making a name for themselves in the automotive industry.",
+             "contain": "true"
           },
           {
             "source": "fleetonomy-two",

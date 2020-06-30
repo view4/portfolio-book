@@ -75,6 +75,9 @@ class ProjectPageTwo extends Component<
       images[Math.abs(currentImageIndex % images.length)].source;
     const image = require("../../images/" + imageFileName + ".png");
 
+    const contain = images[Math.abs(currentImageIndex % images.length)].contain || undefined;
+
+
     return (
       <div className="project-images-container">
         <div className="carousel-container">
@@ -89,6 +92,7 @@ class ProjectPageTwo extends Component<
                     }
                     style={{
                       backgroundImage: `url(${image})`,
+                      backgroundSize: contain && "contain"
                     }}
                     onClick={
                       (e) => appContext.setDisplayExpandedImage(image, isMobile)
