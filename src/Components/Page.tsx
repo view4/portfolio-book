@@ -20,8 +20,8 @@ class Page extends Component<Props> {
       <div className="page" style={isMobile ? { width: "100%" } : null}>
         {this.renderPageContent()}
         <div className="page-footer">
-          {/* <span>
-            {pageNumber !== 1 &&
+          <span>
+            {pageNumber !== 0 &&
               (pageNumber % 2 == 0 || isMobile ? (
                 <button
                   className="page-turner left"
@@ -33,11 +33,11 @@ class Page extends Component<Props> {
                   />
                 </button>
               ) : null)}
-          </span> */}
+          </span>
           <div className="page-index">
             {pageNumber !== 0 && `- ${pageNumber} -`}
           </div>
-          {/* <span>
+          <span>
           {pageNumber < pages.length &&
             (pageNumber % 2 == 1 || isMobile ? (
               <button
@@ -50,7 +50,7 @@ class Page extends Component<Props> {
                 />
               </button>
             ) : null)}
-            </span> */}
+            </span>
         </div>
       </div>
     );

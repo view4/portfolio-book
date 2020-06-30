@@ -1,7 +1,9 @@
 @media only screen and (max-width: 600px) {
+
   .book-cover {
-    height: 54vh;
-    width: 60vw;
+    background-size: contain;
+    height: 81vh;
+    width: 90vw;
   }
   .inner-book {
     height: 82vh;
@@ -29,17 +31,8 @@
     max-height: 72vh;
     max-width: 72vw;
   }
-
-  .blurb-wrapper p {
-    font-size: 18px;
-  }
-  .displayed-image-container.-web {
+    .displayed-image-container.-web {
     background-size: contain;
-  }
-
-  .page {
-	  max-width: 50%;
-
   }
 
   .phone-link, .email-link, .github-link {

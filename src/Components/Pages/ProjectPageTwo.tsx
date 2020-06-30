@@ -91,7 +91,7 @@ class ProjectPageTwo extends Component<
                       backgroundImage: `url(${image})`,
                     }}
                     onClick={
-                      (e) => appContext.setDisplayExpandedImage(image)
+                      (e) => appContext.setDisplayExpandedImage(image, isMobile)
                       //() => this.setState({ displayExpandedView: true })
                       //this.setState({ currentImageIndex: currentImageIndex + 1 })
                     }
