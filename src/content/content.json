@@ -92,7 +92,8 @@
           },
           {
             "source": "fleetonomy-three",
-            "description": "Feel free to read about some of the great things they are doing in the automotive industry." 
+            "description": "Feel free to read about some of the great things they are doing in the automotive industry." ,
+            "contain": "true"
           }
         ]
       },

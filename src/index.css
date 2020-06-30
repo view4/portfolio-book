@@ -263,10 +263,6 @@ header {
   left: 0px;
 }
 
-.project-images-container *{
-  border: 1px solid gray;
-  /* position: relative; */
-}
 
 .typewriter-container {
   font-family: "Comic Sans MS", cursive, sans-serif;
