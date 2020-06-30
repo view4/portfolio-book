@@ -43,16 +43,20 @@
 	top: 7px;
   }
   .circle-image {
-    height: 216px;
-    width: 216px;
+    max-height: 216px;
+    max-width: 216px;
   }
 
   .blurb-wrapper {
     max-height: 72vh;
     max-width: 72vw;
   }
+
+  .blurb-review-text, .blurb-review-author {
+    font-size: 14px;
+  }
     .displayed-image-container.-web {
-    background-size: contain;
+    /* background-size: contain; */
   }
 
   .phone-link, .email-link, .github-link {
@@ -64,7 +68,7 @@
   }
 
   p {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .doodle-range-container {
