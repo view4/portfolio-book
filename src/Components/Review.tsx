@@ -7,7 +7,7 @@ const ReviewText = ({ text }) => (
 
 const ReviewAuthor = ({ name, relation }) => (
   <div className="review-author-text">
-    by {name}, {relation}
+     {name}, {relation}
   </div>
 );
 

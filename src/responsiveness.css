@@ -56,9 +56,12 @@
     font-size: 14px;
   }
     .displayed-image-container.-web {
-    /* background-size: contain; */
+      background-size: 90% 72%;
   }
 
+  .displayed-image-container.-mobile {
+    background-size: 36% 90%;
+  }
   .phone-link, .email-link, .github-link {
 	  font-size: 14px;
   }
