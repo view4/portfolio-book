@@ -230,34 +230,16 @@
     
     "reviews": [
         {
-            "author": "Ellush",
-            "text": " Lorem ipsum, it was nice, lala .... ",
-            "relation": "Flatmate",
-            "index": 1,
-            "position": {
-              "top": "72vh",
-              "left": "7vw"
-            }
+            "author": "Ma'ayan Tzoubari",
+            "text": " Gaby keeps a cool head when tackling challenges and has a proactive attitude, constantly seeking to learn more and go above and beyond...  ",
+            "relation": "Co-worker at Fleetonomy",
+            "index": 1
           },
           {
-            "author": "Leah",
-            "text": " Lorem ipsum, it was okay, lala .... ",
-            "relation": "Imaginary person",
-            "index": 2,
-            "position": {
-              "top": "44vh",
-              "left": "7vw"
-            }
-          },
-          {
-            "author": "Mark",
-            "text": " Lorem ipsum, it was fine, lala .... ",
-            "relation": "Imaginary Person 2",
-            "index": 3,
-            "position": {
-              "top": "18vh",
-              "left": "7vw"
-            }
+            "author": "Daniel Goodman",
+            "text": " It's been a pleasure having Gaby work with me on the FitMe project. Very professional, recommended",
+            "relation": "Client - FitMe",
+            "index": 2
           }
     ],
   "blurb": {

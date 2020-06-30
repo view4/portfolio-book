@@ -106,6 +106,8 @@ export const pages = [
   <ProjectPageTwo images={projects["heart-of-a-belief"].images} />,
   
   <ContactMePage />,
+
+  <div/>
   
   //<DoodlePage />,
 ];

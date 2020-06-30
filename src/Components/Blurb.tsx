@@ -21,7 +21,7 @@ const BlurbReviews = () => {
     content.reviews.map((review, i) => (
         <div>
           <div className={"blurb-review-text"}>{review.text}</div>
-          <div className={"blurb-review-author"}>{review.author}</div>
+          <div className={"blurb-review-author"}>{review.author} ({review.relation})</div>
         </div>
     )
     )}

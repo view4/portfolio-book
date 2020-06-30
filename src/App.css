@@ -22,7 +22,8 @@
 }
 
 .book-cover {
-  background-image: url("./images/The-Portfolio.png");
+  background-image: url("./images/portfolio.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  /*background-size: contain;*/
+  background-size: 100% 100%;
 }
