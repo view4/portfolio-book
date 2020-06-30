@@ -124,7 +124,6 @@ class Book extends Component<{}, State> {
 
   private turnPage = (num: number) => {
     // this.setState({ isTurning: true, isTurningBack: num < 0 ? true : false });
-    console.log(num);
     let { pageNumber } = this.state;
     pageNumber = pageNumber + num;
 
@@ -212,7 +211,6 @@ class Book extends Component<{}, State> {
       setDisplayExpandedImage: (File, isMobile) =>
         this.setState({ displayExpandedImage: true, expandedImageFile: File, isExpandedImageMobile: isMobile }),
     };
-    console.log(this.state);
     return (
       <>
         <PageMenu
