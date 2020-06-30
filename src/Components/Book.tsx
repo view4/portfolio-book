@@ -218,7 +218,7 @@ class Book extends Component<{}, State> {
             this.setState({ isOpen: false, displayBlurb: false, pageNumber: 0 })
           }
           contentsClick={() =>
-            this.setState({ isOpen: true, pageNumber: 0, displayBlurb: false })
+            this.setState({ isOpen: true, pageNumber: isMobile ? 1 :0, displayBlurb: false })
           }
           contactClick={() => this.setState({ isOpen: true, pageNumber: 28 })}
           blurbClick={() =>
