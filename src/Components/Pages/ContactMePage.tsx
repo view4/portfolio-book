@@ -10,7 +10,7 @@ const ContactCard = () => {
     window.open(
       "mailto:morrisgaby987@gmail.com?subject=Web Portfolio&body=Type your message here"
     );
-  }
+  };
   return (
     <div className="contact-details-info" style={{ paddingLeft: "19px" }}>
       <div className="contact-name">Gabriel Morris</div>
@@ -41,12 +41,11 @@ const ContactCard = () => {
 };
 
 class ContactMePage extends Component<{} | null> {
-
   render() {
     return (
       <div className="contact-page">
-        <ChapterHeading heading="Contact Details:" />
         <div>
+          <ChapterHeading heading="Contact Details:" />
           <SubHeading subheading="Do you wish to be a part of the next chapter?" />
           <ParagraphText text={content.contact.text} />
         </div>

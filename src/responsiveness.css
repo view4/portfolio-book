@@ -14,7 +14,12 @@
     padding: 7px;
     margin: 7px;
   }
-
+  .review-context-text {
+    font-size: 18px;
+  }
+  .review-wrapper {
+    left: 3vw;
+  }
 }
 
 @media only screen and (max-width: 600px) {
