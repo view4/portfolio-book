@@ -40,7 +40,7 @@ class CodingEdTwo extends Component<{} | null> {
   };
   render() {
     return (
-      <div className="inner-page-container">
+      <div className="inner-page-container" style={{overflow: "scroll" }}>
         <SubHeading subheading="Coding Bootcamp & Internship (5 months)" />
         <div
           className={"text-section-container"}

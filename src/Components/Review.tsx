@@ -26,7 +26,7 @@ const Review = ({ review, index }) => {
   return (
     <div
       className={"review-wrapper" + (hide ? " hide" : " open")}
-      style={{top: index % 2 === 0 && ((18 * (index * 2 || 1))+ "vh"), bottom: index % 2 !== 0 && ((10 * (index * 2))+ "vh") 
+      style={{top: index % 2 === 0 && ((18 * ((index) || 1))+ "vh"), bottom: index % 2 !== 0 && ((18 * index)+ "vh") 
 
 	/*
         top: position.top && position.top,

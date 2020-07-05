@@ -82,7 +82,7 @@ class CodingEdOne extends Component<{} | null> {
 
   render() {
     return (
-      <div className={"coding-ed-one-p-wrapper"}>
+      <div className={"coding-ed-one-p-wrapper"} style={{overflow: "scroll"}}>
         <ChapterHeading heading="My Coding Education" />
         <ParagraphText text={content.education.intro} />
 

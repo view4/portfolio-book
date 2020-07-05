@@ -56,7 +56,7 @@ body * {
   position: absolute;
   background-color: #ffffffa7;
   border-radius: 36px;
-  padding: 7px;
+  padding: 18px;
   transition: opacity 1.8s;
   opacity: 1;
   width: 360px;
@@ -662,6 +662,7 @@ Include an intro:
   display: flex;
   flex-direction: column;
   justify-content: space-around;  
+  max-height: 50%;
 }
 
 .blurb-review-text {
@@ -901,4 +902,17 @@ Include an intro:
   border: 7px solid black;
   border-radius: 18px;
   overflow: hidden;
+}
+
+.enable-scroll * {
+  overflow: scroll !important;
+}
+
+.blurb-inner-wrapper {
+  overflow: scroll !important;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }

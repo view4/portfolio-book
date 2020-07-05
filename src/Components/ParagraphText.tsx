@@ -10,7 +10,7 @@ export const ParagraphText: FunctionComponent<Props> = ({
   text,
   customStyle,
 }) => (
-  <div className={`paragraph`} style={ customStyle && customStyle}>
+  <div className={`paragraph enable-scroll`} style={ customStyle && customStyle}>
     <p style={customStyle || null}>{text}</p>
   </div>
 );

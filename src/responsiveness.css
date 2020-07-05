@@ -4,11 +4,19 @@
     height: 180px;
     width: 180px;
   }
-
-  .blurb-inner-wrapper p {
-    font-size: 3.6vw;
-    padding: 7px;
+  .blurb-inner-wrapper {
+    font-size: 18px;
   }
+  .blurb-reviews-wrapper {
+    text-align: center;
+    min-height: 36%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-height: 50%;
+    overflow: scroll;
+  }
+  
 
   .blurb-reviews-wrapper > div {
     padding: 7px;
@@ -23,6 +31,11 @@
 }
 
 @media only screen and (max-width: 600px) {
+
+  .blurb-inner-wrapper p {
+    font-size: 3.6vw;
+    padding: 7px;
+  }
 
   .book-cover {
     background-size: contain;
