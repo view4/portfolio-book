@@ -25,8 +25,12 @@
   .review-context-text {
     font-size: 18px;
   }
-  .review-wrapper {
-    left: 3vw;
+  .review-wrapper.left {
+    left: 3vh !important;
+  }
+  
+  .review-wrapper.right {
+    right: 3vh !important;
   }
 }
 

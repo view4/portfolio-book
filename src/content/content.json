@@ -235,19 +235,31 @@
             "author": "Ma'ayan Tzoubari",
             "text": " Gaby keeps a cool head when tackling challenges and has a proactive attitude, constantly seeking to learn more and go above and beyond...  ",
             "relation": "Co-worker at Fleetonomy",
-            "index": 1
+            "index": 1,
+            "style": {
+              "top": "18vh",
+              "left": "7vw"
+            }
           },
           {
             "author": "Daniel Goodman",
             "text": " It's been a pleasure having Gaby work with me on the FitMe project. Very professional, recommended",
             "relation": "Owner of FitMe",
-            "index": 2
+            "index": 2,
+            "style": {
+              "bottom": "18vh",
+              "left": "7vw"
+            }
           },
           {
             "author": "David Joseph",
             "text": "  Professional and insightful, he has been able to create a website that reflects the message I want to get across, and has presented it in a way that vastly has exceeded my expectations. Highly recommended! ",
             "relation": "DMI partner",
-            "index": 2
+            "index": 2,
+            "style": {
+              "bottom": "18vh",
+              "right": "7vw"
+            }
           }
     ],
   "blurb": {

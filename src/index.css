@@ -61,7 +61,6 @@ body * {
   opacity: 1;
   width: 360px;
   z-index: 18;
-  left: 7vw;
 }
 
 .review-wrapper.hide {
@@ -73,7 +72,7 @@ body * {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 108px;
+  min-height: 108px;
 }
 
 .review-context-text {
@@ -915,4 +914,8 @@ Include an intro:
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent; /* make scrollbar transparent */
+}
+
+.br-wrapper {
+  margin: 10px;
 }

@@ -25,15 +25,16 @@ const Review = ({ review, index }) => {
   };
   return (
     <div
-      className={"review-wrapper" + (hide ? " hide" : " open")}
-      style={{top: index % 2 === 0 && ((18 * ((index) || 1))+ "vh"), bottom: index % 2 !== 0 && ((18 * index)+ "vh") 
+      className={"review-wrapper" + (hide ? " hide" : " open") + (review.style.left ? " left" : " right")}
+      style={review.style
+        // {top: index % 2 === 0 && ((18 * ((index) || 1))+ "vh"), bottom: index % 2 !== 0 && ((18 * index)+ "vh") 
 
 	/*
         top: position.top && position.top,
         left: position.left && position.left,
         right: position.right && position.right,
         bottom: position.bottom && position.bottom,*/
-      }}
+      }
     >
       <div className={"review-container"}>
         <div className="review-main">
