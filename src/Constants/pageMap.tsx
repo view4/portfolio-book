@@ -43,7 +43,7 @@ export const pages = [
   <ProjectPageTwo images={projects.myStock.images} isMobile={true}/>,
   
   <ProjectPageOne
-    title="DMI Accountancy"
+    title="Bluebridge Accountancy"
     description={content.projects.dmi.description}
     technologies={content.projects.dmi.technologies}
   />,
