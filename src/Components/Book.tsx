@@ -227,7 +227,7 @@ class Book extends Component<{}, State> {
           doodleClick={() => this.setState({ displayDoodleBoard: true })}
         />
         <AppContextProvider value={contextValue}>
-          <div className="book">{this.renderBookDisplay()}</div>
+          <div className={"book" + (!isOpen ? " closed": "")}>{this.renderBookDisplay()}</div>
           {!isOpen && !displayBlurb && <Reviews />}
           {displayExpandedImage && (
             <ExpandedImageView

@@ -15,7 +15,7 @@ const Review = ({ review, index }) => {
   const [hide, setHide] = useState(true);
 
   useEffect(() => {
-    setTimeout(callSetHide, 1800);
+    setTimeout(callSetHide, 700 * index);
     //return clearTimeout(timer)
   }, []);
 
@@ -25,9 +25,14 @@ const Review = ({ review, index }) => {
   };
   return (
     <div
-      className={"review-wrapper" + (hide ? " hide" : " open") + (review.style.left ? " left" : " right")}
-      style={review.style
+      className={
+	"review-wrapper" + (hide ? " hide" : " open") + (/*review.style.left*/ true ? " left" : " right")
+	}
+      style={//review.style
         // {top: index % 2 === 0 && ((18 * ((index) || 1))+ "vh"), bottom: index % 2 !== 0 && ((18 * index)+ "vh") 
+	{
+		top: (index * 33 || 3) + "%",	
+	}
 
 	/*
         top: position.top && position.top,
@@ -37,10 +42,10 @@ const Review = ({ review, index }) => {
       }
     >
       <div className={"review-container"}>
-        <div className="review-main">
+        {/*<div className="review-main">*/}
           <ReviewText text={review.text} />
           <ReviewAuthor name={review.author} relation={review.relation} />
-        </div>
+       {/* </div> */}
 
       </div>
     </div>
