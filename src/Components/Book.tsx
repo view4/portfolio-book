@@ -188,7 +188,7 @@ class Book extends Component<{}, State> {
         <div className="inner-book">
           {!isMobile ? this.renderBgPages(pageNumber / 4) : null}
           {this.renderInnerBook()}
-          {this.renderBgPages((30 - pageNumber) / 4)}
+          {this.renderBgPages((40 - pageNumber) / 4)}
         </div>
       );
     }
@@ -220,7 +220,7 @@ class Book extends Component<{}, State> {
           contentsClick={() =>
             this.setState({ isOpen: true, pageNumber: isMobile ? 1 :0, displayBlurb: false })
           }
-          contactClick={() => this.setState({ isOpen: true, pageNumber: 28 })}
+          contactClick={() => this.setState({ isOpen: true, pageNumber: 38 })}
           blurbClick={() =>
             this.setState({ displayBlurb: true, pageNumber: 40 })
           }
