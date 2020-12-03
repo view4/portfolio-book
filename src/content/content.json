@@ -33,7 +33,7 @@
 
   "projects": {
     "tour": {
-      "description": "Research/Consultancy based role over the duration of a few months to create a remote/live virtual tour experience for an Israeli Museum.",
+      "description": "Research/Consultancy based role, ongoing over the duration of a few months to create a remote live virtual tour experience for an innovative Israeli Museum.",
       "technologies": [
         "React",
         "A-frame",
@@ -59,7 +59,7 @@
       ]
     },
     "bri": {
-      "description": "Birthright Israel's ",
+      "description": "Birthright Israel's promotional and interactive video. A supplement during the covid-19 times this project helped provide an immersive experience showing how adventurous a trip to Israel can be. ",
       "technologies": ["React", "HTML/CSS", "Eko"],
       "availability": "Not available",
       "images": [
@@ -77,7 +77,7 @@
       ]
     },
     "touchit": {
-      "description": "Making updates, feature and design changes to a commercially used application - one touch screen catalogue system being used in Eilat.",
+      "description": "Continuous updates, design and new feature integration for a commercially used application - a touch screen catalogue system designed for use in a well-known duty-free store.",
 
       "technologies": [
         "React",
@@ -99,7 +99,7 @@
       ]
     },
     "caeserstone": {
-      "description": "Two recent projects have been related to making updates, feature and design changes to three commercially used applications - one touch screen catalogue system being used in Eilat, one mobile app and a desktop app for an interior design store. ",
+      "description": "Dual, Desktop and Mobile, applications with extensive updates - new features, further design changes and general improvements made to both. The apps were designed to enable customers to select products using the designated mobile devices in-store at an innovative and popular interior design store. ",
       "technologies": [
         "React",
         "React-Native",
@@ -416,6 +416,7 @@
 
   ],
   "blurb": {
-    "text": "The decision to freelance was partially born from difficulties adapting to an office setting, but also paralleled by a deep universal desire to break the norm and not to be stuck in the same place, or the same chair all day. It came from wanting to do things 'my' way and this is something which is fundamentally important, alongside creative freedom, independence and the ability to take pride in work."
-  }
+    "text": "The decision to freelance was partially born from difficulty and dislike of working in the traditional office setting/style. It is paralleled with a deep universal desire to break boundaries, to break the norm and to embrace taking on and overcoming the next challenge. This attitude has emanated in the approach to work, to embraxce creative freedom, independence and to ultimately take pride in my work."
+   }
 }
+

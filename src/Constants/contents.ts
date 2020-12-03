@@ -4,23 +4,23 @@ export interface contents {
 }
 export const contents = {
   aboutMe: {
-    name: "Introduction",
+    name: "Intro",
     pageNumber: 2
   },
   codingEducation: {
-    name: "Coding Education",
+    name: "Coding Ed",
     pageNumber: 4
   },
   projects: {
-    name: "Professional Projects",
+    name: "Pro Projects",
     pageNumber: 6
   },
   nonProfessionalProjects: {
-    name: "Personal Development Projects",
+    name: "Personal Dev Projects",
     pageNumber: 30
   },
   contactPage: {
-    name: "Contact Details",
+    name: "Contact",
     pageNumber: 38
   }
 };

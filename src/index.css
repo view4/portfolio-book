@@ -48,8 +48,15 @@ body * {
 }
 
 .blurb-inner-wrapper p {
-  padding: 12px;
-}
+  border: 1px solid pink;
+  margin: 12px;
+  border-radius: 6px;
+  padding: 6px;
+  background: #ffe9d6;
+  /* background-color: pink; */
+  text-decoration: wavy;
+  text-align: center;
+  font-style: italic;}
 
 /* Review   */
 .review-wrapper {
@@ -703,6 +710,8 @@ Include an intro:
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-radius: 6px;
+
   /*background: ;*/
 }
 .blurb-reviews-wrapper {

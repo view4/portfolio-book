@@ -228,7 +228,7 @@ class Book extends Component<{}, State> {
         />
         <AppContextProvider value={contextValue}>
           <div className={"book" + (!isOpen ? " closed": "")}>{this.renderBookDisplay()}</div>
-          {!isOpen && !displayBlurb && <Reviews />}
+          {/* {!isOpen && !displayBlurb && <Reviews />} */}
           {displayExpandedImage && (
             <ExpandedImageView
               isMobile={isExpandedImageMobile}
