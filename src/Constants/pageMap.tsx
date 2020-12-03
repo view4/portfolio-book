@@ -27,6 +27,36 @@ export const pages = [
   <CodingEdOne />,
   <CodingEdTwo />,
 
+  <ProjectPageOne
+    title="Live streamed virtual tour (Ongoing)"
+    description={content.projects.tour.description}
+    technologies={content.projects.tour.technologies}
+  />,
+  <ProjectPageTwo images={projects.tour.images}  />,
+  
+  
+  <ProjectPageOne
+    title="Birthright Israel - Interactive Video"
+    description={content.projects.bri.description}
+    technologies={content.projects.bri.technologies}
+  />,
+  <ProjectPageTwo images={projects.bri.images}/>,
+  
+  
+  <ProjectPageOne
+    title="TouchIt - Duty Free catalogue"
+    description={content.projects.touchit.description}
+    technologies={content.projects.touchit.technologies}
+  />,
+  <ProjectPageTwo images={projects.touchit.images} isMobile={true} />,
+  
+  
+  <ProjectPageOne
+    title="Caeserstone - Mobile and Browser applications."
+    description={content.projects.caeserstone.description}
+    technologies={content.projects.caeserstone.technologies}
+  />,
+  <ProjectPageTwo images={projects.caeserstone.images} isMobile={true} />,
 
   <ProjectPageOne
     title="FitMe"
@@ -40,43 +70,49 @@ export const pages = [
     description={content.projects.myStock.description}
     technologies={content.projects.myStock.technologies}
   />,
-  <ProjectPageTwo images={projects.myStock.images} isMobile={true}/>,
-  
+  <ProjectPageTwo images={projects.myStock.images} isMobile={true} />,
+
   <ProjectPageOne
     title="Bluebridge Accountancy"
     description={content.projects.dmi.description}
     technologies={content.projects.dmi.technologies}
   />,
   <ProjectPageTwo images={projects.dmi.images} />,
-  
+
   <ProjectPageOne
     title="Troox"
     description={content.projects.troox.description}
     technologies={content.projects.troox.technologies}
   />,
-  <ProjectPageTwo images={projects.troox.images} isMobile={true}/>,
-  
+  <ProjectPageTwo images={projects.troox.images} isMobile={true} />,
+
   <ProjectPageOne
     title="Restaurant app prototype"
     description={content.projects["order-please"].description}
     technologies={content.projects["order-please"].technologies}
   />,
-  <ProjectPageTwo images={projects["order-please"].images} isMobile={true}/>,
-  
+  <ProjectPageTwo images={projects["order-please"].images} isMobile={true} />,
+
   <ProjectPageOne
-  title="Petwell House Vets"
+    title="Petwell House Vets"
     description={content.projects["petwell-house"].description}
     technologies={content.projects["petwell-house"].technologies}
   />,
   <ProjectPageTwo images={projects["petwell-house"].images} />,
-  
+
   <ProjectPageOne
     title="Fleetonomy"
     description={content.projects.fleetonomy.description}
     technologies={content.projects.fleetonomy.technologies}
   />,
   <ProjectPageTwo images={projects.fleetonomy.images} />,
-  
+  <ProjectPageOne
+    title="Ma'Pal"
+    description={content.projects.mapal.description}
+    technologies={content.projects.mapal.technologies}
+  />,
+  <ProjectPageTwo images={projects.mapal.images} />,
+
   <ProjectPageOne
     title="Recreation of the apple homepage!"
     description={content.projects.apple.description}
@@ -90,24 +126,24 @@ export const pages = [
     technologies={projects["to-do"].technologies}
   />,
   <ProjectPageTwo images={projects["to-do"].images} />,
-  
+
   <ProjectPageOne
     title="Tv Guide"
     description={projects["tv-app"].description}
     technologies={projects["tv-app"].technologies}
   />,
   <ProjectPageTwo images={projects["tv-app"].images} />,
-  
+
   <ProjectPageOne
     title="Heart of a belief"
     description={projects["heart-of-a-belief"].description}
     technologies={projects["heart-of-a-belief"].technologies}
   />,
   <ProjectPageTwo images={projects["heart-of-a-belief"].images} />,
-  
+
   <ContactMePage />,
 
-  <div/>
-  
+  <div />,
+
   //<DoodlePage />,
 ];
