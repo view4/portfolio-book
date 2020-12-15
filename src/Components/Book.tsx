@@ -24,6 +24,7 @@ interface State {
   renderSpecificPage: boolean;
   specificPageNumber: number;
   isExpandedImageMobile: boolean;
+  displayedProject: any;
 }
 // ----Context---
 
@@ -98,8 +99,11 @@ const PageMenu = ({
 interface AppContextInterface {
   setPageNumber: (num: any) => void;
   setDisplayExpandedImage: (string: any, boolean) => void;
+  displayedProject: any;
+  setDisplayedProject: (object: any) => any;
+
 }
-const ctxt = React.createContext<AppContextInterface | null>(null);
+export const ctxt = React.createContext<AppContextInterface | null>(null);
 
 export const AppContextProvider = ctxt.Provider;
 export const AppContextConsumer = ctxt.Consumer;
@@ -119,8 +123,14 @@ class Book extends Component<{}, State> {
     expandedImageFile: undefined,
     renderSpecificPage: false,
     specificPageNumber: undefined,
-    isExpandedImageMobile: false
+    isExpandedImageMobile: false,
+    displayedProject: {}
   };
+
+  componentDidMount(){
+    this.setState({displayedProject: content.projects["tour"]})
+    // console.log(content.projects)
+  }
 
   private turnPage = (num: number) => {
     // this.setState({ isTurning: true, isTurningBack: num < 0 ? true : false });
@@ -188,7 +198,7 @@ class Book extends Component<{}, State> {
         <div className="inner-book">
           {!isMobile ? this.renderBgPages(pageNumber / 4) : null}
           {this.renderInnerBook()}
-          {this.renderBgPages((40 - pageNumber) / 4)}
+          { !isMobile && this.renderBgPages((10 - pageNumber) / 4)}
         </div>
       );
     }
@@ -203,11 +213,14 @@ class Book extends Component<{}, State> {
       displayExpandedImage,
       isExpandedImageMobile,
       pageNumber,
+      displayedProject
     } = this.state;
 
     const contextValue = {
       setPageNumber: (num) => this.setState({ pageNumber: num }),
       displayExpandedImage,
+      displayedProject,
+      setDisplayedProject: (project) => this.setState({displayedProject:project}),
       setDisplayExpandedImage: (File, isMobile) =>
         this.setState({ displayExpandedImage: true, expandedImageFile: File, isExpandedImageMobile: isMobile }),
     };
@@ -220,7 +233,7 @@ class Book extends Component<{}, State> {
           contentsClick={() =>
             this.setState({ isOpen: true, pageNumber: isMobile ? 1 :0, displayBlurb: false })
           }
-          contactClick={() => this.setState({ isOpen: true, pageNumber: 38 })}
+          contactClick={() => this.setState({ isOpen: true, pageNumber: 8 })}
           blurbClick={() =>
             this.setState({ displayBlurb: true, pageNumber: 40 })
           }

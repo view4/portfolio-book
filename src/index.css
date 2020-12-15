@@ -2,6 +2,12 @@ body {
   text-align: center;
   margin: 0px;
 }
+
+@font-face {
+  font-family: dancing;
+  src: url(./fonts/Dancing_Script/static/DancingScript-Medium.ttf);
+}
+
 /* 
 body * {
   overflow: hidden;
@@ -23,7 +29,7 @@ body * {
   background-size: contain;
   background-repeat: no-repeat;
   transform: rotate(180deg);
-  opacity: 0.36;
+  opacity: 0.18;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -36,7 +42,7 @@ body * {
   background-image: url("./images/flowers.png");
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.36;
+  opacity: 0.18;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -48,16 +54,16 @@ body * {
 }
 
 .blurb-inner-wrapper p {
-  border: 1px solid pink;
-  margin: 12px;
-  border-radius: 6px;
-  padding: 6px;
-  background: #ffe9d6;
-  /* background-color: pink; */
-  text-decoration: wavy;
-  text-align: center;
-  font-style: italic;}
-
+  /* border: 1px solid pink;  */
+    margin: 12px;
+    border-radius: 6px;
+    padding: 6px;
+    /* background: #ffe9d6; */
+    /* background-color: pink; */
+    text-decoration: wavy;
+    text-align: center;
+    font-style: italic;
+}
 /* Review   */
 .review-wrapper {
     position: absolute;
@@ -112,21 +118,23 @@ body * {
     /* display: flex; */
     /* justify-content: center; */
     /* align-items: center; */
-    padding: 10px;
+    padding: 0px 10px;
     /*min-height: 108px;*/
     max-height: 90%;
+    max-width: 90%;
+    margin: auto;
     overflow: hidden;
 
 }
 
-.review-context-text {
+/* .review-context-text {
   font-size: 18px;
     max-height: 108px;
     overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical; 
-}
+} */
 
 .review-author-text {
   font-size: 15px;
@@ -192,7 +200,7 @@ header {
   border-top-width: 18px;
   border-top: 18px double #cecece;
   border-radius: 13px;
-  border-left-color: #f38282c9;
+  border-left-color: #FFC3B8;
   position: relative;
   cursor: pointer;
   height: 675px;
@@ -210,6 +218,7 @@ header {
 .click-container > img {
   height: 150px;
   width: 225px;
+  opacity: 0.72;
 }
 
 .click-mobile-container {
@@ -299,6 +308,7 @@ header {
   width: 36px;
   display: flex;
   align-items: center;
+  cursor: pointer;
   justify-content: center;
 }
 
@@ -334,6 +344,7 @@ header {
   font-weight: 400;
   font-size: 18px;
   padding: 7px;
+  transition: 0.9s font-size;
 }
 
 .contents-item {
@@ -343,6 +354,8 @@ header {
 .contents-item:hover {
   background-color: #e3d1e613;
   cursor: pointer;
+  font-size: 21px;
+  font-weight: 600;
 }
 
 .grat-link {
@@ -398,11 +411,14 @@ li {
 }
 
 .project-images-container {
-  /* position: relative; */
-  height: 90%;
+  max-height: 360px;
+  min-height: 234px;
   display: flex;
   flex-direction: column;
   padding: 9px;
+  /* border: 3px solid #000; */
+  margin: 3px 18px;
+  border-radius: 7px;
 }
 
 .image-navigation-container {
@@ -473,6 +489,11 @@ li {
 
 .page-turner-icon {
   height: 18px;
+  transition: 0.9s height;
+}
+
+.page-turner-icon:hover {
+  height: 21px;
 }
 
 .contact-details-info {
@@ -601,7 +622,8 @@ li {
 .displayed-image-container {
   width: 100%;
   height: 54%;
-  min-height: 54% !important;
+  min-height: 180px;
+  /* min-height: 54% !important; */
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -699,13 +721,13 @@ Include an intro:
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient( #fff 46%, #ffe9d6 54%);
+  background: linear-gradient( #fff 18%, #ffe9d6 72%);
 }
 
 .blurb-inner-wrapper {
   height: 90%;
   width: 90%;
-  border: 3px solid pink;
+  /* border: 3px solid pink; */
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -717,10 +739,11 @@ Include an intro:
 .blurb-reviews-wrapper {
   text-align: center;
   min-height: 36%;
-  display: flex;
+  display: none;
+  /* display: flex; */
   flex-direction: column;
   justify-content: space-around;  
-  max-height: 50%;
+  max-height: 54%;
 }
 
 .blurb-review-text {
@@ -978,4 +1001,92 @@ Include an intro:
 
 .br-wrapper {
   margin: 10px;
+}
+
+
+/* Projects-item */
+
+.project-items-page {
+  overflow:hidden;
+}
+
+.pip-col {
+  width: 50%;
+  height: 90%;
+  position: relative;
+  transform: translateY(-36px);
+}
+
+.pip-col.lst {
+  transform: translateY(36px);
+  /* padding-top: 72px; */
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+.pip-items-container {
+  overflow: auto;
+  overflow: scroll !important;
+  height: 90%;
+  display: flex;
+  max-height: 100%;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  position: relative;
+}
+
+.project-item-container {
+  border: 1px solid #cecece;
+  border-radius: 7px;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  /* width: 360px; */
+  margin: 7px;
+  cursor: pointer;
+  box-shadow: 1.5px 1.5px 3px #cecece;
+}
+.project-item-container.selected {
+  border-width: 3px;
+  box-shadow: 3px 3px 3px #cecece80;
+}
+
+
+.pic-project-image {
+  max-height: 90px;
+  max-width: 180px;
+}
+
+.pc-fade-block {
+  position: absolute;
+  width: 100%;
+  height: 72px;
+  background: linear-gradient(to-top, orange, transparent);
+  bottom: 0px;
+  left:0px;
+}
+
+
+.reviews-container { 
+  position: relative;
+  /* border: 1px solid gray; */
+  height: fit-content;
+  height: 216px;
+  width: 90%;
+  margin: auto;
+  border-radius: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: 36px;
+}
+
+
+
+.tbc-text {
+  font-family: dancing;
 }

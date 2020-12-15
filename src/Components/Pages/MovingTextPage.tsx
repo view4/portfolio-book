@@ -1,5 +1,35 @@
-import { Component } from "react";
-import React from "react";
+import React, {Component, useEffect, useState} from "react";
+import Review from "../Review";
+import content from "../../content/content.json";
+
+const Reviews = () => {
+  const [activeReview, setActiveReview] = useState(0);
+  const reviews = content.reviews;
+
+  useEffect(() => {
+    const newReview = (activeReview + 1) % reviews.length;
+    setTimeout(() => setActiveReview(newReview), 3600)
+  }, [activeReview]);
+
+  return(
+    <div style={{position: "relative"}} className={"reviews-container"}>
+      {reviews.map((review, index) => (
+        <div 
+        style={{
+          height: activeReview === index ? "180px": "0px",
+          transition: "3s height",
+          position: "absolute", 
+          overflow: "hidden" ,
+          background: "#fff"
+          }}>
+          <Review review={review}  key={index}/>
+        </div>
+      ))}
+     
+    </div>
+  )
+}
+
 
 interface State {
   text: String;
@@ -69,11 +99,13 @@ class MovingTextPage extends Component<{}, State> {
 
   render() {
     return (
+      <>
       <div className="typewriter-container">
         <div className={"moving-text"}>
           I am {this.state.text}
         </div>
-      </div>
+       </div>     
+      </>
     );
   }
 }

@@ -7,7 +7,7 @@ const Reviews = () => {
   return (
     <>
       {content.reviews.map((review, i) => (
-        <Review review={review} index={i} />
+        <Review review={review}  />
       ))}
     </>
   );

@@ -8,19 +8,19 @@ export const contents = {
     pageNumber: 2
   },
   codingEducation: {
-    name: "Coding Ed",
+    name: "Coding Education",
     pageNumber: 4
   },
   projects: {
-    name: "Pro Projects",
+    name: "Projects",
     pageNumber: 6
   },
-  nonProfessionalProjects: {
-    name: "Personal Dev Projects",
-    pageNumber: 30
-  },
+  // nonProfessionalProjects: {
+  //   name: "Personal Dev Projects",
+  //   pageNumber: 30
+  // },
   contactPage: {
     name: "Contact",
-    pageNumber: 38
+    pageNumber: 8
   }
 };
